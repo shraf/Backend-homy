@@ -27,7 +27,7 @@ CREATE TABLE addresses (
   area VARCHAR(255) NOT NULL,
   street VARCHAR(255) NOT NULL,
   block VARCHAR(255) NOT NULL,
-  building_no VARCHAR(255) NOT NULL,
+  building VARCHAR(255) NOT NULL,
   default_address BOOLEAN DEFAULT FALSE,
   user_id INT,
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
@@ -101,7 +101,7 @@ CREATE TABLE guests (
   area VARCHAR(255) NOT NULL,
   street VARCHAR(255) NOT NULL,
   block VARCHAR(255) NOT NULL,
-  building_no VARCHAR(255) NOT NULL
+  building VARCHAR(255) NOT NULL
 );
 CREATE TABLE orders (
   id SERIAL PRIMARY KEY,

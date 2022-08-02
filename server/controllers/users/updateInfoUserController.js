@@ -6,7 +6,10 @@ const updateInfoUserController = async (req, res, next) => {
     const {
       email, name, phone,
     } = await updateUserSchema.validate(req.body, { abortEarly: false });
-    const { rows } = await updateInfoUserQuery(name, email, phone, req.params.id);
+    const { rows, rowCount } = await updateInfoUserQuery(name, email, phone, req.params.id);
+    if (!rowCount) {
+      throw customizedError(400, 'there have error try again later');
+    }
     res.json({ message: 'Your data updated successfully', status: 200, data: rows[0] });
   } catch (error) {
     if (error.name === 'ValidationError') {

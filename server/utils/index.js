@@ -1,5 +1,12 @@
 import customizedError from './error/customizedError.js';
-import { signupSchema, signinSchema, updateUserSchema } from './validation/index.js';
+import {
+  signupSchema,
+  signinSchema,
+  updateUserSchema,
+  addressSchema,
+  idAddressSchema,
+  updateUserAddressSchema,
+} from './validation/index.js';
 import { jwtSign, jwtVerify } from './jwt/index.js';
 
 export {
@@ -7,6 +14,9 @@ export {
   signupSchema,
   signinSchema,
   updateUserSchema,
+  addressSchema,
+  idAddressSchema,
+  updateUserAddressSchema,
   jwtSign,
   jwtVerify,
 };

@@ -9,6 +9,10 @@ import {
   checkEmailExistsQuery,
   updateInfoUserQuery,
   getUserAddressesQuery,
+  addUserAddressQuery,
+  deleteUserAddressQuery,
+  updateUserAddressQuery,
+  updateAddressDefaultQuery,
 } from './users/index.js';
 
 export {
@@ -21,4 +25,8 @@ export {
   checkEmailExistsQuery,
   updateInfoUserQuery,
   getUserAddressesQuery,
+  addUserAddressQuery,
+  deleteUserAddressQuery,
+  updateUserAddressQuery,
+  updateAddressDefaultQuery,
 };

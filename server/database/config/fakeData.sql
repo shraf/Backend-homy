@@ -9,7 +9,7 @@ VALUES
     (
         'user1',
         'user1@gmail.com',
-        '$2b$10$klSql.FCEBJSLDScw0BZQuEeROI5oXiNmj5oYc1sr2nPl7GPctrLG',
+        '$2b$10$DviVVuryzUWALxq.yG0Yd.ChLIYNXuKDw5WoUiKK7TPnFuZcL8uL2',
         '+96512345678'
     ),
     (
@@ -31,7 +31,7 @@ INSERT INTO
         area, 
         street, 
         block,
-        building_no,
+        building,
         default_address,
         user_id
     )
@@ -303,7 +303,7 @@ INSERT INTO
         area,
         street,
         block,
-        building_no
+        building
     )
 VALUES
     (
