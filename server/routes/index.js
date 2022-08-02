@@ -7,7 +7,9 @@ import {
   getCollectReviewProductController,
   signup,
   signin,
+  updateInfoUserController,
 } from '../controllers/index.js';
+import { verifyTokenAndAuthorization } from '../middleware/index.js';
 
 const router = Router();
 
@@ -18,5 +20,6 @@ router.get('/subCategories/:categoryId', getSubCategoriesController);
 router.get('/product/:productId', getProductByIdController);
 router.get('/product/:productId/review', getSingleProductReviewController);
 router.get('/product/:productId/rate', getCollectReviewProductController);
+router.put('/user/:id', verifyTokenAndAuthorization, updateInfoUserController);
 
 export default router;

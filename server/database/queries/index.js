@@ -4,7 +4,7 @@ import {
   getSingleProductReviewByIdQuery,
   getCollectReviewForProductQuery,
 } from './products/index.js';
-import { addUserQuery, checkEmailExistsQuery } from './users/index.js';
+import { addUserQuery, checkEmailExistsQuery, updateInfoUserQuery } from './users/index.js';
 
 export {
   getCategoriesQuery,
@@ -14,4 +14,5 @@ export {
   getCollectReviewForProductQuery,
   addUserQuery,
   checkEmailExistsQuery,
+  updateInfoUserQuery,
 };
