@@ -6,8 +6,8 @@ const updateInfoUserController = async (req, res, next) => {
     const {
       email, name, phone,
     } = await updateUserSchema.validate(req.body, { abortEarly: false });
-    await updateInfoUserQuery(name, email, phone, req.params.id);
-    res.json({ message: 'Your data updated successfully', status: 200 });
+    const { rows } = await updateInfoUserQuery(name, email, phone, req.params.id);
+    res.json({ message: 'Your data updated successfully', status: 200, data: rows[0] });
   } catch (error) {
     if (error.name === 'ValidationError') {
       return next(customizedError(400, error.errors[0]));

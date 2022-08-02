@@ -7,8 +7,8 @@ const updateInfoUserQuery = (name, email, phone, id) => {
         email = $2,
         phone = $3
     WHERE id = $4
-    RETURNING *`,
-    values: [name, email, phone,id],
+    RETURNING id,name,email,phone`,
+    values: [name, email, phone, id],
   };
   return connection.query(sql);
 };
