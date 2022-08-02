@@ -8,6 +8,7 @@ import {
   signup,
   signin,
   updateInfoUserController,
+  getAddressesUserController,
 } from '../controllers/index.js';
 import { verifyTokenAndAuthorization } from '../middleware/index.js';
 
@@ -20,6 +21,7 @@ router.get('/subCategories/:categoryId', getSubCategoriesController);
 router.get('/product/:productId', getProductByIdController);
 router.get('/product/:productId/review', getSingleProductReviewController);
 router.get('/product/:productId/rate', getCollectReviewProductController);
-router.put('/user/:id', verifyTokenAndAuthorization, updateInfoUserController);
+router.put('/user/:id/update', verifyTokenAndAuthorization, updateInfoUserController);
+router.get('/user/:id/address', verifyTokenAndAuthorization, getAddressesUserController);
 
 export default router;
