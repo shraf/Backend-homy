@@ -1,6 +1,14 @@
 import { clientError, serverError } from './error/index.js';
 import { getCategoriesController, getSubCategoriesController } from './categories/index.js';
 import {
+  updateInfoUserController,
+  getAddressesUserController,
+  addUserAddressController,
+  deleteUserAddressController,
+  updateUserAddressController,
+  updateAddressDefaultController,
+} from './users/index.js';
+import {
   getProductByIdController,
   getSingleProductReviewController,
   getCollectReviewProductController,
@@ -18,4 +26,10 @@ export {
   getCollectReviewProductController,
   signup,
   signin,
+  updateInfoUserController,
+  getAddressesUserController,
+  addUserAddressController,
+  deleteUserAddressController,
+  updateUserAddressController,
+  updateAddressDefaultController,
 };
