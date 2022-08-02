@@ -1,6 +1,6 @@
 import { hash } from 'bcrypt';
 import dotenv from 'dotenv';
-import { addUserQuery, checkEmailExistsQuery } from '../../database/queries/index.js';
+import { addNewUserQuery, checkEmailExistsQuery } from '../../database/queries/index.js';
 import { jwtSign, customizedError, signupSchema } from '../../utils/index.js';
 
 dotenv.config();
@@ -14,7 +14,7 @@ const signup = async (req, res, next) => {
       throw customizedError(400, 'Email already exists');
     }
     const hashedPassword = await hash(password, 10);
-    const { rows: data } = await addUserQuery(
+    const { rows: data } = await addNewUserQuery(
       name,
       email,
       phone,
