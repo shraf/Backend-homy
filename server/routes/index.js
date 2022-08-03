@@ -26,14 +26,14 @@ router.get('/categories', getCategoriesController);
 router.get('/subCategories/:categoryId', getSubCategoriesController);
 router.get('/product/super', getSuperDealsController);
 router.get('/product/:productId', getProductByIdController);
-router.post('/product/:productId/review', verifyToken, addReviewProductController);
-router.get('/product/:productId/review', getSingleProductReviewController);
+router.route('/product/:productId/review').get(getSingleProductReviewController)
+  .post(verifyToken, addReviewProductController);
 router.get('/product/:productId/rate', getCollectReviewProductController);
 router.put('/user/:id/update', verifyTokenAndAuthorization, updateInfoUserController);
-router.get('/user/:id/address', verifyTokenAndAuthorization, getAddressesUserController);
-router.post('/user/:id/address', verifyTokenAndAuthorization, addUserAddressController);
-router.delete('/user/:id/address', verifyTokenAndAuthorization, deleteUserAddressController);
-router.put('/user/:id/address', verifyTokenAndAuthorization, updateUserAddressController);
+router.route('/user/:id/address').get(verifyTokenAndAuthorization, getAddressesUserController)
+  .post(verifyTokenAndAuthorization, addUserAddressController)
+  .delete(verifyTokenAndAuthorization, deleteUserAddressController)
+  .put(verifyTokenAndAuthorization, updateUserAddressController);
 router.put('/user/:id/address/default', verifyTokenAndAuthorization, updateAddressDefaultController);
 
 export default router;
