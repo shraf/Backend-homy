@@ -4,6 +4,7 @@ import {
   getSingleProductReviewByIdQuery,
   getCollectReviewForProductQuery,
   getSuperDealsQuery,
+  addReviewProductQuery,
 } from './products/index.js';
 import {
   addNewUserQuery,
@@ -31,4 +32,5 @@ export {
   updateUserAddressQuery,
   updateAddressDefaultQuery,
   getSuperDealsQuery,
+  addReviewProductQuery,
 };
