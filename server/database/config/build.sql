@@ -18,7 +18,8 @@ CREATE TABLE users (
   name VARCHAR(100) NOT NULL,
   email VARCHAR(255) NOT NULL UNIQUE,
   password VARCHAR(255) NOT NULL,
-  phone VARCHAR(40) NOT NULL
+  phone VARCHAR(40) NOT NULL,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE addresses (
@@ -29,6 +30,7 @@ CREATE TABLE addresses (
   block VARCHAR(255) NOT NULL,
   building VARCHAR(255) NOT NULL,
   default_address BOOLEAN DEFAULT FALSE,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   user_id INT,
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
@@ -45,6 +47,7 @@ CREATE TABLE sub_categories (
   id SERIAL PRIMARY KEY,
   name VARCHAR(50) NOT NULL,
   category_id INT,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE CASCADE
 );
 
@@ -60,6 +63,7 @@ CREATE TABLE products (
   brand VARCHAR(255) NOT NULL,
   inStock BOOLEAN DEFAULT TRUE,
   sub_category_id INT NULL,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   category_id INT,
   FOREIGN KEY (sub_category_id) REFERENCES sub_categories(id) ON DELETE CASCADE,
   FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE CASCADE
@@ -71,6 +75,7 @@ CREATE TABLE reviews (
   rate INT NOT NULL,
   user_id INT,
   product_id INT,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
   FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
@@ -80,6 +85,7 @@ CREATE TABLE carts (
   user_id INT,
   product_id INT,
   quantity INT,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
   FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
@@ -88,6 +94,7 @@ CREATE TABLE wishlists (
   id SERIAL PRIMARY KEY,
   user_id INT,
   product_id INT,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
   FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 
@@ -101,7 +108,8 @@ CREATE TABLE guests (
   area VARCHAR(255) NOT NULL,
   street VARCHAR(255) NOT NULL,
   block VARCHAR(255) NOT NULL,
-  building VARCHAR(255) NOT NULL
+  building VARCHAR(255) NOT NULL,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 CREATE TABLE orders (
   id SERIAL PRIMARY KEY,
@@ -112,6 +120,7 @@ CREATE TABLE orders (
   order_number VARCHAR(255) NOT NULL,
   user_id INT NULL,
   guest_id INT NULL,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
   FOREIGN KEY (guest_id) REFERENCES guests(id) ON DELETE CASCADE
 );

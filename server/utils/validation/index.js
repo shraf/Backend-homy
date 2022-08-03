@@ -4,6 +4,7 @@ import updateUserSchema from './updateUserSchema.js';
 import addressSchema from './addressSchema.js';
 import idAddressSchema from './idAddressSchema.js';
 import updateUserAddressSchema from './updateUserAddressSchema.js';
+import reviewSchema from './reviewSchema.js';
 
 export {
   signupSchema,
@@ -12,4 +13,5 @@ export {
   addressSchema,
   idAddressSchema,
   updateUserAddressSchema,
+  reviewSchema,
 };
