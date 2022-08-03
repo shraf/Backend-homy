@@ -12,6 +12,7 @@ import {
   getProductByIdController,
   getSingleProductReviewController,
   getCollectReviewProductController,
+  getSuperDealsController,
 } from './products/index.js';
 import signup from './signup/index.js';
 import signin from './signin/index.js';
@@ -32,4 +33,5 @@ export {
   deleteUserAddressController,
   updateUserAddressController,
   updateAddressDefaultController,
+  getSuperDealsController,
 };
