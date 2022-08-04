@@ -29,7 +29,7 @@ const signin = async (req, res, next) => {
       name: data[0].name,
       phone: data[0].phone,
     };
-    res.cookie('token', token, { httpOnly: true, secure: true }).json({ message: 'You have been successfully logged in', status: 200, data: userData });
+    res.json({ message: 'You have been successfully logged in', status: 200, data: userData, token });
   } catch (error) {
     if (error.name === 'ValidationError') {
       return next(customizedError(400, error.errors[0]));
