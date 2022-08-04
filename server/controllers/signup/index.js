@@ -32,7 +32,7 @@ const signup = async (req, res, next) => {
       name,
       phone,
     };
-    res.cookie('token', token).status(201).json({ message: 'You have been successfully register', status: 201, data: userData });
+    res.cookie('token', token, { httpOnly: true, secure: true }).status(201).json({ message: 'You have been successfully register', status: 201, data: userData });
   } catch (error) {
     if (error.name === 'ValidationError') {
       return next(customizedError(400, error.errors[0]));
