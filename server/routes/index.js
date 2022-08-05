@@ -15,6 +15,7 @@ import {
   updateAddressDefaultController,
   getSuperDealsController,
   addReviewProductController,
+  updateUserPasswordController,
 } from '../controllers/index.js';
 import { verifyToken, verifyTokenAndAuthorization } from '../middleware/index.js';
 
@@ -35,6 +36,7 @@ router.get('/product/:productId', getProductByIdController);
 router.route('/product/:productId/review').get(getSingleProductReviewController)
   .post(verifyToken, addReviewProductController);
 router.get('/product/:productId/rate', getCollectReviewProductController);
+router.put('/user/:id/change-password', verifyTokenAndAuthorization, updateUserPasswordController);
 router.put('/user/:id/update', verifyTokenAndAuthorization, updateInfoUserController);
 router.route('/user/:id/address').get(verifyTokenAndAuthorization, getAddressesUserController)
   .post(verifyTokenAndAuthorization, addUserAddressController)
