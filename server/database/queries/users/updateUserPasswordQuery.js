@@ -1,12 +1,12 @@
 import connection from '../../config/connection.js';
 
-const updateUserPasswordQuery = (newPassword, id) => {
+const updateUserPasswordQuery = (newPassword, email) => {
   const sql = {
     text: `UPDATE users
     SET password= $1
-    WHERE id = $2
+    WHERE email = $2
     RETURNING *`,
-    values: [newPassword, id],
+    values: [newPassword, email],
   };
   return connection.query(sql);
 };

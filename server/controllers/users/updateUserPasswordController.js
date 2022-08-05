@@ -4,7 +4,7 @@ import { passwordSchema, customizedError } from '../../utils/index.js';
 
 const updateUserPasswordController = async (req, res, next) => {
   try {
-    const { email, id } = req.user;
+    const { email } = req.user;
     const { oldPassword, newPassword } = await passwordSchema.validate(
       req.body,
       { abortEarly: false },
@@ -21,7 +21,7 @@ const updateUserPasswordController = async (req, res, next) => {
       throw customizedError(400, 'New password is same with old password');
     }
     const hashedPassword = await hash(newPassword, 10);
-    const { rows: updated } = await updateUserPasswordQuery(hashedPassword, id);
+    const { rows: updated } = await updateUserPasswordQuery(hashedPassword, email);
     res.json({ message: 'update password successfully', status: 200, data: updated[0] });
   } catch (error) {
     if (error.name === 'ValidationError') {
