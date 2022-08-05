@@ -32,7 +32,12 @@ const signup = async (req, res, next) => {
       name,
       phone,
     };
-    res.status(201).json({ message: 'You have been successfully register', status: 201, data: userData,token });
+    res.status(201).json({
+      message: 'You have been successfully register',
+      status: 201,
+      data: userData,
+      token,
+    });
   } catch (error) {
     if (error.name === 'ValidationError') {
       return next(customizedError(400, error.errors[0]));

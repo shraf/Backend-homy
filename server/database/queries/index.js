@@ -15,6 +15,7 @@ import {
   deleteUserAddressQuery,
   updateUserAddressQuery,
   updateAddressDefaultQuery,
+  updateUserPasswordQuery,
 } from './users/index.js';
 
 export {
@@ -33,4 +34,5 @@ export {
   updateAddressDefaultQuery,
   getSuperDealsQuery,
   addReviewProductQuery,
+  updateUserPasswordQuery,
 };

@@ -7,6 +7,7 @@ import {
   deleteUserAddressController,
   updateUserAddressController,
   updateAddressDefaultController,
+  updateUserPasswordController,
 } from './users/index.js';
 import {
   getProductByIdController,
@@ -36,4 +37,5 @@ export {
   updateAddressDefaultController,
   getSuperDealsController,
   addReviewProductController,
+  updateUserPasswordController,
 };

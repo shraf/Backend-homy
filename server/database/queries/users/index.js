@@ -6,6 +6,7 @@ import deleteUserAddressQuery from './deleteUserAddressQuery.js';
 import updateUserAddressQuery from './updateUserAddressQuery.js';
 import updateAddressDefaultQuery from './updateAddressDefaultQuery.js';
 import addNewUserQuery from './addNewUserQuery.js';
+import updateUserPasswordQuery from './updateUserPasswordQuery.js';
 
 export {
   addNewUserQuery,
@@ -16,4 +17,5 @@ export {
   deleteUserAddressQuery,
   updateUserAddressQuery,
   updateAddressDefaultQuery,
+  updateUserPasswordQuery,
 };
