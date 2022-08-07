@@ -22,6 +22,7 @@ import {
   addOrderController,
   getBrandsController,
   getProductsByNameController,
+  getTopSellerProductsController,
 } from '../controllers/index.js';
 import { verifyToken, verifyTokenAndAuthorization } from '../middleware/index.js';
 
@@ -55,4 +56,5 @@ router.get('/single-order', getSingleOrderController);
 router.post('/order', addOrderController);
 router.get('/brands', getBrandsController);
 router.get('/search', getProductsByNameController);
+router.get('/top-seller', getTopSellerProductsController);
 export default router;
