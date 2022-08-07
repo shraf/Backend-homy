@@ -9,9 +9,8 @@ carts,
 wishlists,
 orders,
 reviews,
-guests CASCADE;
-
-
+guests,
+brands CASCADE;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -124,5 +123,11 @@ CREATE TABLE orders (
   createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
   FOREIGN KEY (guest_id) REFERENCES guests(id) ON DELETE CASCADE
+);
+
+CREATE TABLE brands (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  image TEXT NOT NULL
 );
 COMMIT;

@@ -25,6 +25,8 @@ import {
   addOrderController,
 } from './orders/index.js';
 
+import { getBrandsController } from './brands/index.js';
+
 export {
   clientError,
   serverError,
@@ -48,4 +50,5 @@ export {
   getSingleUserOrderController,
   getSingleOrderController,
   addOrderController,
+  getBrandsController,
 };
