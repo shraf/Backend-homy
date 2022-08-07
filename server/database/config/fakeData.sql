@@ -411,6 +411,7 @@ VALUES
         addresses,
         status,
         order_number,
+        payment,
         user_id,
         guest_id
     )
@@ -420,7 +421,18 @@ VALUES
         300,
         '{Kuwait, First Residence Building, Kuwait Street, 2,10}',
         'Pending',
-        'scl245as', 
+        'scl245as',
+        'Kent', 
+        1,
+        NULL 
+    ),
+    (
+        '{{4,10},{1,1},{5,3}}',
+        500,
+        '{Kuwait, First Residence Building, Kuwait Street, 2,10}',
+        'Pending',
+        'scl245affs',
+        'Kent', 
         1,
         NULL 
     ),
@@ -430,6 +442,7 @@ VALUES
         '{Kuwait,First Residence Building, Kuwait Street, 3,11}',
         'Pending',
         'asv4524eg', 
+        'Kent',
         NULL,
         2
     );

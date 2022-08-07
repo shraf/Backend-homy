@@ -18,6 +18,12 @@ import {
 } from './products/index.js';
 import signup from './signup/index.js';
 import signin from './signin/index.js';
+import {
+  getUserOrdersController,
+  getSingleUserOrderController,
+  getSingleOrderController,
+  addOrderController,
+} from './orders/index.js';
 
 export {
   clientError,
@@ -38,4 +44,8 @@ export {
   getSuperDealsController,
   addReviewProductController,
   updateUserPasswordController,
+  getUserOrdersController,
+  getSingleUserOrderController,
+  getSingleOrderController,
+  addOrderController,
 };

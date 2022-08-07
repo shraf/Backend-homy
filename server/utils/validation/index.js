@@ -6,6 +6,8 @@ import idAddressSchema from './idAddressSchema.js';
 import updateUserAddressSchema from './updateUserAddressSchema.js';
 import reviewSchema from './reviewSchema.js';
 import passwordSchema from './passwordSchema.js';
+import singleOrderSchema from './singleOrderSchema.js';
+import orderSchema from './orderSchema.js';
 
 export {
   signupSchema,
@@ -16,4 +18,6 @@ export {
   updateUserAddressSchema,
   reviewSchema,
   passwordSchema,
+  singleOrderSchema,
+  orderSchema,
 };

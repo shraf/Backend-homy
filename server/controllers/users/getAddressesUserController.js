@@ -1,6 +1,6 @@
 import { getUserAddressesQuery } from '../../database/queries/index.js';
 
-const getAddressesUserController = async (req, res, next) => {
+const getUserOrdersController = async (req, res, next) => {
   try {
     const { id } = req.user;
     const { rows } = await getUserAddressesQuery(id);
@@ -10,4 +10,4 @@ const getAddressesUserController = async (req, res, next) => {
   }
 };
 
-export default getAddressesUserController;
+export default getUserOrdersController;
