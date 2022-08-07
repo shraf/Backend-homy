@@ -6,6 +6,7 @@ import {
   getCollectReviewForProductQuery,
   getSuperDealsQuery,
   addReviewProductQuery,
+  getProductsQuery,
 } from './products/index.js';
 
 import {
@@ -58,4 +59,5 @@ export {
   addGuestOrderQuery,
   addUserOrderQuery,
   getBrandsQuery,
+  getProductsQuery,
 };

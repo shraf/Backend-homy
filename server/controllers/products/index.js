@@ -3,6 +3,7 @@ import getSingleProductReviewController from './getSingleProductReviewController
 import getCollectReviewProductController from './getCollectReviewProductController.js';
 import getSuperDealsController from './getSuperDealsController.js';
 import addReviewProductController from './addReviewProductController.js';
+import getProductsByNameController from './getProductsByNameController.js';
 
 export {
   getProductByIdController,
@@ -10,4 +11,5 @@ export {
   getCollectReviewProductController,
   getSuperDealsController,
   addReviewProductController,
+  getProductsByNameController,
 };
