@@ -16,6 +16,7 @@ import {
   updateUserAddressQuery,
   updateAddressDefaultQuery,
   updateUserPasswordQuery,
+  getUserOrdersQuery,
 } from './users/index.js';
 
 export {
@@ -35,4 +36,5 @@ export {
   getSuperDealsQuery,
   addReviewProductQuery,
   updateUserPasswordQuery,
+  getUserOrdersQuery,
 };

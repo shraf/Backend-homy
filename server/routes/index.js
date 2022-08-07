@@ -16,6 +16,7 @@ import {
   getSuperDealsController,
   addReviewProductController,
   updateUserPasswordController,
+  getUserOrdersController,
 } from '../controllers/index.js';
 import { verifyToken, verifyTokenAndAuthorization } from '../middleware/index.js';
 
@@ -43,5 +44,6 @@ router.route('/user/:id/address').get(verifyTokenAndAuthorization, getAddressesU
   .delete(verifyTokenAndAuthorization, deleteUserAddressController)
   .put(verifyTokenAndAuthorization, updateUserAddressController);
 router.put('/user/:id/address/default', verifyTokenAndAuthorization, updateAddressDefaultController);
+router.get('/user/:id/orders', verifyTokenAndAuthorization, getUserOrdersController);
 
 export default router;

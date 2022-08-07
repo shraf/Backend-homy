@@ -8,6 +8,7 @@ import {
   updateUserAddressController,
   updateAddressDefaultController,
   updateUserPasswordController,
+  getUserOrdersController,
 } from './users/index.js';
 import {
   getProductByIdController,
@@ -38,4 +39,5 @@ export {
   getSuperDealsController,
   addReviewProductController,
   updateUserPasswordController,
+  getUserOrdersController,
 };
