@@ -28,6 +28,8 @@ import {
 import {
   getUserOrdersQuery,
   getSingleOrderQuery,
+  addGuestOrderQuery,
+  addUserOrderQuery,
 } from './orders/index.js';
 
 export {
@@ -51,4 +53,6 @@ export {
   checkGuestEmailExistsQuery,
   getSingleOrderQuery,
   addGuestQuery,
+  addGuestOrderQuery,
+  addUserOrderQuery,
 };
