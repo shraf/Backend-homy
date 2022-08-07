@@ -331,7 +331,7 @@ VALUES
         2
     );
  
- INSERT INTO
+INSERT INTO
     carts(
     user_id ,
     product_id,
@@ -353,7 +353,7 @@ VALUES
         3,
         5
     );
-    INSERT INTO
+INSERT INTO
     wishlists(
         user_id,
         product_id
@@ -404,7 +404,7 @@ VALUES
         5,
         11
     );
-    INSERT INTO
+INSERT INTO
     orders(
         products,
         amount,
@@ -445,4 +445,31 @@ VALUES
         'Kent',
         NULL,
         2
+    );
+
+INSERT INTO
+    brands(
+      name,
+      image
+    )
+VALUES
+    (
+        'CANON',
+        'https://global.canon/00cmn/img/common/ogp-logo.png'
+    ),
+    (
+         'SAMSUNG',
+        'https://bsmedia.business-standard.com/_media/bs/img/about-page/1562575696.png'
+    ),
+    (
+         'MESTONIX',
+        'https://rndproductsbd.com/assets/images/cl_logo3.png'
+    ),
+    (
+        'SONY',
+        'https://www.sony.co.jp/SonyInfo/CorporateInfo/img/sony-og.jpg'
+    ),
+    (
+         'Xiaomi',
+        'https://www.91-cdn.com/pricebaba-blogimages/wp-content/uploads/2021/09/Xiaomi-Logo.png'
     );

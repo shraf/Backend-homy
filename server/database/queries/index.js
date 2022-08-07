@@ -32,6 +32,8 @@ import {
   addUserOrderQuery,
 } from './orders/index.js';
 
+import { getBrandsQuery } from './brands/index.js';
+
 export {
   getCategoriesQuery,
   getSubCategoriesQuery,
@@ -55,4 +57,5 @@ export {
   addGuestQuery,
   addGuestOrderQuery,
   addUserOrderQuery,
+  getBrandsQuery,
 };
