@@ -8,8 +8,6 @@ import {
   updateUserAddressController,
   updateAddressDefaultController,
   updateUserPasswordController,
-  getUserOrdersController,
-  getSingleUserOrderController,
 } from './users/index.js';
 import {
   getProductByIdController,
@@ -20,6 +18,11 @@ import {
 } from './products/index.js';
 import signup from './signup/index.js';
 import signin from './signin/index.js';
+import {
+  getUserOrdersController,
+  getSingleUserOrderController,
+  getSingleOrderController,
+} from './orders/index.js';
 
 export {
   clientError,
@@ -42,4 +45,5 @@ export {
   updateUserPasswordController,
   getUserOrdersController,
   getSingleUserOrderController,
+  getSingleOrderController,
 };

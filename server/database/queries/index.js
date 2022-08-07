@@ -1,4 +1,5 @@
 import { getCategoriesQuery, getSubCategoriesQuery } from './categories/index.js';
+
 import {
   getProductByIdQuery,
   getSingleProductReviewByIdQuery,
@@ -6,6 +7,7 @@ import {
   getSuperDealsQuery,
   addReviewProductQuery,
 } from './products/index.js';
+
 import {
   addNewUserQuery,
   checkEmailExistsQuery,
@@ -16,9 +18,16 @@ import {
   updateUserAddressQuery,
   updateAddressDefaultQuery,
   updateUserPasswordQuery,
-  getUserOrdersQuery,
-  getSingleUserOrderQuery,
 } from './users/index.js';
+
+import {
+  checkGuestEmailExistsQuery,
+} from './guests/index.js';
+
+import {
+  getUserOrdersQuery,
+  getSingleOrderQuery,
+} from './orders/index.js';
 
 export {
   getCategoriesQuery,
@@ -38,5 +47,6 @@ export {
   addReviewProductQuery,
   updateUserPasswordQuery,
   getUserOrdersQuery,
-  getSingleUserOrderQuery,
+  checkGuestEmailExistsQuery,
+  getSingleOrderQuery,
 };

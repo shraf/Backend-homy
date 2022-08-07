@@ -7,8 +7,6 @@ import updateUserAddressQuery from './updateUserAddressQuery.js';
 import updateAddressDefaultQuery from './updateAddressDefaultQuery.js';
 import addNewUserQuery from './addNewUserQuery.js';
 import updateUserPasswordQuery from './updateUserPasswordQuery.js';
-import getUserOrdersQuery from './getUserOrdersQuery.js';
-import getSingleUserOrderQuery from './getSingleUserOrderQuery.js';
 
 export {
   addNewUserQuery,
@@ -20,6 +18,4 @@ export {
   updateUserAddressQuery,
   updateAddressDefaultQuery,
   updateUserPasswordQuery,
-  getUserOrdersQuery,
-  getSingleUserOrderQuery,
 };

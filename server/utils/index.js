@@ -8,6 +8,7 @@ import {
   updateUserAddressSchema,
   reviewSchema,
   passwordSchema,
+  singleOrderSchema,
 } from './validation/index.js';
 import { jwtSign, jwtVerify } from './jwt/index.js';
 
@@ -23,4 +24,5 @@ export {
   updateUserAddressSchema,
   reviewSchema,
   passwordSchema,
+  singleOrderSchema,
 };
