@@ -9,6 +9,7 @@ import {
   reviewSchema,
   passwordSchema,
   singleOrderSchema,
+  orderSchema,
 } from './validation/index.js';
 import { jwtSign, jwtVerify } from './jwt/index.js';
 
@@ -25,4 +26,5 @@ export {
   reviewSchema,
   passwordSchema,
   singleOrderSchema,
+  orderSchema,
 };
