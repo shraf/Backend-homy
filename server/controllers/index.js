@@ -15,6 +15,7 @@ import {
   getCollectReviewProductController,
   getSuperDealsController,
   addReviewProductController,
+  getProductsByNameController,
 } from './products/index.js';
 import signup from './signup/index.js';
 import signin from './signin/index.js';
@@ -51,4 +52,5 @@ export {
   getSingleOrderController,
   addOrderController,
   getBrandsController,
+  getProductsByNameController,
 };
