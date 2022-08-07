@@ -19,7 +19,6 @@ import {
   getUserOrdersController,
   getSingleUserOrderController,
   getSingleOrderController,
-  addOrderController,
 } from '../controllers/index.js';
 import { verifyToken, verifyTokenAndAuthorization } from '../middleware/index.js';
 
@@ -50,6 +49,5 @@ router.put('/user/:id/address/default', verifyTokenAndAuthorization, updateAddre
 router.get('/user/:id/orders', verifyTokenAndAuthorization, getUserOrdersController);
 router.get('/single-order/:orderNumber', verifyToken, getSingleUserOrderController);
 router.get('/single-order', getSingleOrderController);
-router.post('/order', addOrderController);
 
 export default router;

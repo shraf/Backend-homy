@@ -22,6 +22,7 @@ import {
 
 import {
   checkGuestEmailExistsQuery,
+  addGuestQuery,
 } from './guests/index.js';
 
 import {
@@ -49,4 +50,5 @@ export {
   getUserOrdersQuery,
   checkGuestEmailExistsQuery,
   getSingleOrderQuery,
+  addGuestQuery,
 };

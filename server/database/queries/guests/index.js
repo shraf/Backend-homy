@@ -1,7 +1,7 @@
-import checkGuestEmailExistsQuery from './checkGusetEmailExistsQuery.js';
-import getSingleGuestOrderQuery from './getSingleGuestOrderQuery.js';
+import checkGuestEmailExistsQuery from './checkGuestEmailExistsQuery.js';
+import addGuestQuery from './addGuestQuery.js';
 
 export {
   checkGuestEmailExistsQuery,
-  getSingleGuestOrderQuery,
+  addGuestQuery,
 };

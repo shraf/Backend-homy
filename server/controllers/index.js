@@ -22,7 +22,6 @@ import {
   getUserOrdersController,
   getSingleUserOrderController,
   getSingleOrderController,
-  addOrderController,
 } from './orders/index.js';
 
 export {
@@ -47,5 +46,4 @@ export {
   getUserOrdersController,
   getSingleUserOrderController,
   getSingleOrderController,
-  addOrderController,
 };
