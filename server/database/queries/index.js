@@ -17,6 +17,7 @@ import {
   updateAddressDefaultQuery,
   updateUserPasswordQuery,
   getUserOrdersQuery,
+  getSingleUserOrderQuery,
 } from './users/index.js';
 
 export {
@@ -37,4 +38,5 @@ export {
   addReviewProductQuery,
   updateUserPasswordQuery,
   getUserOrdersQuery,
+  getSingleUserOrderQuery,
 };

@@ -6,6 +6,7 @@ import updateUserAddressController from './updateUserAddressController.js';
 import updateAddressDefaultController from './updateAddressDefaultController.js';
 import updateUserPasswordController from './updateUserPasswordController.js';
 import getUserOrdersController from './getUserOrdersController.js';
+import getSingleUserOrderController from './getSingleUserOrderController.js';
 
 export {
   updateInfoUserController,
@@ -16,4 +17,5 @@ export {
   updateAddressDefaultController,
   updateUserPasswordController,
   getUserOrdersController,
+  getSingleUserOrderController,
 };

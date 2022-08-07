@@ -17,6 +17,7 @@ import {
   addReviewProductController,
   updateUserPasswordController,
   getUserOrdersController,
+  getSingleUserOrderController,
 } from '../controllers/index.js';
 import { verifyToken, verifyTokenAndAuthorization } from '../middleware/index.js';
 
@@ -45,5 +46,6 @@ router.route('/user/:id/address').get(verifyTokenAndAuthorization, getAddressesU
   .put(verifyTokenAndAuthorization, updateUserAddressController);
 router.put('/user/:id/address/default', verifyTokenAndAuthorization, updateAddressDefaultController);
 router.get('/user/:id/orders', verifyTokenAndAuthorization, getUserOrdersController);
+router.get('/single-order/:orderNumber', getSingleUserOrderController);
 
 export default router;
