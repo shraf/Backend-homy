@@ -4,6 +4,7 @@ import getCollectReviewProductController from './getCollectReviewProductControll
 import getSuperDealsController from './getSuperDealsController.js';
 import addReviewProductController from './addReviewProductController.js';
 import getProductsByNameController from './getProductsByNameController.js';
+import getTopSellerProductsController from './getTopSellerProductsController.js';
 
 export {
   getProductByIdController,
@@ -12,4 +13,5 @@ export {
   getSuperDealsController,
   addReviewProductController,
   getProductsByNameController,
+  getTopSellerProductsController,
 };

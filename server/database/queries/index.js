@@ -31,6 +31,7 @@ import {
   getSingleOrderQuery,
   addGuestOrderQuery,
   addUserOrderQuery,
+  getProductsFromOrderQuery,
 } from './orders/index.js';
 
 import { getBrandsQuery } from './brands/index.js';
@@ -60,4 +61,5 @@ export {
   addUserOrderQuery,
   getBrandsQuery,
   getProductsQuery,
+  getProductsFromOrderQuery,
 };
