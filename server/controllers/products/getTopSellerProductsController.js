@@ -1,30 +1,57 @@
-import { getProductsFromOrderQuery } from "../../database/queries/index.js";
+import { getProductsFromOrderQuery } from '../../database/queries/index.js';
 
 const getTopSellerProductsController = async (req, res, next) => {
   try {
     const { rows } = await getProductsFromOrderQuery();
     const product = rows.map(({ products }) => products);
-    let result = [];
-    let result1 =[]
-    for (let i = 0; i < product.length; i += 1) {
-      for (let j = 0; j < product[i].length; j += 1) {
-        const obj = {};
-        if (result.includes(product[i][j][0])) {
-            obj.productId = product[i][j][0];
-            obj.quantity = product[i][j][1];
-            result1.push(obj);
-        } else {
-          obj.productId = product[i][j][0];
-          obj.quantity = product[i][j][1];
-          result.push(product[i][j][0]);
-          result1.push(obj);
-        }
-      }
+    let products = [];
+    // eslint-disable-next-line no-restricted-syntax
+    for (const element of product) {
+      products = [...products, ...element];
     }
-    const result2 = result1.filter(({ productId, quantity }) => productId === result1[0].productId);
-    console.log(result2);
-    console.log(result1);
-    res.send(rows);
+    const count = {};
+    products.forEach((i) => {
+      // eslint-disable-next-line radix
+      count[i[0]] = (count[i[0]] || 0) + parseInt(i[1]);
+    });
+    const findHighest = (obj, num = 1) => {
+      const requiredObj = {};
+      if (num > Object.keys(obj).length) {
+        return false;
+      }
+      Object.keys(obj)
+        .sort((a, b) => obj[b] - obj[a])
+        .forEach((key, ind) => {
+          if (ind < num) {
+            requiredObj[key] = obj[key];
+          }
+        });
+      return requiredObj;
+    };
+    if (Object.keys(count).length >= 20) {
+      const topSellerProducts = findHighest(count, 20);
+      res.json({
+        message: 'Successfully fetched 20 top seller products',
+        status: 200,
+        data: topSellerProducts,
+      });
+    } else if (
+      Object.keys(count).length >= 10 && Object.keys(count).length < 20
+    ) {
+      const topSellerProducts = findHighest(count, 10);
+      res.status(200).json({
+        message: 'Successfully fetched 10 top seller products',
+        status: 200,
+        data: topSellerProducts,
+      });
+    } else {
+      const topSellerProducts = findHighest(count, Object.keys(count).length);
+      res.status(200).json({
+        message: 'Successfully fetched less than 10 top seller products',
+        status: 200,
+        data: topSellerProducts,
+      });
+    }
   } catch (error) {
     next(error);
   }
