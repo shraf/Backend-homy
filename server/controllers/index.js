@@ -35,6 +35,12 @@ import {
   deleteProductFromUserCartsController,
 } from './carts/index.js';
 
+import {
+  addProductsToUserWishlistsController,
+  getUserWishlistsController,
+  deleteProductFromUserWishlistsController,
+} from './wishlists/index.js';
+
 export {
   clientError,
   serverError,
@@ -64,4 +70,7 @@ export {
   addProductsToUserCartsController,
   getUserCartsController,
   deleteProductFromUserCartsController,
+  addProductsToUserWishlistsController,
+  getUserWishlistsController,
+  deleteProductFromUserWishlistsController,
 };

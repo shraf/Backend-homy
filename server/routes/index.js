@@ -26,6 +26,9 @@ import {
   getUserCartsController,
   addProductsToUserCartsController,
   deleteProductFromUserCartsController,
+  addProductsToUserWishlistsController,
+  getUserWishlistsController,
+  deleteProductFromUserWishlistsController,
 } from '../controllers/index.js';
 import { verifyToken, verifyTokenAndAuthorization } from '../middleware/index.js';
 
@@ -64,4 +67,7 @@ router.get('/top-seller', getTopSellerProductsController);
 router.route('/user/:id/cart').get(verifyTokenAndAuthorization, getUserCartsController)
   .post(verifyTokenAndAuthorization, addProductsToUserCartsController);
 router.delete('/user/:id/cart/:productId', verifyTokenAndAuthorization, deleteProductFromUserCartsController);
+router.route('/user/:id/wishlist').get(verifyTokenAndAuthorization, getUserWishlistsController)
+  .post(verifyTokenAndAuthorization, addProductsToUserWishlistsController);
+router.delete('/user/:id/wishlist/:productId', verifyTokenAndAuthorization, deleteProductFromUserWishlistsController);
 export default router;

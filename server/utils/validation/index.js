@@ -9,6 +9,7 @@ import passwordSchema from './passwordSchema.js';
 import singleOrderSchema from './singleOrderSchema.js';
 import orderSchema from './orderSchema.js';
 import cartsSchema from './cartsSchema.js';
+import wishlistsSchema from './wishlistsSchema.js';
 
 export {
   signupSchema,
@@ -22,4 +23,5 @@ export {
   singleOrderSchema,
   orderSchema,
   cartsSchema,
+  wishlistsSchema,
 };

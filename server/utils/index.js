@@ -11,6 +11,7 @@ import {
   singleOrderSchema,
   orderSchema,
   cartsSchema,
+  wishlistsSchema,
 } from './validation/index.js';
 import { jwtSign, jwtVerify } from './jwt/index.js';
 
@@ -29,4 +30,5 @@ export {
   singleOrderSchema,
   orderSchema,
   cartsSchema,
+  wishlistsSchema,
 };
