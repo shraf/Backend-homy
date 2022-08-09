@@ -7,6 +7,7 @@ import {
   getSuperDealsQuery,
   addReviewProductQuery,
   getProductsQuery,
+  getRecommendedProductQuery,
 } from './products/index.js';
 
 import {
@@ -46,7 +47,7 @@ import {
 import {
   getUserWishlistsQuery,
   deleteProductFromUserWishlistsQuery,
-  addProductToUserWishlistsQuery
+  addProductToUserWishlistsQuery,
 } from './wishlists/index.js';
 
 export {
@@ -82,4 +83,5 @@ export {
   getUserWishlistsQuery,
   deleteProductFromUserWishlistsQuery,
   addProductToUserWishlistsQuery,
+  getRecommendedProductQuery,
 };

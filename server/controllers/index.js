@@ -17,6 +17,7 @@ import {
   addReviewProductController,
   getProductsByNameController,
   getTopSellerProductsController,
+  getRecommendedProductController,
 } from './products/index.js';
 import signup from './signup/index.js';
 import signin from './signin/index.js';
@@ -73,4 +74,5 @@ export {
   addProductsToUserWishlistsController,
   getUserWishlistsController,
   deleteProductFromUserWishlistsController,
+  getRecommendedProductController,
 };
