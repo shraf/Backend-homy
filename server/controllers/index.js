@@ -29,6 +29,12 @@ import {
 
 import { getBrandsController } from './brands/index.js';
 
+import {
+  addProductsToUserCartsController,
+  getUserCartsController,
+  deleteProductFromUserCartsController,
+} from './carts/index.js';
+
 export {
   clientError,
   serverError,
@@ -55,4 +61,7 @@ export {
   getBrandsController,
   getProductsByNameController,
   getTopSellerProductsController,
+  addProductsToUserCartsController,
+  getUserCartsController,
+  deleteProductFromUserCartsController,
 };
