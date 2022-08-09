@@ -23,6 +23,9 @@ import {
   getBrandsController,
   getProductsByNameController,
   getTopSellerProductsController,
+  getUserCartsController,
+  addProductsToUserCartsController,
+  deleteProductFromUserCartsController,
 } from '../controllers/index.js';
 import { verifyToken, verifyTokenAndAuthorization } from '../middleware/index.js';
 
@@ -45,7 +48,8 @@ router.route('/product/:productId/review').get(getSingleProductReviewController)
 router.get('/product/:productId/rate', getCollectReviewProductController);
 router.put('/user/:id/change-password', verifyTokenAndAuthorization, updateUserPasswordController);
 router.put('/user/:id/update', verifyTokenAndAuthorization, updateInfoUserController);
-router.route('/user/:id/address').get(verifyTokenAndAuthorization, getAddressesUserController)
+router.route('/user/:id/address')
+  .get(verifyTokenAndAuthorization, getAddressesUserController)
   .post(verifyTokenAndAuthorization, addUserAddressController)
   .put(verifyTokenAndAuthorization, updateUserAddressController);
 router.delete('/user/:id/address/:addressId', verifyTokenAndAuthorization, deleteUserAddressController);
@@ -57,4 +61,7 @@ router.post('/order', addOrderController);
 router.get('/brands', getBrandsController);
 router.get('/search', getProductsByNameController);
 router.get('/top-seller', getTopSellerProductsController);
+router.route('/user/:id/cart').get(verifyTokenAndAuthorization, getUserCartsController)
+  .post(verifyTokenAndAuthorization, addProductsToUserCartsController);
+router.delete('/user/:id/cart/:productId', verifyTokenAndAuthorization, deleteProductFromUserCartsController);
 export default router;

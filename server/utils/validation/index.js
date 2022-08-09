@@ -8,6 +8,7 @@ import reviewSchema from './reviewSchema.js';
 import passwordSchema from './passwordSchema.js';
 import singleOrderSchema from './singleOrderSchema.js';
 import orderSchema from './orderSchema.js';
+import cartsSchema from './cartsSchema.js';
 
 export {
   signupSchema,
@@ -20,4 +21,5 @@ export {
   passwordSchema,
   singleOrderSchema,
   orderSchema,
+  cartsSchema,
 };
