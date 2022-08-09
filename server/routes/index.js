@@ -61,7 +61,7 @@ router.post('/order', addOrderController);
 router.get('/brands', getBrandsController);
 router.get('/search', getProductsByNameController);
 router.get('/top-seller', getTopSellerProductsController);
-router.route('/user/cart/:id').get(verifyTokenAndAuthorization, getUserCartsController)
+router.route('/user/:id/cart').get(verifyTokenAndAuthorization, getUserCartsController)
   .post(verifyTokenAndAuthorization, addProductsToUserCartsController);
-router.delete('/user/cart/:id/:productId', verifyTokenAndAuthorization, deleteProductFromUserCartsController);
+router.delete('/user/:id/cart/:productId', verifyTokenAndAuthorization, deleteProductFromUserCartsController);
 export default router;
