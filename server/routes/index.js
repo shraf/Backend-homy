@@ -52,7 +52,7 @@ router.route('/user/:id/address').get(verifyTokenAndAuthorization, getAddressesU
 router.put('/user/:id/address/default', verifyTokenAndAuthorization, updateAddressDefaultController);
 router.get('/user/:id/orders', verifyTokenAndAuthorization, getUserOrdersController);
 router.get('/single-order/:orderNumber', verifyToken, getSingleUserOrderController);
-router.get('/single-order', getSingleOrderController);
+router.post('/single-order', getSingleOrderController);
 router.post('/order', addOrderController);
 router.get('/brands', getBrandsController);
 router.get('/search', getProductsByNameController);
