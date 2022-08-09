@@ -39,6 +39,8 @@ import { getBrandsQuery } from './brands/index.js';
 import {
   getUserCartsQuery,
   deleteProductFromUserCartsQuery,
+  addProductToUserCartsQuery,
+  updateProductQuantityQuery,
 } from './carts/index.js';
 
 export {
@@ -69,4 +71,6 @@ export {
   getProductsFromOrderQuery,
   getUserCartsQuery,
   deleteProductFromUserCartsQuery,
+  addProductToUserCartsQuery,
+  updateProductQuantityQuery,
 };
