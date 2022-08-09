@@ -51,8 +51,8 @@ router.put('/user/:id/update', verifyTokenAndAuthorization, updateInfoUserContro
 router.route('/user/:id/address')
   .get(verifyTokenAndAuthorization, getAddressesUserController)
   .post(verifyTokenAndAuthorization, addUserAddressController)
-  .delete(verifyTokenAndAuthorization, deleteUserAddressController)
   .put(verifyTokenAndAuthorization, updateUserAddressController);
+router.delete('/user/:id/address/:addressId', verifyTokenAndAuthorization, deleteUserAddressController);
 router.put('/user/:id/address/default', verifyTokenAndAuthorization, updateAddressDefaultController);
 router.get('/user/:id/orders', verifyTokenAndAuthorization, getUserOrdersController);
 router.get('/single-order/:orderNumber', verifyToken, getSingleUserOrderController);
