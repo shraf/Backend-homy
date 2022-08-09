@@ -43,6 +43,12 @@ import {
   updateProductQuantityQuery,
 } from './carts/index.js';
 
+import {
+  getUserWishlistsQuery,
+  deleteProductFromUserWishlistsQuery,
+  addProductToUserWishlistsQuery
+} from './wishlists/index.js';
+
 export {
   getCategoriesQuery,
   getSubCategoriesQuery,
@@ -73,4 +79,7 @@ export {
   deleteProductFromUserCartsQuery,
   addProductToUserCartsQuery,
   updateProductQuantityQuery,
+  getUserWishlistsQuery,
+  deleteProductFromUserWishlistsQuery,
+  addProductToUserWishlistsQuery,
 };

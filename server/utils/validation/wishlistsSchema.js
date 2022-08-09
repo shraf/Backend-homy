@@ -2,8 +2,8 @@ import {
   object, number, array, string,
 } from 'yup';
 
-const cartsSchema = object({
-  carts: array()
+const wishlistsSchema = object({
+  wishlists: array()
     .of(
       object().shape({
         id: number().required('Product id is required'),
@@ -18,10 +18,10 @@ const cartsSchema = object({
         inStock: Boolean(),
         createdAt: string(),
         category_id: number(),
-        quantity: number().required('Quantity is required'),
+        quantity: number(),
       }),
     )
-    .required('cart is required'),
+    .required('wishlist is required'),
 });
 
-export default cartsSchema;
+export default wishlistsSchema;
