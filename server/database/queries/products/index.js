@@ -4,6 +4,7 @@ import getCollectReviewForProductQuery from './getCollectReviewForProductQuery.j
 import getSuperDealsQuery from './getSuperDealsQuery.js';
 import addReviewProductQuery from './addReviewProductQuery.js';
 import getProductsQuery from './getProductsQuery.js';
+import getRecommendedProductQuery from './getRecommendedProductQuery.js';
 
 export {
   getProductByIdQuery,
@@ -12,4 +13,6 @@ export {
   getSuperDealsQuery,
   addReviewProductQuery,
   getProductsQuery,
+  getRecommendedProductQuery,
+
 };

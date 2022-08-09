@@ -29,6 +29,7 @@ import {
   addProductsToUserWishlistsController,
   getUserWishlistsController,
   deleteProductFromUserWishlistsController,
+  getRecommendedProductController,
 } from '../controllers/index.js';
 import { verifyToken, verifyTokenAndAuthorization } from '../middleware/index.js';
 
@@ -70,4 +71,5 @@ router.delete('/user/:id/cart/:productId', verifyTokenAndAuthorization, deletePr
 router.route('/user/:id/wishlist').get(verifyTokenAndAuthorization, getUserWishlistsController)
   .post(verifyTokenAndAuthorization, addProductsToUserWishlistsController);
 router.delete('/user/:id/wishlist/:productId', verifyTokenAndAuthorization, deleteProductFromUserWishlistsController);
+router.get('/products/:categoriesId/recommended', getRecommendedProductController);
 export default router;
