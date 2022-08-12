@@ -19,7 +19,6 @@ const resetPasswordController = async (req, res, next) => {
     if (rows.length === 0) {
       throw customizedError(400, 'We could not find a match for this link');
     }
-    console.log(rows[0]);
     const hashPassword = await hash(newPassword, 10);
     await updateUserResetPasswordQuery(hashPassword, rows[0].id);
     res.json({ status: 200, message: 'Password updated' });

@@ -19,7 +19,6 @@ const sendEmail = async (email, token) => {
     to: email,
     subject: 'Reset password requested',
     html: `<h1>You can now reset password </h1>
-    <p>${token}</p>
     <p>This link will expire in 10 minutes</p>
     Click <a href=${link}>here</a> to reset your password`,
   });

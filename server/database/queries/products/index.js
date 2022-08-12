@@ -5,6 +5,12 @@ import getSuperDealsQuery from './getSuperDealsQuery.js';
 import addReviewProductQuery from './addReviewProductQuery.js';
 import getProductsQuery from './getProductsQuery.js';
 import getRecommendedProductQuery from './getRecommendedProductQuery.js';
+import getAllProductsQuery from './getAllProductsQuery.js';
+import getProductsByCategoryIdQuery from './getProductsByCategoryIdQuery.js';
+import getProductsByCategoryIdAndSubCategoryQuery from './getProductsByCategoryIdAndSubCategoryQuery.js';
+import getProductsByCategoryIdAndBrandsQuery from './getProductsByCategoryIdAndBrandsQuery.js';
+import getProductsByCategoryIdAndSubCategoryAndBrandsQuery from './getProductsByCategoryIdAndSubCategoryAndBrandsQuery.js';
+import getProductsByPlaceQuery from './getProductsByPlaceQuery.js';
 
 export {
   getProductByIdQuery,
@@ -14,5 +20,10 @@ export {
   addReviewProductQuery,
   getProductsQuery,
   getRecommendedProductQuery,
-
+  getAllProductsQuery,
+  getProductsByCategoryIdQuery,
+  getProductsByCategoryIdAndSubCategoryQuery,
+  getProductsByCategoryIdAndBrandsQuery,
+  getProductsByCategoryIdAndSubCategoryAndBrandsQuery,
+  getProductsByPlaceQuery,
 };
