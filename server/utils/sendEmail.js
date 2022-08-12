@@ -13,7 +13,7 @@ const sendEmail = async (email, token) => {
       rejectUnauthorized: false,
     },
   });
-  const link = 'https://magnificent-hamster-8a7ccb.netlify.app/'
+  const link = `https://magnificent-hamster-8a7ccb.netlify.app/reset-password/${token}`;
   await transporter.sendMail({
     from: process.env.EMAIL,
     to: email,
@@ -21,7 +21,7 @@ const sendEmail = async (email, token) => {
     html: `<h1>You can now reset password </h1>
     <p>${token}</p>
     <p>This link will expire in 10 minutes</p>
-    <span>https://magnificent-hamster-8a7ccb.netlify.app</span>
+    <span>${link}</span>
     Click <a href="${link}">here</a> to reset your password`,
   });
 };
