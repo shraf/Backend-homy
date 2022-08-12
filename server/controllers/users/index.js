@@ -5,6 +5,8 @@ import deleteUserAddressController from './deleteUserAddressController.js';
 import updateUserAddressController from './updateUserAddressController.js';
 import updateAddressDefaultController from './updateAddressDefaultController.js';
 import updateUserPasswordController from './updateUserPasswordController.js';
+import forgetPasswordController from './forgetPasswordController.js';
+import resetPasswordController from './resetPasswordController.js';
 
 export {
   updateInfoUserController,
@@ -14,4 +16,6 @@ export {
   updateUserAddressController,
   updateAddressDefaultController,
   updateUserPasswordController,
+  forgetPasswordController,
+  resetPasswordController,
 };

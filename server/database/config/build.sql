@@ -18,6 +18,7 @@ CREATE TABLE users (
   email VARCHAR(255) NOT NULL UNIQUE,
   password VARCHAR(255) NOT NULL,
   phone VARCHAR(40) NOT NULL,
+  reset_link TEXT,
   createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 

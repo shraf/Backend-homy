@@ -7,6 +7,9 @@ import updateUserAddressQuery from './updateUserAddressQuery.js';
 import updateAddressDefaultQuery from './updateAddressDefaultQuery.js';
 import addNewUserQuery from './addNewUserQuery.js';
 import updateUserPasswordQuery from './updateUserPasswordQuery.js';
+import updateUserResetQuery from './updateUserResetQuery.js';
+import checkUserByResetLinkQuery from './checkUserByResetLinkQuery.js';
+import updateUserResetPasswordQuery from './updateUserResetPasswordQuery.js';
 
 export {
   addNewUserQuery,
@@ -18,4 +21,7 @@ export {
   updateUserAddressQuery,
   updateAddressDefaultQuery,
   updateUserPasswordQuery,
+  updateUserResetQuery,
+  checkUserByResetLinkQuery,
+  updateUserResetPasswordQuery,
 };

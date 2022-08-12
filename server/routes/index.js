@@ -30,6 +30,9 @@ import {
   getUserWishlistsController,
   deleteProductFromUserWishlistsController,
   getRecommendedProductController,
+  getProductsFilteredController,
+  forgetPasswordController,
+  resetPasswordController,
 } from '../controllers/index.js';
 import { verifyToken, verifyTokenAndAuthorization } from '../middleware/index.js';
 
@@ -71,5 +74,9 @@ router.delete('/user/:id/cart/:productId', verifyTokenAndAuthorization, deletePr
 router.route('/user/:id/wishlist').get(verifyTokenAndAuthorization, getUserWishlistsController)
   .post(verifyTokenAndAuthorization, addProductsToUserWishlistsController);
 router.delete('/user/:id/wishlist/:productId', verifyTokenAndAuthorization, deleteProductFromUserWishlistsController);
+router.post('/products', getProductsFilteredController);
 router.get('/products/:categoriesId/recommended', getRecommendedProductController);
+router.patch('/forget-password', forgetPasswordController);
+router.patch('/reset-password/:token', resetPasswordController);
+
 export default router;
