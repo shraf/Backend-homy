@@ -8,6 +8,8 @@ import {
   updateUserAddressController,
   updateAddressDefaultController,
   updateUserPasswordController,
+  forgetPasswordController,
+  resetPasswordController,
 } from './users/index.js';
 import {
   getProductByIdController,
@@ -18,6 +20,7 @@ import {
   getProductsByNameController,
   getTopSellerProductsController,
   getRecommendedProductController,
+  getProductsFilteredController,
 } from './products/index.js';
 import signup from './signup/index.js';
 import signin from './signin/index.js';
@@ -75,4 +78,7 @@ export {
   getUserWishlistsController,
   deleteProductFromUserWishlistsController,
   getRecommendedProductController,
+  getProductsFilteredController,
+  forgetPasswordController,
+  resetPasswordController,
 };

@@ -12,8 +12,14 @@ import {
   orderSchema,
   cartsSchema,
   wishlistsSchema,
+  filterSchema,
+  emailSchema,
+  resetPasswordSchema,
 } from './validation/index.js';
+
 import { jwtSign, jwtVerify } from './jwt/index.js';
+
+import sendEmail from './sendEmail.js';
 
 export {
   customizedError,
@@ -31,4 +37,8 @@ export {
   orderSchema,
   cartsSchema,
   wishlistsSchema,
+  filterSchema,
+  emailSchema,
+  resetPasswordSchema,
+  sendEmail,
 };

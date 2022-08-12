@@ -138,6 +138,10 @@ VALUES
     (
         'Metal Doors',
         2
+    ),
+    (
+        'Aluminum Doors',
+        2
     );
 
 INSERT INTO
@@ -157,7 +161,7 @@ INSERT INTO
 VALUES
     (
         'Xiaomi Motion-Activated Night Light',
-        11.5,
+        100,
         'https://i.postimg.cc/jdcCKyk5/Rectangle-111.png',
         '{https://i.postimg.cc/vTQMSNyv/Rectangle-109.png,https://i.postimg.cc/NfjB6Sps/Rectangle-108.png,https://i.postimg.cc/Y9xBgzFL/Rectangle-107.png,https://i.postimg.cc/J7PWzKm9/Rectangle-106.png}',
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
@@ -165,12 +169,12 @@ VALUES
         10.0,
         'Xiaomi',
         TRUE,
-        NULL,
-        6
+        1,
+        2
     ),
     (
         'Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin',
-        5.5,
+        50,
         'https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg',
         '{https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg,https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg}',
         '21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz',
@@ -183,7 +187,7 @@ VALUES
     ),
     (
         'prdocut 3',
-        11.5,
+        150,
         'https://i.postimg.cc/jdcCKyk5/Rectangle-111.png',
         '{https://i.postimg.cc/vTQMSNyv/Rectangle-109.png,https://i.postimg.cc/NfjB6Sps/Rectangle-108.png,https://i.postimg.cc/Y9xBgzFL/Rectangle-107.png,https://i.postimg.cc/J7PWzKm9/Rectangle-106.png}',
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
@@ -191,12 +195,12 @@ VALUES
         60.0,
         'Xiaomi',
         TRUE,
-        NULL,
-        6
+        1,
+        2
     ),
     (
         'product 4',
-        5.5,
+        45,
         'https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg',
         '{https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg,https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg}',
         '21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz',
@@ -209,7 +213,7 @@ VALUES
     ),
     (
         'Xiaomi Motion-Activated Night Light',
-        4.0,
+        300,
         'https://i.postimg.cc/wvM7bMkv/Smart-Locks-1.png',
         '{https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg}',
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
@@ -222,7 +226,7 @@ VALUES
     ),
     (
          'new product ',
-        11.5,
+        600,
         'https://i.postimg.cc/jdcCKyk5/Rectangle-111.png',
         '{https://i.postimg.cc/vTQMSNyv/Rectangle-109.png,https://i.postimg.cc/NfjB6Sps/Rectangle-108.png,https://i.postimg.cc/Y9xBgzFL/Rectangle-107.png,https://i.postimg.cc/J7PWzKm9/Rectangle-106.png}',
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
@@ -230,25 +234,25 @@ VALUES
         10.0,
         'Xiaomi',
         TRUE,
-        NULL,
-        6
+        4,
+        2
     ),
     (
         'product 7',
-        11.5,
+        450,
         'https://i.postimg.cc/jdcCKyk5/Rectangle-111.png',
         '{https://i.postimg.cc/vTQMSNyv/Rectangle-109.png,https://i.postimg.cc/NfjB6Sps/Rectangle-108.png,https://i.postimg.cc/Y9xBgzFL/Rectangle-107.png,https://i.postimg.cc/J7PWzKm9/Rectangle-106.png}',
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         10.0,
-        'Xiaomi',
+        'SAMSUNG',
         TRUE,
-        NULL,
-        6
+        4,
+        2
     ),
     (
         'product 8',
-        5.5,
+        330,
         'https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg',
         '{https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg,https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg}',
         '21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz',
@@ -261,20 +265,20 @@ VALUES
     ),
     (
         'prdocut 9',
-        11.5,
+        270,
         'https://i.postimg.cc/jdcCKyk5/Rectangle-111.png',
         '{https://i.postimg.cc/vTQMSNyv/Rectangle-109.png,https://i.postimg.cc/NfjB6Sps/Rectangle-108.png,https://i.postimg.cc/Y9xBgzFL/Rectangle-107.png,https://i.postimg.cc/J7PWzKm9/Rectangle-106.png}',
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         60.0,
-        'Xiaomi',
+        'SAMSUNG',
         TRUE,
-        NULL,
-        6
+        2,
+        2
     ),
     (
         'product 10',
-        5.5,
+        900,
         'https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg',
         '{https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg,https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg}',
         '21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz',

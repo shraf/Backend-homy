@@ -20,6 +20,9 @@ import {
   updateUserAddressQuery,
   updateAddressDefaultQuery,
   updateUserPasswordQuery,
+  updateUserResetQuery,
+  checkUserByResetLinkQuery,
+  updateUserResetPasswordQuery,
 } from './users/index.js';
 
 import {
@@ -84,4 +87,7 @@ export {
   deleteProductFromUserWishlistsQuery,
   addProductToUserWishlistsQuery,
   getRecommendedProductQuery,
+  updateUserResetQuery,
+  checkUserByResetLinkQuery,
+  updateUserResetPasswordQuery,
 };
