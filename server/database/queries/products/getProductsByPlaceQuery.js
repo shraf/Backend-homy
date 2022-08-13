@@ -7,7 +7,7 @@ const getProductsByPlaceQuery = (minPrice, maxPrice, page, place) => {
       products.brand,products.quick_overview,products.discount,products.inStock
      FROM products join categories ON products.category_id = categories.id 
     GROUP BY products.id, categories.id
-    HAVING products.price >= $1 AND products.price <=$2 
+    HAVING products.price BETWEEN $1 AND $2
     AND categories.place=$4 
     LIMIT 4 
     OFFSET 4*($3-1)`,

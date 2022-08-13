@@ -16,6 +16,18 @@ const getProductsFilteredController = async (req, res, next) => {
       filter: { maxPrice, minPrice, brands, subCategory },
     } = await filterSchema.validate(req.body, { abortEarly: false });
     const smallLettersBrands = brands?.map((brand) => brand.toLowerCase());
+    const parseArrayForSqlQuery = (stringArray) => {
+      let returnString = '';
+      stringArray.forEach((value, index) => {
+        if (index > 0) {
+          returnString += ', ';
+        }
+        returnString += `'${value}'`;
+      });
+      return returnString;
+    };
+    console.log(smallLettersBrands);
+    const brandsToStringForSqlQuery = parseArrayForSqlQuery(smallLettersBrands);
     if (categoryId == undefined && subCategory == 0) {
       if (place == 'all') {
         const { rows: allProducts } = await getAllProductsQuery(
@@ -59,7 +71,7 @@ const getProductsFilteredController = async (req, res, next) => {
           maxPrice,
           page,
           categoryId,
-          smallLettersBrands,
+          brandsToStringForSqlQuery,
         );
         return res.json({
           message: 'Successfully retrieved products',
@@ -91,7 +103,7 @@ const getProductsFilteredController = async (req, res, next) => {
           page,
           categoryId,
           subCategory,
-          smallLettersBrands,
+          brandsToStringForSqlQuery,
         );
         return res.json({
           message: 'Successfully retrieved products',
