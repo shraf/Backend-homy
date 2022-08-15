@@ -1,3 +1,8 @@
+/* eslint-disable no-plusplus */
+/* eslint-disable quotes */
+/* eslint-disable prefer-template */
+/* eslint-disable operator-linebreak */
+/* eslint-disable space-infix-ops */
 import connection from '../../config/connection.js';
 
 const getProductsByCategoryIdAndSubCategoryAndBrandsQuery = (
@@ -6,13 +11,19 @@ const getProductsByCategoryIdAndSubCategoryAndBrandsQuery = (
   page,
   categoryId,
   subCategory,
-  smallLettersBrands,
+  Brands,
 ) => {
-  console.log(smallLettersBrands);
+  let count = 5;
+  const b = Brands.map(() => {
+    count++;
+    return `$${count}`;
+  });
   const sql = {
-    text: `SELECT * FROM products WHERE price BETWEEN $1 AND $2 
-    AND category_id=$4 AND sub_category_id=$5 AND LOWER(brand) IN ($6) LIMIT 4 OFFSET 4*($3-1)`,
-    values: [minPrice, maxPrice, page, categoryId, subCategory, smallLettersBrands],
+    text:
+      "SELECT * FROM products WHERE price BETWEEN $1 AND $2 AND category_id=$4 AND sub_category_id=$5 AND LOWER(brand) IN (" +
+      b.join(",") +
+      ") LIMIT 4 OFFSET 4*($3-1)",
+    values: [minPrice, maxPrice, page, categoryId, subCategory, ...Brands],
   };
   return connection.query(sql);
 };

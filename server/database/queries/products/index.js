@@ -11,6 +11,8 @@ import getProductsByCategoryIdAndSubCategoryQuery from './getProductsByCategoryI
 import getProductsByCategoryIdAndBrandsQuery from './getProductsByCategoryIdAndBrandsQuery.js';
 import getProductsByCategoryIdAndSubCategoryAndBrandsQuery from './getProductsByCategoryIdAndSubCategoryAndBrandsQuery.js';
 import getProductsByPlaceQuery from './getProductsByPlaceQuery.js';
+import getAllProductsByBrandsQuery from './getAllProductsByBrandsQuery.js';
+import getProductsByPlaceANDBrandsQuery from './getProductsByPlaceANDBrandsQuery.js';
 
 export {
   getProductByIdQuery,
@@ -26,4 +28,6 @@ export {
   getProductsByCategoryIdAndBrandsQuery,
   getProductsByCategoryIdAndSubCategoryAndBrandsQuery,
   getProductsByPlaceQuery,
+  getAllProductsByBrandsQuery,
+  getProductsByPlaceANDBrandsQuery,
 };

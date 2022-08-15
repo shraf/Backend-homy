@@ -14,6 +14,8 @@ import {
   getProductsByCategoryIdAndBrandsQuery,
   getProductsByCategoryIdAndSubCategoryAndBrandsQuery,
   getProductsByPlaceQuery,
+  getAllProductsByBrandsQuery,
+  getProductsByPlaceANDBrandsQuery,
 } from './products/index.js';
 
 import {
@@ -102,4 +104,6 @@ export {
   getProductsByCategoryIdAndBrandsQuery,
   getProductsByCategoryIdAndSubCategoryAndBrandsQuery,
   getProductsByPlaceQuery,
+  getAllProductsByBrandsQuery,
+  getProductsByPlaceANDBrandsQuery,
 };
