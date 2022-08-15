@@ -10,7 +10,8 @@ wishlists,
 orders,
 reviews,
 guests,
-brands CASCADE;
+brands,
+banaras CASCADE;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -130,6 +131,11 @@ CREATE TABLE orders (
 );
 
 CREATE TABLE brands (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  image TEXT NOT NULL
+);
+CREATE TABLE banaras (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   image TEXT NOT NULL

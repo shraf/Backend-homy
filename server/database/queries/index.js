@@ -53,6 +53,10 @@ import {
   addProductToUserWishlistsQuery,
 } from './wishlists/index.js';
 
+import {
+  getBanarasQuery,
+} from './banars/index.js';
+
 export {
   getCategoriesQuery,
   getSubCategoriesQuery,
@@ -90,4 +94,5 @@ export {
   updateUserResetQuery,
   checkUserByResetLinkQuery,
   updateUserResetPasswordQuery,
+  getBanarasQuery,
 };

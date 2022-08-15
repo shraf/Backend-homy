@@ -1,5 +1,6 @@
 import { clientError, serverError } from './error/index.js';
 import { getCategoriesController, getSubCategoriesController } from './categories/index.js';
+
 import {
   updateInfoUserController,
   getAddressesUserController,
@@ -11,6 +12,7 @@ import {
   forgetPasswordController,
   resetPasswordController,
 } from './users/index.js';
+
 import {
   getProductByIdController,
   getSingleProductReviewController,
@@ -22,8 +24,10 @@ import {
   getRecommendedProductController,
   getProductsFilteredController,
 } from './products/index.js';
+
 import signup from './signup/index.js';
 import signin from './signin/index.js';
+
 import {
   getUserOrdersController,
   getSingleUserOrderController,
@@ -44,6 +48,8 @@ import {
   getUserWishlistsController,
   deleteProductFromUserWishlistsController,
 } from './wishlists/index.js';
+
+import { getBanarasController } from './banaras/index.js';
 
 export {
   clientError,
@@ -81,4 +87,5 @@ export {
   getProductsFilteredController,
   forgetPasswordController,
   resetPasswordController,
+  getBanarasController,
 };

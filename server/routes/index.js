@@ -4,6 +4,7 @@ import userRoute from './user.js';
 import orderRoute from './order.js';
 import productRoute from './product.js';
 import generalRoute from './general.js';
+import banarasRoute from './banaras.js';
 
 export {
   wishlistRoute,
@@ -12,4 +13,5 @@ export {
   orderRoute,
   productRoute,
   generalRoute,
+  banarasRoute,
 };
