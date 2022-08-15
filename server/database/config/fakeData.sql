@@ -533,3 +533,29 @@ VALUES
          'Xiaomi',
         'https://www.91-cdn.com/pricebaba-blogimages/wp-content/uploads/2021/09/Xiaomi-Logo.png'
     );
+INSERT INTO
+    banaras(
+      name,
+      image
+    )
+VALUES
+    (
+        'banara1',
+        'https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg'
+    ),
+    (
+         'banara2',
+        'https://i.postimg.cc/jdcCKyk5/Rectangle-111.png'
+    ),
+    (
+         'banara3',
+        'https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg'
+    ),
+    (
+        'banara4',
+        'https://i.postimg.cc/jdcCKyk5/Rectangle-111.png'
+    ),
+    (
+         'banara5',
+        'https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg'
+    );

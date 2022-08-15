@@ -11,6 +11,7 @@ import {
   productRoute,
   userRoute,
   wishlistRoute,
+  banarasRoute,
 } from './routes/index.js';
 
 const app = express();
@@ -39,6 +40,7 @@ app.use('/api/v1', cartRoute);
 app.use('/api/v1', orderRoute);
 app.use('/api/v1', productRoute);
 app.use('/api/v1', wishlistRoute);
+app.use('/api/v1', banarasRoute);
 
 if (NODE_ENV === 'production') {
   app.get('*', (req, res) => {
