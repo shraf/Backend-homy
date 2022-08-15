@@ -8,14 +8,6 @@ import {
   addReviewProductQuery,
   getProductsQuery,
   getRecommendedProductQuery,
-  getAllProductsQuery,
-  getProductsByCategoryIdQuery,
-  getProductsByCategoryIdAndSubCategoryQuery,
-  getProductsByCategoryIdAndBrandsQuery,
-  getProductsByCategoryIdAndSubCategoryAndBrandsQuery,
-  getProductsByPlaceQuery,
-  getAllProductsByBrandsQuery,
-  getProductsByPlaceANDBrandsQuery,
 } from './products/index.js';
 
 import {
@@ -98,12 +90,4 @@ export {
   updateUserResetQuery,
   checkUserByResetLinkQuery,
   updateUserResetPasswordQuery,
-  getAllProductsQuery,
-  getProductsByCategoryIdQuery,
-  getProductsByCategoryIdAndSubCategoryQuery,
-  getProductsByCategoryIdAndBrandsQuery,
-  getProductsByCategoryIdAndSubCategoryAndBrandsQuery,
-  getProductsByPlaceQuery,
-  getAllProductsByBrandsQuery,
-  getProductsByPlaceANDBrandsQuery,
 };

@@ -18,6 +18,7 @@ CREATE TABLE users (
   email VARCHAR(255) NOT NULL UNIQUE,
   password VARCHAR(255) NOT NULL,
   phone VARCHAR(40) NOT NULL,
+  role INT NOT NULL DEFAULT 0,
   reset_link TEXT,
   createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
@@ -65,6 +66,7 @@ CREATE TABLE products (
   sub_category_id INT NULL,
   createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   category_id INT,
+  archived BOOLEAN DEFAULT FALSE,
   FOREIGN KEY (sub_category_id) REFERENCES sub_categories(id) ON DELETE CASCADE,
   FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE CASCADE
 );

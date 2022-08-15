@@ -3,26 +3,30 @@ INSERT INTO
         name, 
         email, 
         password, 
-        phone
+        phone,
+        role
     )
 VALUES
     (
         'user1',
         'user1@gmail.com',
         '$2b$10$DviVVuryzUWALxq.yG0Yd.ChLIYNXuKDw5WoUiKK7TPnFuZcL8uL2',
-        '+96512345678'
+        '+96512345678',
+        0
     ),
     (
         'user2',
         'user2@gmail.com',
         '$2b$10$klSql.FCEBJSLDScw0BZQuEeROI5oXiNmj5oYc1sr2nPl7GPctrLG',
-        '+96512345678'
+        '+96512345678',
+        0
     ),
     (
         'user3',
         'user3@gmail.com',
         '$2b$10$klSql.FCEBJSLDScw0BZQuEeROI5oXiNmj5oYc1sr2nPl7GPctrLG',
-        '+96512345678'
+        '+96512345678',
+        0
     );
 
 INSERT INTO
@@ -156,7 +160,8 @@ INSERT INTO
     brand,
     inStock,
     sub_category_id,
-    category_id
+    category_id,
+    archived
     )
 VALUES
     (
@@ -170,7 +175,8 @@ VALUES
         'Xiaomi',
         TRUE,
         1,
-        2
+        2,
+        FALSE
     ),
     (
         'Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin',
@@ -183,7 +189,8 @@ VALUES
         'Acer',
         TRUE,
         NULL,
-        1
+        1,
+        FALSE
     ),
     (
         'prdocut 3',
@@ -196,7 +203,8 @@ VALUES
         'Xiaomi',
         TRUE,
         1,
-        2
+        2,
+        FALSE
     ),
     (
         'product 4',
@@ -209,7 +217,8 @@ VALUES
         'Acer',
         TRUE,
         NULL,
-        1
+        1,
+        FALSE
     ),
     (
         'Xiaomi Motion-Activated Night Light',
@@ -222,7 +231,8 @@ VALUES
         'Xiaomi',
         TRUE,
         3,
-        2
+        2,
+        FALSE
     ),
     (
          'new product ',
@@ -235,7 +245,8 @@ VALUES
         'Xiaomi',
         TRUE,
         4,
-        2
+        2,
+        FALSE
     ),
     (
         'product 7',
@@ -248,7 +259,8 @@ VALUES
         'SAMSUNG',
         TRUE,
         4,
-        2
+        2,
+        FALSE
     ),
     (
         'product 8',
@@ -261,7 +273,8 @@ VALUES
         'Acer',
         TRUE,
         NULL,
-        1
+        1,
+        FALSE
     ),
     (
         'prdocut 9',
@@ -274,7 +287,8 @@ VALUES
         'SAMSUNG',
         TRUE,
         2,
-        2
+        2,
+        FALSE
     ),
     (
         'product 10',
@@ -287,7 +301,8 @@ VALUES
         'Acer',
         TRUE,
         NULL,
-        1
+        1,
+        FALSE
     ),
     (
         'product 11',
@@ -300,7 +315,8 @@ VALUES
         'Acer',
         TRUE,
         NULL,
-        5
+        5,
+        FALSE
     ),
       (
         'product 12',
@@ -313,7 +329,8 @@ VALUES
         'Acer',
         TRUE,
         NULL,
-        6
+        6,
+        FALSE
     );
 
 INSERT INTO
