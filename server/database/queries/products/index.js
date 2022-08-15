@@ -14,5 +14,4 @@ export {
   addReviewProductQuery,
   getProductsQuery,
   getRecommendedProductQuery,
-
 };
