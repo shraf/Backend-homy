@@ -45,18 +45,16 @@ const getProductsFilteredController = async (req, res, next) => {
         );
         res.json({ status: 200, data: allProducts });
       }
-      // all & have brands still need to be implemented :( :( :(
-        if ((place == 'in' || place == 'out') && brands.length != 0) {
-          const { rows: allProducts } = await getProductsByPlaceANDBrandsQuery(
-            minPrice,
-            maxPrice,
-            page,
-            place,
-            smallLettersBrands,
-          );
-          res.json({ status: 200, data: allProducts });
-        }
-      // just in & have brands OR just out & have brands still need to be implemented :( :( :(
+      if ((place == 'in' || place == 'out') && brands.length != 0) {
+        const { rows: allProducts } = await getProductsByPlaceANDBrandsQuery(
+          minPrice,
+          maxPrice,
+          page,
+          place,
+          smallLettersBrands,
+        );
+        res.json({ status: 200, data: allProducts });
+      }
     }
     if (categoryId != undefined) {
       if (subCategory == 0 && brands.length == 0) {
