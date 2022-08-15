@@ -61,6 +61,7 @@ CREATE TABLE products (
   description TEXT NOT NULL,
   quick_overview TEXT NOT NULL,
   discount FLOAT NOT NULL,
+  shipment FLOAT NOT NULL DEFAULT 0,
   brand VARCHAR(255) NOT NULL,
   inStock BOOLEAN DEFAULT TRUE,
   sub_category_id INT NULL,

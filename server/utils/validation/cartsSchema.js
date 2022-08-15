@@ -15,6 +15,7 @@ const cartsSchema = object({
         quick_overview: string(),
         discount: number(),
         brand: string(),
+        shipment: number(),
         inStock: Boolean(),
         createdAt: string(),
         category_id: number(),
