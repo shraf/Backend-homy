@@ -6,10 +6,12 @@ import {
   getBrandsController,
   getProductsByNameController,
   getTopSellerProductsController,
+  getCategoryByIdController,
 } from '../controllers/index.js';
 
 const router = Router();
 router.get('/categories', getCategoriesController);
+router.get('/categories/:categoryId', getCategoryByIdController);
 router.get('/subCategories/:categoryId', getSubCategoriesController);
 router.get('/product/super', getSuperDealsController);
 router.get('/brands', getBrandsController);

@@ -1,4 +1,4 @@
-import { getCategoriesQuery, getSubCategoriesQuery } from './categories/index.js';
+import { getCategoriesQuery, getSubCategoriesQuery, getCategoryByIdQuery } from './categories/index.js';
 
 import {
   getProductByIdQuery,
@@ -95,4 +95,5 @@ export {
   checkUserByResetLinkQuery,
   updateUserResetPasswordQuery,
   getBanarasQuery,
+  getCategoryByIdQuery,
 };
