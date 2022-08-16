@@ -1,5 +1,5 @@
 import { clientError, serverError } from './error/index.js';
-import { getCategoriesController, getSubCategoriesController } from './categories/index.js';
+import { getCategoriesController, getSubCategoriesController, getCategoryByIdController } from './categories/index.js';
 
 import {
   updateInfoUserController,
@@ -88,4 +88,5 @@ export {
   forgetPasswordController,
   resetPasswordController,
   getBanarasController,
+  getCategoryByIdController,
 };
