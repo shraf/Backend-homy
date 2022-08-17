@@ -1,10 +1,122 @@
 INSERT INTO
+    roles(
+      role
+)
+VALUES
+    ( 
+        'user'
+    ),
+    (
+        'admin'
+    ),
+    (
+        'employee1'
+    ),
+    (
+        'employee2'
+    ),
+    (
+        'employee3'
+    ),
+    (
+        'employee4'
+    ),
+    (
+        'employee5'
+    );
+INSERT INTO
+    pages(
+      name,
+      link
+)
+VALUES
+    (
+        'products',
+        '/products'
+    ),
+    (
+        'categories',
+        '/categories'
+    ),
+    (
+        'subCategories',
+        '/subCategories'
+    ),
+    (
+        'brands',
+        '/brands'
+    ),
+    (
+        'orders',
+        '/orders'
+    ),
+    (
+        'users',
+        '/users'
+    ),
+    (
+        'employees',
+        '/employees'
+    ),
+    (
+        'roles',
+        '/roles'
+    ),
+    (
+        'banaras',
+        '/banaras'
+    );
+INSERT INTO
+    permissions(
+      name
+    )
+VALUES 
+    (
+        'get'
+    ),
+    (
+        'post'
+    ),
+    (
+        'put'
+    ),
+    (
+        'delete'
+    );
+INSERT INTO
+    roles_permissions (
+      role_id,
+      permission_id,
+      page_id
+    )
+VALUES
+    (
+        3,
+        1,
+        1
+    ),
+    (
+        3,
+        2,
+        1
+    ),
+    (
+        3,
+        3,
+        1
+    ),
+    (
+        3,
+        4,
+        1
+    );
+INSERT INTO
     users(
         name, 
         email, 
         password, 
         phone,
-        role
+        role_id
     )
 VALUES
     (
@@ -12,21 +124,35 @@ VALUES
         'user1@gmail.com',
         '$2b$10$DviVVuryzUWALxq.yG0Yd.ChLIYNXuKDw5WoUiKK7TPnFuZcL8uL2',
         '+96512345678',
-        0
+        1
     ),
     (
         'user2',
         'user2@gmail.com',
         '$2b$10$klSql.FCEBJSLDScw0BZQuEeROI5oXiNmj5oYc1sr2nPl7GPctrLG',
         '+96512345678',
-        0
+        1
     ),
     (
         'user3',
         'user3@gmail.com',
         '$2b$10$klSql.FCEBJSLDScw0BZQuEeROI5oXiNmj5oYc1sr2nPl7GPctrLG',
         '+96512345678',
-        0
+        1
+    ),
+    (
+        'admin',
+        'admin@gmail.com',
+        '$2b$10$p07XMmOtUZ35RSBDOH.O.OKCTnASQg67sHauTP2pdMieA0wesM/ia',
+        '+96512345678',
+        2
+    ),
+    (
+        'employee1',
+        'employee1@gmail.com',
+        '$2b$10$p07XMmOtUZ35RSBDOH.O.OKCTnASQg67sHauTP2pdMieA0wesM/ia',
+        '+96512345678',
+        3
     );
 
 INSERT INTO

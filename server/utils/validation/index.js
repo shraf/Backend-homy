@@ -17,6 +17,7 @@ import brandsSchema from './brandsSchema.js';
 import categorySchema from './categorySchema.js';
 import subCategorySchema from './subCategorySchema.js';
 import productSchema from './productSchema.js';
+import employeeSchema from './employeeSchema.js';
 
 export {
   signupSchema,
@@ -38,4 +39,5 @@ export {
   categorySchema,
   subCategorySchema,
   productSchema,
+  employeeSchema,
 };

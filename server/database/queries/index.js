@@ -81,6 +81,15 @@ import {
   updateBanarasQuery,
 } from './banaras/index.js';
 
+import {
+  addEmployeeQuery,
+  getEmployeesQuery,
+  getRolesQuery,
+  getRolesPermissionsQuery,
+  getPagesQuery,
+  getPermissionsQuery,
+} from './admin/index.js';
+
 export {
   getCategoriesQuery,
   getSubCategoriesQuery,
@@ -138,4 +147,10 @@ export {
   archivedProductQuery,
   addProductQuery,
   updateProductQuery,
+  addEmployeeQuery,
+  getEmployeesQuery,
+  getRolesQuery,
+  getRolesPermissionsQuery,
+  getPagesQuery,
+  getPermissionsQuery,
 };
