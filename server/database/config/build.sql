@@ -42,13 +42,16 @@ CREATE TABLE categories (
   name VARCHAR(255) NOT NULL,
   image TEXT NOT NULL,
   place VARCHAR(100) NOT NULL,
-  has_Sub_Categories BOOLEAN DEFAULT FALSE
+  archived BOOLEAN DEFAULT FALSE,
+  has_Sub_Categories BOOLEAN DEFAULT FALSE,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 );
 
 CREATE TABLE sub_categories (
   id SERIAL PRIMARY KEY,
   name VARCHAR(50) NOT NULL,
   category_id INT,
+  archived BOOLEAN DEFAULT FALSE,
   createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE CASCADE
 );
@@ -66,9 +69,9 @@ CREATE TABLE products (
   brand VARCHAR(255) NOT NULL,
   inStock BOOLEAN DEFAULT TRUE,
   sub_category_id INT NULL,
-  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  category_id INT,
+  category_id INT NULL,
   archived BOOLEAN DEFAULT FALSE,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (sub_category_id) REFERENCES sub_categories(id) ON DELETE CASCADE,
   FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE CASCADE
 );
@@ -133,11 +136,14 @@ CREATE TABLE orders (
 CREATE TABLE brands (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
-  image TEXT NOT NULL
+  image TEXT NOT NULL,
+  archived BOOLEAN DEFAULT FALSE,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 CREATE TABLE banaras (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
-  image TEXT NOT NULL
+  image TEXT NOT NULL,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 COMMIT;

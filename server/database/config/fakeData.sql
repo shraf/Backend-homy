@@ -73,79 +73,94 @@ INSERT INTO
         name, 
         image,
         place, 
-        has_Sub_Categories
+        has_Sub_Categories,
+        archived
     )
 VALUES
     (
         'Security Camers',
         'https://i.postimg.cc/0NfwBLRt/Camera-uta6i-EV-1.png',
         'in',
+        FALSE,
         FALSE
     ),
     (
         'Smart Locks',
         'https://i.postimg.cc/wvM7bMkv/Smart-Locks-1.png',
         'in',
-        TRUE
+        TRUE,
+        FALSE
     ),
     (
         'Smart Switches',
         'https://i.postimg.cc/RFYNrmPT/Smart-lighting-1.png',
         'in',
+        FALSE,
         FALSE
     ),
     (
         'Smart BLinds',
         'https://i.postimg.cc/pV9BmLtR/Smart-switches-1.png',
         'in',
+        FALSE,
         FALSE
     ),
     (
         'Smart Alarms',
         'https://i.postimg.cc/gJ18V3Pd/Smart-switches-1-1.png',
         'out',
+        FALSE,
         FALSE
     ),
     (
         'Smart Lighting',
         'https://i.postimg.cc/FKBLv0zc/Smart-switches-2.png',
         'out',
+        FALSE,
         FALSE
     );
 
 INSERT INTO
     sub_categories(
         name, 
-        category_id
+        category_id,
+        archived
     )
 VALUES
     (
         'Smart Wi-Fi',
-        2
+        2,
+        FALSE
     ),
     (
         'Smart Bluetooth',
-        2
+        2,
+        FALSE
     ),
     (
         'Wood & PVC Doors',
-        2
+        2,
+        FALSE
     ),
     (
         'Aluminum Doors',
-        2
+        2,
+        FALSE
     ),
     (
         'Glass Doors',
-        2
+        2,
+        FALSE
     ),
     (
         'Metal Doors',
-        2
+        2,
+        FALSE
     ),
     (
         'Aluminum Doors',
-        2
+        2,
+        FALSE
     );
 
 INSERT INTO
@@ -510,28 +525,34 @@ VALUES
 INSERT INTO
     brands(
       name,
-      image
+      image,
+      archived
     )
 VALUES
     (
         'CANON',
-        'https://global.canon/00cmn/img/common/ogp-logo.png'
+        'https://global.canon/00cmn/img/common/ogp-logo.png',
+        FALSE
     ),
     (
          'SAMSUNG',
-        'https://bsmedia.business-standard.com/_media/bs/img/about-page/1562575696.png'
+        'https://bsmedia.business-standard.com/_media/bs/img/about-page/1562575696.png',
+        FALSE
     ),
     (
          'MESTONIX',
-        'https://rndproductsbd.com/assets/images/cl_logo3.png'
+        'https://rndproductsbd.com/assets/images/cl_logo3.png',
+        FALSE
     ),
     (
         'SONY',
-        'https://www.sony.co.jp/SonyInfo/CorporateInfo/img/sony-og.jpg'
+        'https://www.sony.co.jp/SonyInfo/CorporateInfo/img/sony-og.jpg',
+        FALSE
     ),
     (
          'Xiaomi',
-        'https://www.91-cdn.com/pricebaba-blogimages/wp-content/uploads/2021/09/Xiaomi-Logo.png'
+        'https://www.91-cdn.com/pricebaba-blogimages/wp-content/uploads/2021/09/Xiaomi-Logo.png',
+        FALSE
     );
 INSERT INTO
     banaras(

@@ -1,4 +1,16 @@
-import { getCategoriesQuery, getSubCategoriesQuery, getCategoryByIdQuery } from './categories/index.js';
+import {
+  getCategoriesQuery,
+  getSubCategoriesQuery,
+  getCategoryByIdQuery,
+  addCategoryQuery,
+  updateCategoryQuery,
+  deleteCategoryQuery,
+  archivedCategoryQuery,
+  addSubCategoryQuery,
+  updateSubCategoryQuery,
+  deleteSubCategoryQuery,
+  archivedSubCategoryQuery,
+} from './categories/index.js';
 
 import {
   getProductByIdQuery,
@@ -8,6 +20,10 @@ import {
   addReviewProductQuery,
   getProductsQuery,
   getRecommendedProductQuery,
+  deleteProductQuery,
+  archivedProductQuery,
+  addProductQuery,
+  updateProductQuery,
 } from './products/index.js';
 
 import {
@@ -38,7 +54,13 @@ import {
   getProductsFromOrderQuery,
 } from './orders/index.js';
 
-import { getBrandsQuery } from './brands/index.js';
+import {
+  getBrandsQuery,
+  addBrandsQuery,
+  deleteBrandsQuery,
+  updateBrandsQuery,
+  archivedBrandsQuery,
+} from './brands/index.js';
 
 import {
   getUserCartsQuery,
@@ -55,7 +77,9 @@ import {
 
 import {
   getBanarasQuery,
-} from './banars/index.js';
+  addBanarasQuery,
+  updateBanarasQuery,
+} from './banaras/index.js';
 
 export {
   getCategoriesQuery,
@@ -96,4 +120,22 @@ export {
   updateUserResetPasswordQuery,
   getBanarasQuery,
   getCategoryByIdQuery,
+  addBrandsQuery,
+  deleteBrandsQuery,
+  updateBrandsQuery,
+  archivedBrandsQuery,
+  addBanarasQuery,
+  updateBanarasQuery,
+  addCategoryQuery,
+  updateCategoryQuery,
+  deleteCategoryQuery,
+  archivedCategoryQuery,
+  addSubCategoryQuery,
+  updateSubCategoryQuery,
+  deleteSubCategoryQuery,
+  archivedSubCategoryQuery,
+  deleteProductQuery,
+  archivedProductQuery,
+  addProductQuery,
+  updateProductQuery,
 };
