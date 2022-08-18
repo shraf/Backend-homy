@@ -39,6 +39,7 @@ import {
   updateUserResetQuery,
   checkUserByResetLinkQuery,
   updateUserResetPasswordQuery,
+  getUsersAndEmployeesQuery,
 } from './users/index.js';
 
 import {
@@ -88,6 +89,9 @@ import {
   getRolesPermissionsQuery,
   getPagesQuery,
   getPermissionsQuery,
+  checkRoleExistsQuery,
+  addRolesQuery,
+  addRolesPermissionsQuery,
 } from './admin/index.js';
 
 export {
@@ -153,4 +157,8 @@ export {
   getRolesPermissionsQuery,
   getPagesQuery,
   getPermissionsQuery,
+  checkRoleExistsQuery,
+  addRolesQuery,
+  addRolesPermissionsQuery,
+  getUsersAndEmployeesQuery,
 };

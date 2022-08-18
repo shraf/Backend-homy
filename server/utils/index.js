@@ -19,6 +19,7 @@ import {
   subCategorySchema,
   productSchema,
   employeeSchema,
+  rolesSchema,
 } from './validation/index.js';
 
 import { jwtSign, jwtVerify } from './jwt/index.js';
@@ -49,4 +50,5 @@ export {
   subCategorySchema,
   productSchema,
   employeeSchema,
+  rolesSchema,
 };

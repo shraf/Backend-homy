@@ -7,6 +7,7 @@ import updateAddressDefaultController from './updateAddressDefaultController.js'
 import updateUserPasswordController from './updateUserPasswordController.js';
 import forgetPasswordController from './forgetPasswordController.js';
 import resetPasswordController from './resetPasswordController.js';
+import getUsersAndEmployeesController from './getUsersAndEmployeesController.js';
 
 export {
   updateInfoUserController,
@@ -18,4 +19,5 @@ export {
   updateUserPasswordController,
   forgetPasswordController,
   resetPasswordController,
+  getUsersAndEmployeesController,
 };

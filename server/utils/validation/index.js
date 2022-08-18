@@ -18,6 +18,7 @@ import categorySchema from './categorySchema.js';
 import subCategorySchema from './subCategorySchema.js';
 import productSchema from './productSchema.js';
 import employeeSchema from './employeeSchema.js';
+import rolesSchema from './rolesSchema.js';
 
 export {
   signupSchema,
@@ -40,4 +41,5 @@ export {
   subCategorySchema,
   productSchema,
   employeeSchema,
+  rolesSchema,
 };

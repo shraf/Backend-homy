@@ -17,6 +17,7 @@ import {
   updateUserPasswordController,
   forgetPasswordController,
   resetPasswordController,
+  getUsersAndEmployeesController,
 } from './users/index.js';
 
 import {
@@ -63,6 +64,8 @@ import {
   getRolesController,
   getPagesController,
   getPermissionsController,
+  addRolesController,
+  getPermissionsByRoleIdController,
 } from './admin/index.js';
 
 export {
@@ -110,4 +113,7 @@ export {
   deleteCategoryController,
   getPagesController,
   getPermissionsController,
+  addRolesController,
+  getPermissionsByRoleIdController,
+  getUsersAndEmployeesController,
 };

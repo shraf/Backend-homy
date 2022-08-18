@@ -10,10 +10,10 @@ VALUES
         'admin'
     ),
     (
-        'employee1'
+        'product manager'
     ),
     (
-        'employee2'
+        'categories manager'
     ),
     (
         'employee3'
@@ -31,40 +31,44 @@ INSERT INTO
 )
 VALUES
     (
+        'home',
+        '/dashboard/home'
+    ),
+    (
         'products',
-        '/products'
+        '/dashboard/products'
     ),
     (
         'categories',
-        '/categories'
+        '/dashboard/categories'
     ),
     (
         'subCategories',
-        '/subCategories'
+        '/dashboard/subCategories'
     ),
     (
         'brands',
-        '/brands'
+        '/dashboard/brands'
     ),
     (
         'orders',
-        '/orders'
+        '/dashboard/orders'
     ),
     (
         'users',
-        '/users'
+        '/dashboard/users'
     ),
     (
-        'employees',
-        '/employees'
+        'profile',
+        '/dashboard/profile'
     ),
     (
         'roles',
-        '/roles'
+        '/dashboard/roles'
     ),
     (
         'banaras',
-        '/banaras'
+        '/dashboard/banaras'
     );
 INSERT INTO
     permissions(
@@ -93,22 +97,42 @@ VALUES
     (
         3,
         1,
-        1
+        2
     ),
     (
         3,
         2,
-        1
+        2
     ),
     (
         3,
         3,
-        1
+        2
     ),
     (
         3,
         4,
-        1
+        2
+    ),
+    (
+        4,
+        1,
+        3
+    ),
+    (
+        4,
+        2,
+        3
+    ),
+    (
+        4,
+        3,
+        3
+    ),
+    (
+        4,
+        4,
+        3
     );
 INSERT INTO
     users(

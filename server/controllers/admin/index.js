@@ -3,6 +3,8 @@ import getEmployeesController from './getEmployeesController.js';
 import getRolesController from './getRolesController.js';
 import getPagesController from './getPagesController.js';
 import getPermissionsController from './getPermissionsController.js';
+import addRolesController from './addRolesController.js';
+import getPermissionsByRoleIdController from './getPermissionsByRoleIdController.js';
 
 export {
   addEmployeeController,
@@ -10,4 +12,6 @@ export {
   getRolesController,
   getPagesController,
   getPermissionsController,
+  addRolesController,
+  getPermissionsByRoleIdController,
 };
