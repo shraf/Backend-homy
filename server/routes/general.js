@@ -7,6 +7,7 @@ import {
   getProductsByNameController,
   getTopSellerProductsController,
   getCategoryByIdController,
+  getPermissionsByRoleIdController,
 } from '../controllers/index.js';
 
 const router = Router();
@@ -17,5 +18,6 @@ router.get('/product/super', getSuperDealsController);
 router.get('/brands', getBrandsController);
 router.get('/search', getProductsByNameController);
 router.get('/top-seller', getTopSellerProductsController);
+router.get('/permission-role', getPermissionsByRoleIdController);
 
 export default router;

@@ -1,5 +1,11 @@
 import { clientError, serverError } from './error/index.js';
-import { getCategoriesController, getSubCategoriesController, getCategoryByIdController } from './categories/index.js';
+import {
+  getCategoriesController,
+  getSubCategoriesController,
+  getCategoryByIdController,
+  addCategoryController,
+  deleteCategoryController,
+} from './categories/index.js';
 
 import {
   updateInfoUserController,
@@ -11,6 +17,7 @@ import {
   updateUserPasswordController,
   forgetPasswordController,
   resetPasswordController,
+  getUsersAndEmployeesController,
 } from './users/index.js';
 
 import {
@@ -51,6 +58,16 @@ import {
 
 import { getBanarasController } from './banaras/index.js';
 
+import {
+  addEmployeeController,
+  getEmployeesController,
+  getRolesController,
+  getPagesController,
+  getPermissionsController,
+  addRolesController,
+  getPermissionsByRoleIdController,
+} from './admin/index.js';
+
 export {
   clientError,
   serverError,
@@ -89,4 +106,14 @@ export {
   resetPasswordController,
   getBanarasController,
   getCategoryByIdController,
+  addEmployeeController,
+  getEmployeesController,
+  getRolesController,
+  addCategoryController,
+  deleteCategoryController,
+  getPagesController,
+  getPermissionsController,
+  addRolesController,
+  getPermissionsByRoleIdController,
+  getUsersAndEmployeesController,
 };

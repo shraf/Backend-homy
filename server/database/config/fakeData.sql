@@ -1,10 +1,146 @@
 INSERT INTO
+    roles(
+      role
+)
+VALUES
+    ( 
+        'user'
+    ),
+    (
+        'admin'
+    ),
+    (
+        'product manager'
+    ),
+    (
+        'categories manager'
+    ),
+    (
+        'employee3'
+    ),
+    (
+        'employee4'
+    ),
+    (
+        'employee5'
+    );
+INSERT INTO
+    pages(
+      name,
+      link
+)
+VALUES
+    (
+        'home',
+        '/dashboard/home'
+    ),
+    (
+        'products',
+        '/dashboard/products'
+    ),
+    (
+        'categories',
+        '/dashboard/categories'
+    ),
+    (
+        'subCategories',
+        '/dashboard/subCategories'
+    ),
+    (
+        'brands',
+        '/dashboard/brands'
+    ),
+    (
+        'orders',
+        '/dashboard/orders'
+    ),
+    (
+        'users',
+        '/dashboard/users'
+    ),
+    (
+        'profile',
+        '/dashboard/profile'
+    ),
+    (
+        'roles',
+        '/dashboard/roles'
+    ),
+    (
+        'banaras',
+        '/dashboard/banaras'
+    );
+INSERT INTO
+    permissions(
+      name
+    )
+VALUES 
+    (
+        'get'
+    ),
+    (
+        'post'
+    ),
+    (
+        'put'
+    ),
+    (
+        'delete'
+    );
+INSERT INTO
+    roles_permissions (
+      role_id,
+      permission_id,
+      page_id
+    )
+VALUES
+    (
+        3,
+        1,
+        2
+    ),
+    (
+        3,
+        2,
+        2
+    ),
+    (
+        3,
+        3,
+        2
+    ),
+    (
+        3,
+        4,
+        2
+    ),
+    (
+        4,
+        1,
+        3
+    ),
+    (
+        4,
+        2,
+        3
+    ),
+    (
+        4,
+        3,
+        3
+    ),
+    (
+        4,
+        4,
+        3
+    );
+INSERT INTO
     users(
         name, 
         email, 
         password, 
         phone,
-        role
+        role_id
     )
 VALUES
     (
@@ -12,21 +148,35 @@ VALUES
         'user1@gmail.com',
         '$2b$10$DviVVuryzUWALxq.yG0Yd.ChLIYNXuKDw5WoUiKK7TPnFuZcL8uL2',
         '+96512345678',
-        0
+        1
     ),
     (
         'user2',
         'user2@gmail.com',
         '$2b$10$klSql.FCEBJSLDScw0BZQuEeROI5oXiNmj5oYc1sr2nPl7GPctrLG',
         '+96512345678',
-        0
+        1
     ),
     (
         'user3',
         'user3@gmail.com',
         '$2b$10$klSql.FCEBJSLDScw0BZQuEeROI5oXiNmj5oYc1sr2nPl7GPctrLG',
         '+96512345678',
-        0
+        1
+    ),
+    (
+        'admin',
+        'admin@gmail.com',
+        '$2b$10$p07XMmOtUZ35RSBDOH.O.OKCTnASQg67sHauTP2pdMieA0wesM/ia',
+        '+96512345678',
+        2
+    ),
+    (
+        'employee1',
+        'employee1@gmail.com',
+        '$2b$10$p07XMmOtUZ35RSBDOH.O.OKCTnASQg67sHauTP2pdMieA0wesM/ia',
+        '+96512345678',
+        3
     );
 
 INSERT INTO
@@ -73,79 +223,94 @@ INSERT INTO
         name, 
         image,
         place, 
-        has_Sub_Categories
+        has_Sub_Categories,
+        archived
     )
 VALUES
     (
         'Security Camers',
         'https://i.postimg.cc/0NfwBLRt/Camera-uta6i-EV-1.png',
         'in',
+        FALSE,
         FALSE
     ),
     (
         'Smart Locks',
         'https://i.postimg.cc/wvM7bMkv/Smart-Locks-1.png',
         'in',
-        TRUE
+        TRUE,
+        FALSE
     ),
     (
         'Smart Switches',
         'https://i.postimg.cc/RFYNrmPT/Smart-lighting-1.png',
         'in',
+        FALSE,
         FALSE
     ),
     (
         'Smart BLinds',
         'https://i.postimg.cc/pV9BmLtR/Smart-switches-1.png',
         'in',
+        FALSE,
         FALSE
     ),
     (
         'Smart Alarms',
         'https://i.postimg.cc/gJ18V3Pd/Smart-switches-1-1.png',
         'out',
+        FALSE,
         FALSE
     ),
     (
         'Smart Lighting',
         'https://i.postimg.cc/FKBLv0zc/Smart-switches-2.png',
         'out',
+        FALSE,
         FALSE
     );
 
 INSERT INTO
     sub_categories(
         name, 
-        category_id
+        category_id,
+        archived
     )
 VALUES
     (
         'Smart Wi-Fi',
-        2
+        2,
+        FALSE
     ),
     (
         'Smart Bluetooth',
-        2
+        2,
+        FALSE
     ),
     (
         'Wood & PVC Doors',
-        2
+        2,
+        FALSE
     ),
     (
         'Aluminum Doors',
-        2
+        2,
+        FALSE
     ),
     (
         'Glass Doors',
-        2
+        2,
+        FALSE
     ),
     (
         'Metal Doors',
-        2
+        2,
+        FALSE
     ),
     (
         'Aluminum Doors',
-        2
+        2,
+        FALSE
     );
 
 INSERT INTO
@@ -510,28 +675,34 @@ VALUES
 INSERT INTO
     brands(
       name,
-      image
+      image,
+      archived
     )
 VALUES
     (
         'CANON',
-        'https://global.canon/00cmn/img/common/ogp-logo.png'
+        'https://global.canon/00cmn/img/common/ogp-logo.png',
+        FALSE
     ),
     (
          'SAMSUNG',
-        'https://bsmedia.business-standard.com/_media/bs/img/about-page/1562575696.png'
+        'https://bsmedia.business-standard.com/_media/bs/img/about-page/1562575696.png',
+        FALSE
     ),
     (
          'MESTONIX',
-        'https://rndproductsbd.com/assets/images/cl_logo3.png'
+        'https://rndproductsbd.com/assets/images/cl_logo3.png',
+        FALSE
     ),
     (
         'SONY',
-        'https://www.sony.co.jp/SonyInfo/CorporateInfo/img/sony-og.jpg'
+        'https://www.sony.co.jp/SonyInfo/CorporateInfo/img/sony-og.jpg',
+        FALSE
     ),
     (
          'Xiaomi',
-        'https://www.91-cdn.com/pricebaba-blogimages/wp-content/uploads/2021/09/Xiaomi-Logo.png'
+        'https://www.91-cdn.com/pricebaba-blogimages/wp-content/uploads/2021/09/Xiaomi-Logo.png',
+        FALSE
     );
 INSERT INTO
     banaras(

@@ -10,6 +10,7 @@ import updateUserPasswordQuery from './updateUserPasswordQuery.js';
 import updateUserResetQuery from './updateUserResetQuery.js';
 import checkUserByResetLinkQuery from './checkUserByResetLinkQuery.js';
 import updateUserResetPasswordQuery from './updateUserResetPasswordQuery.js';
+import getUsersAndEmployeesQuery from './getUsersAndEmployeesQuery.js';
 
 export {
   addNewUserQuery,
@@ -24,4 +25,5 @@ export {
   updateUserResetQuery,
   checkUserByResetLinkQuery,
   updateUserResetPasswordQuery,
+  getUsersAndEmployeesQuery,
 };

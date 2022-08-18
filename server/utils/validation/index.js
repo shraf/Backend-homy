@@ -13,6 +13,12 @@ import wishlistsSchema from './wishlistsSchema.js';
 import filterSchema from './filterSchema.js';
 import emailSchema from './emailSchema.js';
 import resetPasswordSchema from './resetPasswordSchema.js';
+import brandsSchema from './brandsSchema.js';
+import categorySchema from './categorySchema.js';
+import subCategorySchema from './subCategorySchema.js';
+import productSchema from './productSchema.js';
+import employeeSchema from './employeeSchema.js';
+import rolesSchema from './rolesSchema.js';
 
 export {
   signupSchema,
@@ -30,4 +36,10 @@ export {
   filterSchema,
   emailSchema,
   resetPasswordSchema,
+  brandsSchema,
+  categorySchema,
+  subCategorySchema,
+  productSchema,
+  employeeSchema,
+  rolesSchema,
 };

@@ -15,6 +15,11 @@ import {
   filterSchema,
   emailSchema,
   resetPasswordSchema,
+  brandsSchema,
+  subCategorySchema,
+  productSchema,
+  employeeSchema,
+  rolesSchema,
 } from './validation/index.js';
 
 import { jwtSign, jwtVerify } from './jwt/index.js';
@@ -41,4 +46,9 @@ export {
   emailSchema,
   resetPasswordSchema,
   sendEmail,
+  brandsSchema,
+  subCategorySchema,
+  productSchema,
+  employeeSchema,
+  rolesSchema,
 };

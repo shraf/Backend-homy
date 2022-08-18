@@ -11,7 +11,41 @@ orders,
 reviews,
 guests,
 brands,
-banaras CASCADE;
+banaras,
+roles,
+pages,
+permissions,
+roles_permissions CASCADE;
+
+CREATE TABLE roles (
+  id SERIAL PRIMARY KEY,
+  role VARCHAR(255) NOT NULL,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE pages (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  link VARCHAR(255) NOT NULL,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE permissions (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE roles_permissions (
+  id SERIAL PRIMARY KEY,
+  role_id int NOT NULL,
+  permission_id int NOT NULL,
+  page_id int NOT NULL,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (role_id) REFERENCES roles(id) ON DELETE CASCADE,
+  FOREIGN KEY (permission_id) REFERENCES permissions(id) ON DELETE CASCADE,
+  FOREIGN KEY (page_id) REFERENCES pages(id) ON DELETE CASCADE
+);
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -19,9 +53,10 @@ CREATE TABLE users (
   email VARCHAR(255) NOT NULL UNIQUE,
   password VARCHAR(255) NOT NULL,
   phone VARCHAR(40) NOT NULL,
-  role INT NOT NULL DEFAULT 0,
+  role_id INT NULL DEFAULT 1,
   reset_link TEXT,
-  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (role_id) REFERENCES roles(id) ON DELETE CASCADE
 );
 
 CREATE TABLE addresses (
@@ -42,13 +77,16 @@ CREATE TABLE categories (
   name VARCHAR(255) NOT NULL,
   image TEXT NOT NULL,
   place VARCHAR(100) NOT NULL,
-  has_Sub_Categories BOOLEAN DEFAULT FALSE
+  archived BOOLEAN DEFAULT FALSE,
+  has_Sub_Categories BOOLEAN DEFAULT FALSE,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE sub_categories (
   id SERIAL PRIMARY KEY,
   name VARCHAR(50) NOT NULL,
   category_id INT,
+  archived BOOLEAN DEFAULT FALSE,
   createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE CASCADE
 );
@@ -66,9 +104,9 @@ CREATE TABLE products (
   brand VARCHAR(255) NOT NULL,
   inStock BOOLEAN DEFAULT TRUE,
   sub_category_id INT NULL,
-  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  category_id INT,
+  category_id INT NULL,
   archived BOOLEAN DEFAULT FALSE,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (sub_category_id) REFERENCES sub_categories(id) ON DELETE CASCADE,
   FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE CASCADE
 );
@@ -133,11 +171,15 @@ CREATE TABLE orders (
 CREATE TABLE brands (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
-  image TEXT NOT NULL
+  image TEXT NOT NULL,
+  archived BOOLEAN DEFAULT FALSE,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
 CREATE TABLE banaras (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
-  image TEXT NOT NULL
+  image TEXT NOT NULL,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 COMMIT;
