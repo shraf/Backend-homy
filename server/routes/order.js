@@ -8,6 +8,7 @@ import {
 import { verifyToken, verifyTokenAndAuthorization } from '../middleware/index.js';
 
 const router = Router();
+
 router.get('/user/:id/orders', verifyTokenAndAuthorization, getUserOrdersController);
 router.get('/single-order/:orderNumber', verifyToken, getSingleUserOrderController);
 router.post('/single-order', getSingleOrderController);

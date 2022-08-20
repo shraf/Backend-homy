@@ -3,7 +3,7 @@ import { getCategoriesQuery } from '../../database/queries/index.js';
 const getCategoriesController = async (req, res, next) => {
   try {
     const { place } = req.query;
-    const { rows } = await getCategoriesQuery();
+    const { rows } = await getCategoriesQuery(false);
     if (place === 'in') {
       const indoor = rows.filter((row) => row.place === 'in');
       res.json({ message: 'Successfully retrieved indoor categories', status: 200, data: indoor });

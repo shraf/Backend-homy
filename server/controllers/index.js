@@ -5,6 +5,9 @@ import {
   getCategoryByIdController,
   addCategoryController,
   deleteCategoryController,
+  updateCategoryController,
+  archivedCategoryController,
+  getAllCategoriesController,
 } from './categories/index.js';
 
 import {
@@ -42,7 +45,11 @@ import {
   addOrderController,
 } from './orders/index.js';
 
-import { getBrandsController } from './brands/index.js';
+import {
+  getBrandsController,
+  addBrandController,
+  updateBrandController,
+} from './brands/index.js';
 
 import {
   addProductsToUserCartsController,
@@ -56,7 +63,12 @@ import {
   deleteProductFromUserWishlistsController,
 } from './wishlists/index.js';
 
-import { getBanarasController } from './banaras/index.js';
+import {
+  getBannersController,
+  addBannerController,
+  getAllBannersController,
+  updateBannerController,
+} from './banners/index.js';
 
 import {
   addEmployeeController,
@@ -104,7 +116,6 @@ export {
   getProductsFilteredController,
   forgetPasswordController,
   resetPasswordController,
-  getBanarasController,
   getCategoryByIdController,
   addEmployeeController,
   getEmployeesController,
@@ -116,4 +127,13 @@ export {
   addRolesController,
   getPermissionsByRoleIdController,
   getUsersAndEmployeesController,
+  getBannersController,
+  addBannerController,
+  getAllBannersController,
+  updateBannerController,
+  addBrandController,
+  updateBrandController,
+  updateCategoryController,
+  archivedCategoryController,
+  getAllCategoriesController,
 };

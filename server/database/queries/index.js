@@ -10,6 +10,7 @@ import {
   updateSubCategoryQuery,
   deleteSubCategoryQuery,
   archivedSubCategoryQuery,
+  getAllSubCategoriesByCategoryIdQuery,
 } from './categories/index.js';
 
 import {
@@ -24,6 +25,7 @@ import {
   archivedProductQuery,
   addProductQuery,
   updateProductQuery,
+  getAllProductsByCategoryIdQuery,
 } from './products/index.js';
 
 import {
@@ -77,10 +79,11 @@ import {
 } from './wishlists/index.js';
 
 import {
-  getBanarasQuery,
-  addBanarasQuery,
-  updateBanarasQuery,
-} from './banaras/index.js';
+  getBannersQuery,
+  addBannerQuery,
+  updateBannerQuery,
+  getAllBannersQuery,
+} from './banners/index.js';
 
 import {
   addEmployeeQuery,
@@ -131,14 +134,14 @@ export {
   updateUserResetQuery,
   checkUserByResetLinkQuery,
   updateUserResetPasswordQuery,
-  getBanarasQuery,
   getCategoryByIdQuery,
   addBrandsQuery,
   deleteBrandsQuery,
   updateBrandsQuery,
   archivedBrandsQuery,
-  addBanarasQuery,
-  updateBanarasQuery,
+  getBannersQuery,
+  addBannerQuery,
+  updateBannerQuery,
   addCategoryQuery,
   updateCategoryQuery,
   deleteCategoryQuery,
@@ -161,4 +164,7 @@ export {
   addRolesQuery,
   addRolesPermissionsQuery,
   getUsersAndEmployeesQuery,
+  getAllBannersQuery,
+  getAllSubCategoriesByCategoryIdQuery,
+  getAllProductsByCategoryIdQuery,
 };

@@ -10,6 +10,7 @@ import {
 import { verifyToken } from '../middleware/index.js';
 
 const router = Router();
+
 router.get('/product/:productId', getProductByIdController);
 router.route('/product/:productId/review').get(getSingleProductReviewController)
   .post(verifyToken, addReviewProductController);

@@ -11,7 +11,7 @@ orders,
 reviews,
 guests,
 brands,
-banaras,
+banners,
 roles,
 pages,
 permissions,
@@ -176,7 +176,7 @@ CREATE TABLE brands (
   createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE banaras (
+CREATE TABLE banners (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   image TEXT NOT NULL,

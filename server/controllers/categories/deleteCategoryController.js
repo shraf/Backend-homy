@@ -3,8 +3,8 @@ import { customizedError } from '../../utils/index.js';
 
 const deleteCategoryController = async (req, res, next) => {
   try {
-    const { categoryId } = req.params;
-    const { rows, rowCount } = await deleteCategoryQuery(categoryId);
+    const { id } = req.params;
+    const { rows, rowCount } = await deleteCategoryQuery(id);
     if (!rowCount) {
       throw customizedError(400, 'There have error try again later');
     }

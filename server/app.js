@@ -11,8 +11,10 @@ import {
   productRoute,
   userRoute,
   wishlistRoute,
-  banarasRoute,
+  bannerRoute,
   adminRoute,
+  brandRoute,
+  categoryRoute,
 } from './routes/index.js';
 
 const app = express();
@@ -41,8 +43,10 @@ app.use('/api/v1', cartRoute);
 app.use('/api/v1', orderRoute);
 app.use('/api/v1', productRoute);
 app.use('/api/v1', wishlistRoute);
-app.use('/api/v1', banarasRoute);
+app.use('/api/v1', bannerRoute);
 app.use('/api/v1', adminRoute);
+app.use('/api/v1', brandRoute);
+app.use('/api/v1', categoryRoute);
 
 if (NODE_ENV === 'production') {
   app.get('*', (req, res) => {

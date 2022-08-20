@@ -4,8 +4,10 @@ import userRoute from './user.js';
 import orderRoute from './order.js';
 import productRoute from './product.js';
 import generalRoute from './general.js';
-import banarasRoute from './banaras.js';
+import bannerRoute from './banners.js';
 import adminRoute from './admin.js';
+import brandRoute from './brands.js';
+import categoryRoute from './categories.js';
 
 export {
   wishlistRoute,
@@ -14,6 +16,8 @@ export {
   orderRoute,
   productRoute,
   generalRoute,
-  banarasRoute,
+  bannerRoute,
   adminRoute,
+  brandRoute,
+  categoryRoute,
 };

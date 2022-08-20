@@ -10,19 +10,22 @@ VALUES
         'admin'
     ),
     (
-        'product manager'
+        'products manager'
     ),
     (
-        'categories manager'
+        'categories and Sub categories manager'
     ),
     (
-        'employee3'
+        'banners manager'
     ),
     (
-        'employee4'
+        'orders manager'
     ),
     (
-        'employee5'
+        'brands manager'
+    ),
+    (
+        'banners manager'
     );
 INSERT INTO
     pages(
@@ -32,43 +35,43 @@ INSERT INTO
 VALUES
     (
         'home',
-        '/dashboard/home'
+        '/'
     ),
     (
         'products',
-        '/dashboard/products'
+        '/products'
     ),
     (
         'categories',
-        '/dashboard/categories'
+        '/categories'
     ),
     (
         'subCategories',
-        '/dashboard/subCategories'
+        '/subCategories'
     ),
     (
         'brands',
-        '/dashboard/brands'
+        '/brands'
     ),
     (
         'orders',
-        '/dashboard/orders'
+        '/orders'
     ),
     (
         'users',
-        '/dashboard/users'
+        '/users'
     ),
     (
         'profile',
-        '/dashboard/profile'
+        '/profile'
     ),
     (
         'roles',
-        '/dashboard/roles'
+        '/roles'
     ),
     (
-        'banaras',
-        '/dashboard/banaras'
+        'banners',
+        '/banners'
     );
 INSERT INTO
     permissions(
@@ -94,46 +97,24 @@ INSERT INTO
       page_id
     )
 VALUES
-    (
-        3,
-        1,
-        2
-    ),
-    (
-        3,
-        2,
-        2
-    ),
-    (
-        3,
-        3,
-        2
-    ),
-    (
-        3,
-        4,
-        2
-    ),
-    (
-        4,
-        1,
-        3
-    ),
-    (
-        4,
-        2,
-        3
-    ),
-    (
-        4,
-        3,
-        3
-    ),
-    (
-        4,
-        4,
-        3
-    );
+    (3,1,2),
+    (3,2,2),
+    (3,3,2),
+    (3,4,2),
+    (4,1,3),
+    (4,2,3),
+    (4,3,3),
+    (4,4,3),
+    (4,1,4),
+    (4,2,4),
+    (4,3,4),
+    (4,4,4),
+    (7,1,5),
+    (7,2,5),
+    (7,3,5),
+    (8,1,10),
+    (8,2,10),
+    (8,3,10);
 INSERT INTO
     users(
         name, 
@@ -172,11 +153,32 @@ VALUES
         2
     ),
     (
-        'employee1',
-        'employee1@gmail.com',
+        'product',
+        'product@gmail.com',
         '$2b$10$p07XMmOtUZ35RSBDOH.O.OKCTnASQg67sHauTP2pdMieA0wesM/ia',
         '+96512345678',
         3
+    ),
+    (
+        'brand',
+        'brand@gmail.com',
+        '$2b$10$p07XMmOtUZ35RSBDOH.O.OKCTnASQg67sHauTP2pdMieA0wesM/ia',
+        '+96512345678',
+        7
+    ),
+    (
+        'category',
+        'category@gmail.com',
+        '$2b$10$p07XMmOtUZ35RSBDOH.O.OKCTnASQg67sHauTP2pdMieA0wesM/ia',
+        '+96512345678',
+        4
+    ),
+    (
+        'banner',
+        'banner@gmail.com',
+        '$2b$10$p07XMmOtUZ35RSBDOH.O.OKCTnASQg67sHauTP2pdMieA0wesM/ia',
+        '+96512345678',
+        8
     );
 
 INSERT INTO
@@ -705,28 +707,28 @@ VALUES
         FALSE
     );
 INSERT INTO
-    banaras(
+    banners(
       name,
       image
     )
 VALUES
     (
-        'banara1',
+        'banner1',
         'https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg'
     ),
     (
-         'banara2',
+         'banner2',
         'https://i.postimg.cc/jdcCKyk5/Rectangle-111.png'
     ),
     (
-         'banara3',
+         'banner3',
         'https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg'
     ),
     (
-        'banara4',
+        'banner4',
         'https://i.postimg.cc/jdcCKyk5/Rectangle-111.png'
     ),
     (
-         'banara5',
+         'banner5',
         'https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg'
     );

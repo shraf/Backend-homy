@@ -1,9 +1,9 @@
 import connection from '../../config/connection.js';
 
-const archivedSubCategoryQuery = (id) => {
+const archivedSubCategoryQuery = (archive, id) => {
   const sql = {
-    text: 'UPDATE sub_categories SET archived = true WHERE id=$1',
-    values: [id],
+    text: 'UPDATE sub_categories SET archived = $1 WHERE id=$2',
+    values: [archive, id],
   };
   return connection.query(sql);
 };

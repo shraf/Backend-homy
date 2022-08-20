@@ -1,16 +1,17 @@
-import { addCategoryQuery } from '../../database/queries/index.js';
+import { addCategoryQuery, updateCategoryQuery } from '../../database/queries/index.js';
 import { customizedError } from '../../utils/index.js';
 import categorySchema from '../../utils/validation/categorySchema.js';
 
-const addCategoryController = async (req, res, next) => {
+const updateCategoryController = async (req, res, next) => {
   try {
+    const { id } = req.params;
     const {
       name, image, place, hasSubCategories,
     } = await categorySchema.validate(req.body, { abortEarly: false });
-    const { rows: data } = await addCategoryQuery(name, image, place, hasSubCategories);
-    res.status(201).json({
-      message: 'You have been successfully added category',
-      status: 201,
+    const { rows: data } = await updateCategoryQuery(name, image, place, hasSubCategories, id);
+    res.json({
+      message: 'You have been successfully updated category',
+      status: 200,
       data,
     });
   } catch (error) {
@@ -21,4 +22,4 @@ const addCategoryController = async (req, res, next) => {
   }
 };
 
-export default addCategoryController;
+export default updateCategoryController;
