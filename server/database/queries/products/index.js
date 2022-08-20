@@ -10,6 +10,7 @@ import archivedProductQuery from './archivedProductQuery.js';
 import addProductQuery from './addProductQuery.js';
 import updateProductQuery from './updateProductQuery.js';
 import getAllProductsByCategoryIdQuery from './getAllProductsByCategoryIdQuery.js';
+import getAllProductsBySubCategoryQuery from './getAllProductsBySubCategoryQuery.js';
 
 export {
   getProductByIdQuery,
@@ -24,4 +25,5 @@ export {
   addProductQuery,
   updateProductQuery,
   getAllProductsByCategoryIdQuery,
+  getAllProductsBySubCategoryQuery,
 };

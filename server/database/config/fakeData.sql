@@ -182,6 +182,13 @@ VALUES
         '$2b$10$p07XMmOtUZ35RSBDOH.O.OKCTnASQg67sHauTP2pdMieA0wesM/ia',
         '+96512345678',
         8
+    ),
+    (
+        'sub-category',
+        'sub-category@gmail.com',
+        '$2b$10$p07XMmOtUZ35RSBDOH.O.OKCTnASQg67sHauTP2pdMieA0wesM/ia',
+        '+96512345678',
+        9
     );
 
 INSERT INTO

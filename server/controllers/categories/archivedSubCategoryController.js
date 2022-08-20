@@ -1,24 +1,16 @@
 import {
-  archivedCategoryQuery,
   archivedProductQuery,
   archivedSubCategoryQuery,
-  getAllProductsByCategoryIdQuery,
-  getAllSubCategoriesByCategoryIdQuery,
+  getAllProductsBySubCategoryQuery,
 } from '../../database/queries/index.js';
 
-const global = async (categoryId, subCategories, products, archivedValue) => {
+const global = async (subCategoryId, products, archivedValue) => {
   if (products.length > 0) {
     products.forEach(async ({ id: productId }) => {
       await archivedProductQuery(archivedValue, productId);
     });
-
-    if (subCategories.length > 0) {
-      subCategories.forEach(async ({ id: subCategoriesId }) => {
-        await archivedSubCategoryQuery(archivedValue, subCategoriesId);
-      });
-    }
   }
-  const { rows } = await archivedCategoryQuery(archivedValue, categoryId);
+  const { rows } = await archivedSubCategoryQuery(archivedValue, subCategoryId);
   return rows;
 };
 
@@ -26,19 +18,18 @@ const archivedSubCategoryController = async (req, res, next) => {
   try {
     const { id } = req.params;
     const { archive } = req.query;
-    const { rows: subCategories } = await getAllSubCategoriesByCategoryIdQuery(id);
-    const { rows: products } = await getAllProductsByCategoryIdQuery(id);
+    const { rows: products } = await getAllProductsBySubCategoryQuery(id);
     if (archive) {
-      const result = await global(id, subCategories, products, true);
+      const result = await global(id, products, true);
       return res.json({
-        message: 'You have been successfully archived category',
+        message: 'You have been successfully archived sub-category',
         status: 200,
         data: result,
       });
     }
-    const result = await global(id, subCategories, products, false);
+    const result = await global(id, products, false);
     res.json({
-      message: 'You have been successfully not archived category',
+      message: 'You have been successfully not archived sub-category',
       status: 200,
       data: result,
     });

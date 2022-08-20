@@ -11,6 +11,7 @@ import {
   deleteSubCategoryQuery,
   archivedSubCategoryQuery,
   getAllSubCategoriesByCategoryIdQuery,
+  getAllSubCategoriesQuery,
 } from './categories/index.js';
 
 import {
@@ -26,6 +27,7 @@ import {
   addProductQuery,
   updateProductQuery,
   getAllProductsByCategoryIdQuery,
+  getAllProductsBySubCategoryQuery,
 } from './products/index.js';
 
 import {
@@ -167,4 +169,6 @@ export {
   getAllBannersQuery,
   getAllSubCategoriesByCategoryIdQuery,
   getAllProductsByCategoryIdQuery,
+  getAllProductsBySubCategoryQuery,
+  getAllSubCategoriesQuery,
 };

@@ -10,6 +10,7 @@ import updateSubCategoryQuery from './updateSubCategoryQuery.js';
 import archivedSubCategoryQuery from './archivedSubCategoryQuery.js';
 import deleteSubCategoryQuery from './deleteSubCategoryQuery.js';
 import getAllSubCategoriesByCategoryIdQuery from './getAllSubCategoriesByCategoryIdQuery.js';
+import getAllSubCategoriesQuery from './getAllSubCategoriesQuery.js';
 
 export {
   getCategoriesQuery,
@@ -24,4 +25,5 @@ export {
   deleteSubCategoryQuery,
   archivedSubCategoryQuery,
   getAllSubCategoriesByCategoryIdQuery,
+  getAllSubCategoriesQuery,
 };
