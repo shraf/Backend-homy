@@ -9,7 +9,7 @@ import { verifyTokenAndAdminAuthorization } from '../middleware/index.js';
 
 const router = Router();
 
-router.get('/banner', getBannersController);
+router.get('/banners', getBannersController);
 router.get('/dashboard/banners', verifyTokenAndAdminAuthorization, getAllBannersController);
 router.post('/dashboard/banner', verifyTokenAndAdminAuthorization, addBannerController);
 router.put('/dashboard/banner/:id', verifyTokenAndAdminAuthorization, updateBannerController);
