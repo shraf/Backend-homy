@@ -8,6 +8,11 @@ import {
   updateCategoryController,
   archivedCategoryController,
   getAllCategoriesController,
+  addSubCategoryController,
+  deleteSubCategoryController,
+  updateSubCategoryController,
+  archivedSubCategoryController,
+  getAllSubCategoriesController,
 } from './categories/index.js';
 
 import {
@@ -136,4 +141,9 @@ export {
   updateCategoryController,
   archivedCategoryController,
   getAllCategoriesController,
+  addSubCategoryController,
+  deleteSubCategoryController,
+  updateSubCategoryController,
+  archivedSubCategoryController,
+  getAllSubCategoriesController,
 };

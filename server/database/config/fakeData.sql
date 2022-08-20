@@ -13,7 +13,7 @@ VALUES
         'products manager'
     ),
     (
-        'categories and Sub categories manager'
+        'categories manager'
     ),
     (
         'banners manager'
@@ -26,6 +26,9 @@ VALUES
     ),
     (
         'banners manager'
+    ),
+    (
+        'sub-categories manager'
     );
 INSERT INTO
     pages(
@@ -105,10 +108,10 @@ VALUES
     (4,2,3),
     (4,3,3),
     (4,4,3),
-    (4,1,4),
-    (4,2,4),
-    (4,3,4),
-    (4,4,4),
+    (9,1,4),
+    (9,2,4),
+    (9,3,4),
+    (9,4,4),
     (7,1,5),
     (7,2,5),
     (7,3,5),
@@ -179,6 +182,13 @@ VALUES
         '$2b$10$p07XMmOtUZ35RSBDOH.O.OKCTnASQg67sHauTP2pdMieA0wesM/ia',
         '+96512345678',
         8
+    ),
+    (
+        'sub-category',
+        'sub-category@gmail.com',
+        '$2b$10$p07XMmOtUZ35RSBDOH.O.OKCTnASQg67sHauTP2pdMieA0wesM/ia',
+        '+96512345678',
+        9
     );
 
 INSERT INTO

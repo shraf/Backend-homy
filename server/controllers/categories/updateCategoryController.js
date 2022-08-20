@@ -1,4 +1,4 @@
-import { addCategoryQuery, updateCategoryQuery } from '../../database/queries/index.js';
+import { updateCategoryQuery } from '../../database/queries/index.js';
 import { customizedError } from '../../utils/index.js';
 import categorySchema from '../../utils/validation/categorySchema.js';
 

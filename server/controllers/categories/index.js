@@ -6,6 +6,11 @@ import deleteCategoryController from './deleteCategoryController.js';
 import updateCategoryController from './updateCategoryController.js';
 import archivedCategoryController from './archivedCategoryController.js';
 import getAllCategoriesController from './getAllCategoriesController.js';
+import addSubCategoryController from './addSubCategoryController.js';
+import deleteSubCategoryController from './deleteSubCategoryController.js';
+import updateSubCategoryController from './updateSubCategoryController.js';
+import archivedSubCategoryController from './archivedSubCategoryController.js';
+import getAllSubCategoriesController from './getAllSubCategoriesController.js';
 
 export {
   getCategoriesController,
@@ -16,4 +21,9 @@ export {
   updateCategoryController,
   archivedCategoryController,
   getAllCategoriesController,
+  addSubCategoryController,
+  deleteSubCategoryController,
+  updateSubCategoryController,
+  archivedSubCategoryController,
+  getAllSubCategoriesController,
 };
