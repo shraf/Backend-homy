@@ -1,8 +1,8 @@
-import { updateCategoryQuery } from '../../database/queries/index.js';
+import { addCategoryQuery, updateCategoryQuery } from '../../database/queries/index.js';
 import { customizedError } from '../../utils/index.js';
 import categorySchema from '../../utils/validation/categorySchema.js';
 
-const updateCategoryController = async (req, res, next) => {
+const updateSubCategoryController = async (req, res, next) => {
   try {
     const { id } = req.params;
     const {
@@ -22,4 +22,4 @@ const updateCategoryController = async (req, res, next) => {
   }
 };
 
-export default updateCategoryController;
+export default updateSubCategoryController;
