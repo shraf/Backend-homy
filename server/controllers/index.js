@@ -53,6 +53,8 @@ import {
   getSingleUserOrderController,
   getSingleOrderController,
   addOrderController,
+  updateOrderController,
+  getAllOrdersController,
 } from './orders/index.js';
 
 import {
@@ -156,4 +158,6 @@ export {
   deleteProductController,
   getAllProductsController,
   archivedProductController,
+  updateOrderController,
+  getAllOrdersController,
 };

@@ -20,6 +20,7 @@ import {
   productSchema,
   employeeSchema,
   rolesSchema,
+  statusSchema,
 } from './validation/index.js';
 
 import { jwtSign, jwtVerify } from './jwt/index.js';
@@ -51,4 +52,5 @@ export {
   productSchema,
   employeeSchema,
   rolesSchema,
+  statusSchema,
 };
