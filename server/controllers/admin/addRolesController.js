@@ -12,6 +12,9 @@ const addRolesController = async (req, res, next) => {
       throw customizedError(400, 'Role name already exists');
     }
     const { rows: role } = await addRolesQuery(name.toLocaleLowerCase());
+    if (!role.length) {
+      throw customizedError(400, 'there have error try again later');
+    }
     const roleId = role[0].id;
     permissionPage.forEach(async ({ permissionId, pageId }) => {
       const { rowCount } = await addRolesPermissionsQuery(roleId, permissionId, pageId);

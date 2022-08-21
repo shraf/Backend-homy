@@ -7,6 +7,11 @@ import getProductsByNameController from './getProductsByNameController.js';
 import getTopSellerProductsController from './getTopSellerProductsController.js';
 import getRecommendedProductController from './getRecommendedProductController.js';
 import getProductsFilteredController from './getProductsFilteredController.js';
+import addProductController from './addProductController.js';
+import updateProductController from './updateProductController.js';
+import deleteProductController from './deleteProductController.js';
+import getAllProductsController from './getAllProductsController.js';
+import archivedProductController from './archivedProductController.js';
 
 
 export {
@@ -19,4 +24,9 @@ export {
   getTopSellerProductsController,
   getRecommendedProductController,
   getProductsFilteredController,
+  addProductController,
+  updateProductController,
+  deleteProductController,
+  getAllProductsController,
+  archivedProductController,
 };
