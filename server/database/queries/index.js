@@ -57,6 +57,9 @@ import {
   addGuestOrderQuery,
   addUserOrderQuery,
   getProductsFromOrderQuery,
+  updateOrderQuery,
+  getAllOrdersJoinUsersQuery,
+  getAllOrdersJoinGuestsQuery,
 } from './orders/index.js';
 
 import {
@@ -171,4 +174,7 @@ export {
   getAllProductsByCategoryIdQuery,
   getAllProductsBySubCategoryQuery,
   getAllSubCategoriesQuery,
+  updateOrderQuery,
+  getAllOrdersJoinUsersQuery,
+  getAllOrdersJoinGuestsQuery,
 };
