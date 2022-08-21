@@ -30,18 +30,15 @@ const verifyTokenAndAuthorization = (req, res, next) => {
 const verifyTokenAndAdminAuthorization = (req, res, next) => {
   verifyToken(req, res, async () => {
     const { rows: data } = await getRolesPermissionsQuery(req.user.role);
-    console.log(data);
     try {
       if (req.user.role == 2) {
         return next();
       }
       if (req.user.role != 1 && req.user.role != 2) {
-        // const pageLink = req.headers && req.headers.referer && req.headers.referer.split('/')[4];
-        const pageLink = 'subCategories';
+        const pageLink = req.headers && req.headers.referer && req.headers.referer.split('/')[4];
         if (data.length) {
           const x = data.find((item) => item.methodname.toLowerCase() === req.method.toLowerCase()
           && item.pagename.toLowerCase() === pageLink.toLowerCase());
-          console.log(x);
           if (x?.pagename == pageLink) {
             next();
           } else {
