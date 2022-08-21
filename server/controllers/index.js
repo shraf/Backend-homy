@@ -38,6 +38,11 @@ import {
   getTopSellerProductsController,
   getRecommendedProductController,
   getProductsFilteredController,
+  addProductController,
+  updateProductController,
+  deleteProductController,
+  getAllProductsController,
+  archivedProductController,
 } from './products/index.js';
 
 import signup from './signup/index.js';
@@ -146,4 +151,9 @@ export {
   updateSubCategoryController,
   archivedSubCategoryController,
   getAllSubCategoriesController,
+  addProductController,
+  updateProductController,
+  deleteProductController,
+  getAllProductsController,
+  archivedProductController,
 };

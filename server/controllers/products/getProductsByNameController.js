@@ -3,7 +3,7 @@ import { getProductsQuery } from '../../database/queries/index.js';
 const getProductsByNameController = async (req, res, next) => {
   try {
     const { productName } = req.query;
-    const { rows } = await getProductsQuery();
+    const { rows } = await getProductsQuery(false);
     const products = rows.filter((product) => product.name.toLowerCase().includes(productName.toLowerCase()));
     res.json({
       message: 'Successfully retrieved products ',
