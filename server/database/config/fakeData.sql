@@ -652,8 +652,7 @@ INSERT INTO
         order_number,
         payment,
         user_id,
-        guest_id,
-        createdat
+        guest_id
     )
 VALUES
     (
@@ -661,33 +660,10 @@ VALUES
         300,
         '{Kuwait, First Residence Building, Kuwait Street, 2,10}',
         'pending',
-        'scl245sdas',
+        'scl245as',
         'Kent', 
         1,
-        NULL,
-        '2022-06-24T17:07:10.007Z' 
-    ),
-       (
-        '{{1,2},{2,10},{3,5}}',
-        300,
-        '{Kuwait, First Residence Building, Kuwait Street, 2,10}',
-        'pending',
-        'scl2sd45as',
-        'Kent', 
-        1,
-        NULL,
-        '2022-07-24T17:07:10.007Z' 
-    ),
-      (
-        '{{1,2},{2,10},{3,5}}',
-        300,
-        '{Kuwait, First Residence Building, Kuwait Street, 2,10}',
-        'pending',
-        'scl24df5as',
-        'Kent', 
-        1,
-        NULL,
-        '2022-07-24T17:07:10.007Z' 
+        NULL 
     ),
     (
         '{{4,10},{1,1},{5,3}}',
@@ -697,19 +673,17 @@ VALUES
         'scl245affs',
         'Kent', 
         1,
-        NULL,
-        '2022-08-24T17:07:10.007Z'
+        NULL 
     ),
     (
         '{{1,5},{4,2},{3,5}}',
         200,
         '{Kuwait,First Residence Building, Kuwait Street, 3,11}',
         'reject',
-        'asv4524edg', 
+        'asv4524eg', 
         'Kent',
         NULL,
-        2,
-        '2022-08-24T17:07:10.007Z'
+        2
     );
 
 INSERT INTO
