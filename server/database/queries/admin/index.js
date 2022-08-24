@@ -8,6 +8,8 @@ import checkRoleExistsQuery from './checkRoleExistsQuery.js';
 import addRolesQuery from './addRolesQuery.js';
 import addRolesPermissionsQuery from './addRolesPermissionsQuery.js';
 import updateRoleForEmployeeQuery from './updateRoleForEmployeeQuery.js';
+import getOrderStatusQuery from './getOrderStatusQuery.js';
+import getOrderByMonthQuery from './getOrderByMonthQuery.js';
 
 export {
   addEmployeeQuery,
@@ -20,4 +22,6 @@ export {
   addRolesQuery,
   addRolesPermissionsQuery,
   updateRoleForEmployeeQuery,
+  getOrderStatusQuery,
+  getOrderByMonthQuery,
 };

@@ -101,6 +101,8 @@ import {
   addRolesQuery,
   addRolesPermissionsQuery,
   updateRoleForEmployeeQuery,
+  getOrderStatusQuery,
+  getOrderByMonthQuery,
 } from './admin/index.js';
 
 export {
@@ -179,4 +181,6 @@ export {
   getAllOrdersJoinUsersQuery,
   getAllOrdersJoinGuestsQuery,
   updateRoleForEmployeeQuery,
+  getOrderStatusQuery,
+  getOrderByMonthQuery,
 };

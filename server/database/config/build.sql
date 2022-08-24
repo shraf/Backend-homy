@@ -158,7 +158,7 @@ CREATE TABLE orders (
   products TEXT[][],
   amount FLOAT NOT NULL,
   addresses TEXT[] ,
-  status VARCHAR(100) DEFAULT 'Pending',
+  status VARCHAR(100) DEFAULT 'pending',
   order_number VARCHAR(255) NOT NULL UNIQUE,
   payment VARCHAR(255) NOT NULL,
   user_id INT NULL,
