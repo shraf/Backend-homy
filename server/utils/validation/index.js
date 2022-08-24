@@ -20,6 +20,7 @@ import productSchema from './productSchema.js';
 import employeeSchema from './employeeSchema.js';
 import rolesSchema from './rolesSchema.js';
 import statusSchema from './statusSchema.js';
+import roleIdSchema from './roleIdSchema.js';
 
 export {
   signupSchema,
@@ -44,4 +45,5 @@ export {
   employeeSchema,
   rolesSchema,
   statusSchema,
+  roleIdSchema,
 };

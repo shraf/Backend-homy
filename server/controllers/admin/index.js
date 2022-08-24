@@ -5,6 +5,7 @@ import getPagesController from './getPagesController.js';
 import getPermissionsController from './getPermissionsController.js';
 import addRolesController from './addRolesController.js';
 import getPermissionsByRoleIdController from './getPermissionsByRoleIdController.js';
+import updateRoleForEmployeeController from './updateRoleForEmployeeController.js';
 
 export {
   addEmployeeController,
@@ -14,4 +15,5 @@ export {
   getPermissionsController,
   addRolesController,
   getPermissionsByRoleIdController,
+  updateRoleForEmployeeController,
 };

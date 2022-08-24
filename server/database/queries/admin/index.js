@@ -7,6 +7,7 @@ import getPermissionsQuery from './getPermissionsQuery.js';
 import checkRoleExistsQuery from './checkRoleExistsQuery.js';
 import addRolesQuery from './addRolesQuery.js';
 import addRolesPermissionsQuery from './addRolesPermissionsQuery.js';
+import updateRoleForEmployeeQuery from './updateRoleForEmployeeQuery.js';
 
 export {
   addEmployeeQuery,
@@ -18,4 +19,5 @@ export {
   checkRoleExistsQuery,
   addRolesQuery,
   addRolesPermissionsQuery,
+  updateRoleForEmployeeQuery,
 };
