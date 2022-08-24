@@ -90,6 +90,7 @@ import {
   getPermissionsController,
   addRolesController,
   getPermissionsByRoleIdController,
+  updateRoleForEmployeeController,
 } from './admin/index.js';
 
 export {
@@ -160,4 +161,5 @@ export {
   archivedProductController,
   updateOrderController,
   getAllOrdersController,
+  updateRoleForEmployeeController,
 };

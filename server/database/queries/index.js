@@ -100,6 +100,7 @@ import {
   checkRoleExistsQuery,
   addRolesQuery,
   addRolesPermissionsQuery,
+  updateRoleForEmployeeQuery,
 } from './admin/index.js';
 
 export {
@@ -177,4 +178,5 @@ export {
   updateOrderQuery,
   getAllOrdersJoinUsersQuery,
   getAllOrdersJoinGuestsQuery,
+  updateRoleForEmployeeQuery,
 };
