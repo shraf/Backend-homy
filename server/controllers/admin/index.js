@@ -6,6 +6,9 @@ import getPermissionsController from './getPermissionsController.js';
 import addRolesController from './addRolesController.js';
 import getPermissionsByRoleIdController from './getPermissionsByRoleIdController.js';
 import updateRoleForEmployeeController from './updateRoleForEmployeeController.js';
+import getOrderStatusController from './getOrderStatusController.js';
+import getStatisticsController from './getStatisticsController.js';
+import getOrderByMonthsController from './getOrderByMonthsController.js';
 
 export {
   addEmployeeController,
@@ -16,4 +19,7 @@ export {
   addRolesController,
   getPermissionsByRoleIdController,
   updateRoleForEmployeeController,
+  getOrderStatusController,
+  getStatisticsController,
+  getOrderByMonthsController,
 };
