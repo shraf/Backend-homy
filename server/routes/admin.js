@@ -7,7 +7,7 @@ import {
   getPermissionsController,
   getRolesController,
   getUsersAndEmployeesController,
-  updateRoleForUserController,
+  updateRoleForEmployeeController,
 } from '../controllers/index.js';
 import { verifyTokenAndAdminAuthorization } from '../middleware/index.js';
 
@@ -21,6 +21,6 @@ router.post('/employee', verifyTokenAndAdminAuthorization, addEmployeeController
 router.get('/pages', verifyTokenAndAdminAuthorization, getPagesController);
 router.get('/permissions', verifyTokenAndAdminAuthorization, getPermissionsController);
 router.get('/users-employees', verifyTokenAndAdminAuthorization, getUsersAndEmployeesController);
-router.put('/dashboard/employee/:id/update-role', verifyTokenAndAdminAuthorization, updateRoleForUserController);
+router.put('/dashboard/employee/:id/update-role', verifyTokenAndAdminAuthorization, updateRoleForEmployeeController);
 
 export default router;
