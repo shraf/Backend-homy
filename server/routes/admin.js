@@ -2,6 +2,7 @@ import { Router } from 'express';
 import {
   addEmployeeController,
   addRolesController,
+  deleteRoleController,
   getEmployeesController,
   getOrderByMonthsController,
   getOrderStatusController,
@@ -20,6 +21,7 @@ const router = Router();
 router.route('/roles')
   .get(verifyTokenAndAdminAuthorization, getRolesController)
   .post(verifyTokenAndAdminAuthorization, addRolesController);
+router.delete('/role/:id', verifyTokenAndAdminAuthorization, deleteRoleController)
 router.get('/employees', verifyTokenAndAdminAuthorization, getEmployeesController);
 router.post('/employee', verifyTokenAndAdminAuthorization, addEmployeeController);
 router.get('/pages', verifyTokenAndAdminAuthorization, getPagesController);

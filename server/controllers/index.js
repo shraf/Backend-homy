@@ -94,9 +94,10 @@ import {
   getOrderStatusController,
   getStatisticsController,
   getOrderByMonthsController,
+  deleteRoleController,
 } from './admin/index.js';
 
-import{
+import {
   addPromoCodeController,
   checkPromoCodeExistsController,
   deletePromoCodeController,
@@ -181,4 +182,5 @@ export {
   deletePromoCodeController,
   getPromoCodesController,
   updatePromoCodeController,
+  deleteRoleController,
 };
