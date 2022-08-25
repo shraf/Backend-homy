@@ -103,6 +103,8 @@ import {
   updateRoleForEmployeeQuery,
   getOrderStatusQuery,
   getOrderByMonthQuery,
+  deleteRoleQuery,
+  checkUsersByRoleIdQuery,
 } from './admin/index.js';
 
 import {
@@ -196,4 +198,6 @@ export {
   checkPromoCodeExistsQuery,
   getPromoCodesQuery,
   updatePromoCodeQuery,
+  deleteRoleQuery,
+  checkUsersByRoleIdQuery,
 };
