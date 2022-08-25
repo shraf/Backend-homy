@@ -14,12 +14,15 @@ const verifyToken = async (req, res, next) => {
     req.user = decoded;
     next();
   } catch (err) {
-    next(customizedError(403, 'Token is not valid!'));
+    next(customizedError(403, 'Token is Not Valid'));
   }
 };
 
 const verifyTokenAndAuthorization = (req, res, next) => {
   verifyToken(req, res, () => {
+    if (req.user === undefined) {
+      return res.status(403).json({ status: 403, message: 'Token is not valid!' });
+    }
     if (req.user.id == req.params.id) {
       next();
     } else {
@@ -29,7 +32,10 @@ const verifyTokenAndAuthorization = (req, res, next) => {
 };
 const verifyTokenAndAdminAuthorization = (req, res, next) => {
   verifyToken(req, res, async () => {
-    const { rows: data } = await getRolesPermissionsQuery(req.user.role);
+    if (req.user === undefined) {
+      return res.status(403).json({ status: 403, message: 'Token is not valid!' });
+    }
+    const { rows: data } = await getRolesPermissionsQuery(req.user?.role);
     try {
       if (req.user.role == 2) {
         return next();

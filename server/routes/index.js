@@ -8,6 +8,7 @@ import bannerRoute from './banners.js';
 import adminRoute from './admin.js';
 import brandRoute from './brands.js';
 import categoryRoute from './categories.js';
+import promoCodeRoute from './promoCodes.js';
 
 export {
   wishlistRoute,
@@ -20,4 +21,5 @@ export {
   adminRoute,
   brandRoute,
   categoryRoute,
+  promoCodeRoute,
 };

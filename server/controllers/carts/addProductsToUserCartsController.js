@@ -26,7 +26,7 @@ const addProductsToUserCartsController = async (req, res, next) => {
       await updateProductQuantityQuery(id, product.id, product.quantity);
     });
     const { rows: newUserProducts } = await getUserCartsQuery(id);
-    res.json({ message: 'successfully added new product and edit quantity in carts for user', data: newUserProducts });
+    res.status(201).json({ status: 201, message: 'successfully added new product and edit quantity in carts for user', data: newUserProducts });
   } catch (error) {
     if (error.name === 'ValidationError') {
       return next(customizedError(400, error.errors[0]));

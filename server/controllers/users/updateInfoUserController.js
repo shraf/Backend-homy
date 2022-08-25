@@ -3,10 +3,11 @@ import { updateUserSchema, customizedError } from '../../utils/index.js';
 
 const updateInfoUserController = async (req, res, next) => {
   try {
+    const { id } = req.params
     const {
       email, name, phone,
     } = await updateUserSchema.validate(req.body, { abortEarly: false });
-    const { rows, rowCount } = await updateInfoUserQuery(name, email, phone, req.params.id);
+    const { rows, rowCount } = await updateInfoUserQuery(name, email, phone, id);
     if (!rowCount) {
       throw customizedError(400, 'there have error try again later');
     }

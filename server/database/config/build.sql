@@ -12,6 +12,7 @@ reviews,
 guests,
 brands,
 banners,
+promo_codes,
 roles,
 pages,
 permissions,
@@ -182,4 +183,13 @@ CREATE TABLE banners (
   image TEXT NOT NULL,
   createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE promo_codes (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL UNIQUE,
+  discount TEXT NOT NULL,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+
 COMMIT;

@@ -15,6 +15,7 @@ import {
   adminRoute,
   brandRoute,
   categoryRoute,
+  promoCodeRoute,
 } from './routes/index.js';
 
 const app = express();
@@ -47,6 +48,7 @@ app.use('/api/v1', bannerRoute);
 app.use('/api/v1', adminRoute);
 app.use('/api/v1', brandRoute);
 app.use('/api/v1', categoryRoute);
+app.use('/api/v1', promoCodeRoute);
 
 if (NODE_ENV === 'production') {
   app.get('*', (req, res) => {
