@@ -1,7 +1,6 @@
 import {
   archivedProductQuery,
 } from '../../database/queries/index.js';
-import { customizedError } from '../../utils/index.js';
 
 const archivedProductController = async (req, res, next) => {
   try {

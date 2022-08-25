@@ -75,6 +75,10 @@ VALUES
     (
         'banners',
         '/banners'
+    ),
+    (
+        'promoCode',
+        '/promoCode'
     );
 INSERT INTO
     permissions(

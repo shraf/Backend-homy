@@ -35,14 +35,11 @@ const verifyTokenAndAdminAuthorization = (req, res, next) => {
         return next();
       }
       if (req.user.role != 1 && req.user.role != 2) {
-        let pageLink = req.headers && req.headers.referer && req.headers.referer.split('/')[3];
-        if (pageLink == '') {
-          pageLink = 'home';
-        }
+        const pageLink = req.headers.pathname;
         if (data.length) {
           const x = data.find((item) => item.methodname.toLowerCase() === req.method.toLowerCase()
-          && item.pagename.toLowerCase() === pageLink.toLowerCase());
-          if (x?.pagename == pageLink) {
+          && item.link === pageLink);
+          if (x?.link == pageLink) {
             next();
           } else {
             throw customizedError(403, ' You are not allowed to do that');
