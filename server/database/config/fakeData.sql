@@ -748,39 +748,6 @@ VALUES
          'banner5',
         'https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg'
     );
-
-    INSERT INTO
-    brands(
-      name,
-      image,
-      archived
-    )
-VALUES
-    (
-        'CANON',
-        'https://global.canon/00cmn/img/common/ogp-logo.png',
-        FALSE
-    ),
-    (
-         'SAMSUNG',
-        'https://bsmedia.business-standard.com/_media/bs/img/about-page/1562575696.png',
-        FALSE
-    ),
-    (
-         'MESTONIX',
-        'https://rndproductsbd.com/assets/images/cl_logo3.png',
-        FALSE
-    ),
-    (
-        'SONY',
-        'https://www.sony.co.jp/SonyInfo/CorporateInfo/img/sony-og.jpg',
-        FALSE
-    ),
-    (
-         'Xiaomi',
-        'https://www.91-cdn.com/pricebaba-blogimages/wp-content/uploads/2021/09/Xiaomi-Logo.png',
-        FALSE
-    );
 INSERT INTO
     promo_codes(
       name,
