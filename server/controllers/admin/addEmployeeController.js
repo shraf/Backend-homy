@@ -1,13 +1,11 @@
 import { hash } from 'bcrypt';
-import dotenv from 'dotenv';
 import { addEmployeeQuery, checkEmailExistsQuery } from '../../database/queries/index.js';
 import { customizedError, employeeSchema } from '../../utils/index.js';
 
-dotenv.config();
 const addEmployeeController = async (req, res, next) => {
   try {
     const {
-      name, email, password, phone, roleId
+      name, email, password, phone, roleId,
     } = await employeeSchema.validate(req.body, { abortEarly: false });
     const { rowCount } = await checkEmailExistsQuery(email);
     if (rowCount) {

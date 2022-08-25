@@ -22,7 +22,7 @@ const addProductsToUserWishlistsController = async (req, res, next) => {
     });
 
     const { rows: newUserProducts } = await getUserWishlistsQuery(id);
-    res.json({ message: 'successfully added new product in wishlists for user', data: newUserProducts });
+    res.status(201).json({ status: 201, message: 'successfully added new product in wishlists for user', data: newUserProducts });
   } catch (error) {
     if (error.name === 'ValidationError') {
       return next(customizedError(400, error.errors[0]));

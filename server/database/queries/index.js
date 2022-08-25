@@ -105,6 +105,14 @@ import {
   getOrderByMonthQuery,
 } from './admin/index.js';
 
+import {
+  addPromoCodeQuery,
+  deletePromoCodeQuery,
+  checkPromoCodeExistsQuery,
+  getPromoCodesQuery,
+  updatePromoCodeQuery,
+} from './promoCodes/index.js';
+
 export {
   getCategoriesQuery,
   getSubCategoriesQuery,
@@ -183,4 +191,9 @@ export {
   updateRoleForEmployeeQuery,
   getOrderStatusQuery,
   getOrderByMonthQuery,
+  addPromoCodeQuery,
+  deletePromoCodeQuery,
+  checkPromoCodeExistsQuery,
+  getPromoCodesQuery,
+  updatePromoCodeQuery,
 };

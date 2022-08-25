@@ -10,7 +10,7 @@ const updateSubCategoryController = async (req, res, next) => {
     } = await subCategorySchema.validate(req.body, { abortEarly: false });
     const { rows: data } = await updateSubCategoryQuery(name, categoryId, id);
     res.json({
-      message: 'You have been successfully updated category',
+      message: 'You have been successfully updated sub-category',
       status: 200,
       data,
     });

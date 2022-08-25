@@ -96,6 +96,14 @@ import {
   getOrderByMonthsController,
 } from './admin/index.js';
 
+import{
+  addPromoCodeController,
+  checkPromoCodeExistsController,
+  deletePromoCodeController,
+  getPromoCodesController,
+  updatePromoCodeController,
+} from './promoCodes/index.js';
+
 export {
   clientError,
   serverError,
@@ -168,4 +176,9 @@ export {
   getOrderStatusController,
   getStatisticsController,
   getOrderByMonthsController,
+  addPromoCodeController,
+  checkPromoCodeExistsController,
+  deletePromoCodeController,
+  getPromoCodesController,
+  updatePromoCodeController,
 };
