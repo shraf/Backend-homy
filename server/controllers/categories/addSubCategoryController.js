@@ -12,6 +12,9 @@ const addSubCategoryController = async (req, res, next) => {
       { abortEarly: false },
     );
     const { rows } = await getCategoryByIdQuery(categoryId);
+    if (!rows.length) {
+      throw customizedError(400, 'There is no category by this id');
+    }
     const {
       name,
       image,

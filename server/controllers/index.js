@@ -84,7 +84,6 @@ import {
 
 import {
   addEmployeeController,
-  getEmployeesController,
   getRolesController,
   getPagesController,
   getPermissionsController,
@@ -144,7 +143,6 @@ export {
   resetPasswordController,
   getCategoryByIdController,
   addEmployeeController,
-  getEmployeesController,
   getRolesController,
   addCategoryController,
   deleteCategoryController,

@@ -6,6 +6,7 @@ import getProductsFromOrderQuery from './getProductsFromOrderQuery.js';
 import getAllOrdersJoinUsersQuery from './getAllOrdersJoinUsersQuery.js';
 import getAllOrdersJoinGuestsQuery from './getAllOrdersJoinGuestsQuery.js';
 import updateOrderQuery from './updateOrderQuery.js';
+import checkOrderByOrderNumberQuery from './checkOrderByOrderNumberQuery.js'
 
 export {
   getUserOrdersQuery,
@@ -16,4 +17,5 @@ export {
   updateOrderQuery,
   getAllOrdersJoinUsersQuery,
   getAllOrdersJoinGuestsQuery,
+  checkOrderByOrderNumberQuery,
 };

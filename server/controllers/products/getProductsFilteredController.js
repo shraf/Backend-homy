@@ -4,7 +4,8 @@ import { customizedError, filterSchema } from '../../utils/index.js';
 
 const getProductsFilteredController = async (req, res, next) => {
   try {
-    const { categoryId, page, place } = req.query;
+    const { categoryId, place } = req.query;
+    let { page } = req.query;
     const {
       filter: { maxPrice, minPrice, brands, subCategory },
     } = await filterSchema.validate(req.body, { abortEarly: false });
@@ -19,6 +20,9 @@ const getProductsFilteredController = async (req, res, next) => {
       });
       return returnString;
     };
+    if (page == undefined) {
+      page = 1;
+    }
     const selections = `SELECT p.id,p.name,p.image,p.albums, p.price,
     p.description, p.category_id,p.sub_category_id,
      p.brand,p.quick_overview,p.discount,p.inStock,p.archived

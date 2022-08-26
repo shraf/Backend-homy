@@ -62,6 +62,7 @@ import {
   updateOrderQuery,
   getAllOrdersJoinUsersQuery,
   getAllOrdersJoinGuestsQuery,
+  checkOrderByOrderNumberQuery,
 } from './orders/index.js';
 
 import {
@@ -94,7 +95,6 @@ import {
 
 import {
   addEmployeeQuery,
-  getEmployeesQuery,
   getRolesQuery,
   getRolesPermissionsQuery,
   getPagesQuery,
@@ -175,7 +175,6 @@ export {
   addProductQuery,
   updateProductQuery,
   addEmployeeQuery,
-  getEmployeesQuery,
   getRolesQuery,
   getRolesPermissionsQuery,
   getPagesQuery,
@@ -204,4 +203,5 @@ export {
   checkUsersByRoleIdQuery,
   getUserByIdQuery,
   deleteUserQuery,
+  checkOrderByOrderNumberQuery,
 };

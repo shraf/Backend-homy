@@ -4,6 +4,7 @@ import {
   addUserOrderQuery,
   checkEmailExistsQuery,
   checkGuestEmailExistsQuery,
+  checkOrderByOrderNumberQuery,
 } from '../../database/queries/index.js';
 import { customizedError, orderSchema } from '../../utils/index.js';
 
@@ -19,6 +20,10 @@ const addOrderController = async (req, res, next) => {
       addresses,
       orderNumber,
     } = await orderSchema.validate(req.body, { abortEarly: false });
+    const { rows: order} = await checkOrderByOrderNumberQuery(orderNumber.toLocaleLowerCase());
+    if (order.length) {
+      throw customizedError(400,'this order number exists');
+    }
     const { rows: user } = await checkEmailExistsQuery(email);
     const { rows: guest } = await checkGuestEmailExistsQuery(email);
     if (user.length) {

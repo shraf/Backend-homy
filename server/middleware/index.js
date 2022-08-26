@@ -7,8 +7,9 @@ dotenv.config();
 
 const verifyToken = async (req, res, next) => {
   const authHeader = req.headers.token;
-  if (!authHeader) res.status(401).json({ status: 401, message: 'You are not authenticated!' });
+  if (!authHeader) return res.status(401).json({ status: 401, message: 'You are not authenticated!' });
   const token = authHeader.split(' ')[1];
+  if (!token) return res.status(401).json({ status: 400, message: 'There is no have Token' });
   try {
     const decoded = await jwtVerify(token);
     req.user = decoded;

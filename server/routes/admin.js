@@ -4,7 +4,6 @@ import {
   addRolesController,
   deleteRoleController,
   deleteUserController,
-  getEmployeesController,
   getOrderByMonthsController,
   getOrderStatusController,
   getPagesController,
@@ -23,7 +22,6 @@ router.route('/roles')
   .get(verifyTokenAndAdminAuthorization, getRolesController)
   .post(verifyTokenAndAdminAuthorization, addRolesController);
 router.delete('/role/:id', verifyTokenAndAdminAuthorization, deleteRoleController)
-router.get('/employees', verifyTokenAndAdminAuthorization, getEmployeesController);
 router.post('/employee', verifyTokenAndAdminAuthorization, addEmployeeController);
 router.get('/pages', verifyTokenAndAdminAuthorization, getPagesController);
 router.get('/permissions', verifyTokenAndAdminAuthorization, getPermissionsController);

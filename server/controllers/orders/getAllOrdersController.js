@@ -1,6 +1,4 @@
 import { getAllOrdersJoinGuestsQuery, getAllOrdersJoinUsersQuery } from '../../database/queries/index.js';
-// getAllOrdersJoinUsersQuery,
-// getAllOrdersJoinGuestsQuery,
 
 const getAllOrdersController = async (req, res, next) => {
   try {

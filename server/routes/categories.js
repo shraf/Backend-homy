@@ -17,9 +17,6 @@ import {
 import { verifyTokenAndAdminAuthorization } from '../middleware/index.js';
 
 const router = Router();
-router.get('/categories', getCategoriesController);
-router.get('/categories/:categoryId', getCategoryByIdController);
-router.get('/subCategories/:categoryId', getSubCategoriesController);
 
 router.get('/categories', getCategoriesController);
 router.get('/categories/:categoryId', getCategoryByIdController);
