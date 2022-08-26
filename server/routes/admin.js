@@ -3,6 +3,7 @@ import {
   addEmployeeController,
   addRolesController,
   deleteRoleController,
+  deleteUserController,
   getEmployeesController,
   getOrderByMonthsController,
   getOrderStatusController,
@@ -32,5 +33,6 @@ router.get('/dashboard/order-status', verifyToken, getOrderStatusController);
 router.get('/dashboard/top-products', verifyToken, getTopSellerProductsController);
 router.get('/dashboard/statistics', verifyToken, getStatisticsController);
 router.get('/dashboard/order-month', verifyToken, getOrderByMonthsController);
+router.delete('/dashboard/user/:id', verifyTokenAndAdminAuthorization, deleteUserController);
 
 export default router;

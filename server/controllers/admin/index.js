@@ -10,6 +10,7 @@ import getOrderStatusController from './getOrderStatusController.js';
 import getStatisticsController from './getStatisticsController.js';
 import getOrderByMonthsController from './getOrderByMonthsController.js';
 import deleteRoleController from './deleteRoleController.js';
+import deleteUserController from './deleteUserController.js';
 
 export {
   addEmployeeController,
@@ -24,4 +25,5 @@ export {
   getStatisticsController,
   getOrderByMonthsController,
   deleteRoleController,
+  deleteUserController,
 };
