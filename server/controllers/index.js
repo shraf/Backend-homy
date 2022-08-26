@@ -95,6 +95,7 @@ import {
   getStatisticsController,
   getOrderByMonthsController,
   deleteRoleController,
+  deleteUserController,
 } from './admin/index.js';
 
 import {
@@ -183,4 +184,5 @@ export {
   getPromoCodesController,
   updatePromoCodeController,
   deleteRoleController,
+  deleteUserController,
 };

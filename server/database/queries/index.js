@@ -44,6 +44,8 @@ import {
   checkUserByResetLinkQuery,
   updateUserResetPasswordQuery,
   getUsersAndEmployeesQuery,
+  getUserByIdQuery,
+  deleteUserQuery,
 } from './users/index.js';
 
 import {
@@ -200,4 +202,6 @@ export {
   updatePromoCodeQuery,
   deleteRoleQuery,
   checkUsersByRoleIdQuery,
+  getUserByIdQuery,
+  deleteUserQuery,
 };
