@@ -12,14 +12,12 @@ import {
   getStatisticsController,
   getTopSellerProductsController,
   getUsersAndEmployeesController,
-  signInAdmin,
   updateRoleForEmployeeController,
 } from '../controllers/index.js';
 import { verifyToken, verifyTokenAndAdminAuthorization } from '../middleware/index.js';
 
 const router = Router();
 
-router.post('/dashboard/signIn', signInAdmin);
 router.route('/roles')
   .get(verifyTokenAndAdminAuthorization, getRolesController)
   .post(verifyTokenAndAdminAuthorization, addRolesController);

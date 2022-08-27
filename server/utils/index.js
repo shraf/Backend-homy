@@ -1,7 +1,7 @@
 import customizedError from './error/customizedError.js';
 import {
   signupSchema,
-  signInSchema,
+  signinSchema,
   updateUserSchema,
   addressSchema,
   idAddressSchema,
@@ -35,7 +35,7 @@ export {
   jwtSign,
   jwtVerify,
   signupSchema,
-  signInSchema,
+  signinSchema,
   updateUserSchema,
   addressSchema,
   idAddressSchema,

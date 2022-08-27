@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import {
   signup,
-  signIn,
+  signin,
   updateInfoUserController,
   getAddressesUserController,
   addUserAddressController,
@@ -17,7 +17,7 @@ import { verifyTokenAndAuthorization } from '../middleware/index.js';
 const router = Router();
 
 router.post('/signup', signup);
-router.post('/signin', signIn);
+router.post('/signin', signin);
 router.put('/user/:id/change-password', verifyTokenAndAuthorization, updateUserPasswordController);
 router.put('/user/:id/update', verifyTokenAndAuthorization, updateInfoUserController);
 router.route('/user/:id/address')

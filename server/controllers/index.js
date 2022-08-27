@@ -47,8 +47,7 @@ import {
 } from './products/index.js';
 
 import signup from './signup/index.js';
-import signIn from './signIn/index.js';
-import signInAdmin from './signInAdmin/index.js';
+import signin from './signin/index.js';
 
 import {
   getUserOrdersController,
@@ -116,8 +115,7 @@ export {
   getSingleProductReviewController,
   getCollectReviewProductController,
   signup,
-  signIn,
-  signInAdmin,
+  signin,
   updateInfoUserController,
   getAddressesUserController,
   addUserAddressController,

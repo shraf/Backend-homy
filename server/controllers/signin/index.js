@@ -1,12 +1,12 @@
 import { compare } from 'bcrypt';
 import dotenv from 'dotenv';
 import { checkEmailExistsQuery } from '../../database/queries/index.js';
-import { jwtSign, customizedError, signInSchema } from '../../utils/index.js';
+import { jwtSign, customizedError, signinSchema } from '../../utils/index.js';
 
 dotenv.config();
-const signIn = async (req, res, next) => {
+const signin = async (req, res, next) => {
   try {
-    const { email, password } = await signInSchema.validate(req.body, {
+    const { email, password } = await signinSchema.validate(req.body, {
       abortEarly: false,
     });
     const { rowCount, rows: data } = await checkEmailExistsQuery(email);
@@ -45,4 +45,4 @@ const signIn = async (req, res, next) => {
   }
 };
 
-export default signIn;
+export default signin;
