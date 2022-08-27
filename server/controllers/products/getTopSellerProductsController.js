@@ -1,4 +1,4 @@
-import { getProductsFromOrderQuery } from '../../database/queries/index.js';
+import { getProductByIdQuery, getProductsFromOrderQuery } from '../../database/queries/index.js';
 
 const getTopSellerProductsController = async (req, res, next) => {
   try {
@@ -17,38 +17,36 @@ const getTopSellerProductsController = async (req, res, next) => {
     });
     const sorted = Object.entries(count)
       .sort(([, a], [, b]) => b - a);
+    let topSellerProductsIds = [];
     if (dashboard) {
-      const topSellerProducts = sorted.slice(0, 10);
-      return res.status(200).json({
-        message: 'Successfully fetched less than 10 top seller products for dashboard',
-        status: 200,
-        data: topSellerProducts,
-      });
+      topSellerProductsIds = sorted.slice(0, 10);
     }
     if (Object.keys(count).length >= 20) {
-      const topSellerProducts = sorted.slice(0, 20);
-      res.json({
-        message: 'Successfully fetched 20 top seller products',
-        status: 200,
-        data: topSellerProducts,
-      });
+      topSellerProductsIds = sorted.slice(0, 20);
     } else if (
       Object.keys(count).length >= 10 && Object.keys(count).length < 20
     ) {
-      const topSellerProducts = sorted.slice(0, 10);
-      res.status(200).json({
-        message: 'Successfully fetched 10 top seller products',
-        status: 200,
-        data: topSellerProducts,
-      });
+      topSellerProductsIds = sorted.slice(0, 10);
     } else {
-      const topSellerProducts = sorted.slice(0, Object.keys(count).length);
-      res.status(200).json({
-        message: 'Successfully fetched less than 10 top seller products',
-        status: 200,
-        data: topSellerProducts,
-      });
+      topSellerProductsIds = sorted.slice(0, Object.keys(count).length);
     }
+    const finalTopSellerProducts = [];
+    const topSellerProducts = topSellerProductsIds.map(async (topProduct) => {
+      const { rows: productById } = await getProductByIdQuery(Number(topProduct[0]));
+      return { ...productById[0], quantity: topProduct[1] };
+    });
+    await Promise.all(topSellerProducts).then((sellerProducts) => {
+      sellerProducts.forEach((productItem) => {
+        finalTopSellerProducts.push(productItem);
+      });
+    }).catch((error) => {
+      next(error);
+    });
+    res.status(200).json({
+      message: 'Successfully fetched less than 10 top seller products',
+      status: 200,
+      data: finalTopSellerProducts,
+    });
   } catch (error) {
     next(error);
   }

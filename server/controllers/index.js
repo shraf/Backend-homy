@@ -43,6 +43,7 @@ import {
   deleteProductController,
   getAllProductsController,
   archivedProductController,
+  updateProductRatingQuery,
 } from './products/index.js';
 
 import signup from './signup/index.js';
@@ -183,4 +184,5 @@ export {
   updatePromoCodeController,
   deleteRoleController,
   deleteUserController,
+  updateProductRatingQuery,
 };
