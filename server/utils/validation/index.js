@@ -1,5 +1,5 @@
 import signupSchema from './signupSchema.js';
-import signinSchema from './signinSchema.js';
+import signInSchema from './signInSchema.js';
 import updateUserSchema from './updateUserSchema.js';
 import addressSchema from './addressSchema.js';
 import idAddressSchema from './idAddressSchema.js';
@@ -26,7 +26,7 @@ import discountSchema from './discountSchema.js';
 
 export {
   signupSchema,
-  signinSchema,
+  signInSchema,
   updateUserSchema,
   addressSchema,
   idAddressSchema,
