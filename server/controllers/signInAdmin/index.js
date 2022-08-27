@@ -4,7 +4,7 @@ import { checkEmailExistsQuery } from '../../database/queries/index.js';
 import { jwtSign, customizedError, signInSchema } from '../../utils/index.js';
 
 dotenv.config();
-const signIn = async (req, res, next) => {
+const signInAdmin = async (req, res, next) => {
   try {
     const { email, password } = await signInSchema.validate(req.body, {
       abortEarly: false,
@@ -16,6 +16,9 @@ const signIn = async (req, res, next) => {
     const resultCompare = await compare(password, data[0].password);
     if (!resultCompare) {
       throw customizedError(400, 'There have error with email or password');
+    }
+    if (data[0].role_id === 1) {
+      throw customizedError(400, 'You Can\'t login to dashboard');
     }
     const token = await jwtSign({
       id: data[0].id,
@@ -45,4 +48,4 @@ const signIn = async (req, res, next) => {
   }
 };
 
-export default signIn;
+export default signInAdmin;
