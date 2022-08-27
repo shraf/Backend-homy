@@ -364,8 +364,8 @@ VALUES
         1,
         2,
         FALSE,
-        9,
-        3
+        16,
+        5
     ),
     (
         'Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin',
@@ -381,8 +381,8 @@ VALUES
         NULL,
         1,
         FALSE,
-        0,
-        0
+        1,
+        1
     ),
     (
         'prdocut 3',
