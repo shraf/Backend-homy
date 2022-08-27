@@ -345,7 +345,9 @@ INSERT INTO
     inStock,
     sub_category_id,
     category_id,
-    archived
+    archived,
+    rating,
+    users_rated_number
     )
 VALUES
     (
@@ -361,7 +363,9 @@ VALUES
         TRUE,
         1,
         2,
-        FALSE
+        FALSE,
+        9,
+        3
     ),
     (
         'Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin',
@@ -376,7 +380,9 @@ VALUES
         TRUE,
         NULL,
         1,
-        FALSE
+        FALSE,
+        0,
+        0
     ),
     (
         'prdocut 3',
@@ -391,7 +397,9 @@ VALUES
         TRUE,
         1,
         2,
-        FALSE
+        FALSE,
+        0,
+        0
     ),
     (
         'product 4',
@@ -406,7 +414,9 @@ VALUES
         TRUE,
         NULL,
         1,
-        FALSE
+        FALSE,
+        0,
+        0
     ),
     (
         'Xiaomi Motion-Activated Night Light',
@@ -421,7 +431,9 @@ VALUES
         TRUE,
         3,
         2,
-        FALSE
+        FALSE,
+        0,
+        0
     ),
     (
          'new product ',
@@ -436,7 +448,9 @@ VALUES
         TRUE,
         4,
         2,
-        FALSE
+        FALSE,
+        0,
+        0
     ),
     (
         'product 7',
@@ -451,7 +465,9 @@ VALUES
         TRUE,
         4,
         2,
-        FALSE
+        FALSE,
+        0,
+        0
     ),
     (
         'product 8',
@@ -466,7 +482,9 @@ VALUES
         TRUE,
         NULL,
         1,
-        FALSE
+        FALSE,
+        0,
+        0
     ),
     (
         'prdocut 9',
@@ -481,7 +499,9 @@ VALUES
         TRUE,
         2,
         2,
-        FALSE
+        FALSE,
+        0,
+        0
     ),
     (
         'product 10',
@@ -496,7 +516,9 @@ VALUES
         TRUE,
         NULL,
         1,
-        FALSE
+        FALSE,
+        0,
+        0
     ),
     (
         'product 11',
@@ -511,7 +533,9 @@ VALUES
         TRUE,
         NULL,
         5,
-        FALSE
+        FALSE,
+        0,
+        0
     ),
     (
         'product 12',
@@ -526,7 +550,9 @@ VALUES
         TRUE,
         NULL,
         6,
-        FALSE
+        FALSE,
+        0,
+        0
     );
 
 INSERT INTO
@@ -552,7 +578,7 @@ VALUES
     (
         'Amazing Product',
         4,
-        1,
+        3,
         1
     ),
     (
