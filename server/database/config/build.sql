@@ -106,6 +106,8 @@ CREATE TABLE products (
   inStock BOOLEAN DEFAULT TRUE,
   sub_category_id INT NULL,
   category_id INT NULL,
+  rating FLOAT NOT NULL DEFAULT 0,
+  users_rated_number INT NOT NULL DEFAULT 0,
   archived BOOLEAN DEFAULT FALSE,
   createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (sub_category_id) REFERENCES sub_categories(id) ON DELETE CASCADE,
