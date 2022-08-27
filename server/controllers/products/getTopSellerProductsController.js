@@ -31,17 +31,11 @@ const getTopSellerProductsController = async (req, res, next) => {
       topSellerProductsIds = sorted.slice(0, Object.keys(count).length);
     }
     const finalTopSellerProducts = [];
-    const topSellerProducts = topSellerProductsIds.map(async (topProduct) => {
+    await Promise.all(topSellerProductsIds.map(async (topProduct) => {
       const { rows: productById } = await getProductByIdQuery(Number(topProduct[0]));
-      return { ...productById[0], quantity: topProduct[1] };
-    });
-    await Promise.all(topSellerProducts).then((sellerProducts) => {
-      sellerProducts.forEach((productItem) => {
-        finalTopSellerProducts.push(productItem);
-      });
-    }).catch((error) => {
-      next(error);
-    });
+      const contents = await { ...productById[0], quantity: topProduct[1] };
+      finalTopSellerProducts.push(contents);
+    }));
     res.status(200).json({
       message: 'Successfully fetched less than 10 top seller products',
       status: 200,
