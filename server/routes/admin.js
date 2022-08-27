@@ -23,7 +23,7 @@ router.post('/dashboard/signIn', signInAdmin);
 router.route('/roles')
   .get(verifyTokenAndAdminAuthorization, getRolesController)
   .post(verifyTokenAndAdminAuthorization, addRolesController);
-router.delete('/role/:id', verifyTokenAndAdminAuthorization, deleteRoleController)
+router.delete('/role/:id', verifyTokenAndAdminAuthorization, deleteRoleController);
 router.post('/employee', verifyTokenAndAdminAuthorization, addEmployeeController);
 router.get('/pages', verifyTokenAndAdminAuthorization, getPagesController);
 router.get('/permissions', verifyTokenAndAdminAuthorization, getPermissionsController);
