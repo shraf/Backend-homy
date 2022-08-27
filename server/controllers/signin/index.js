@@ -4,7 +4,7 @@ import { checkEmailExistsQuery } from '../../database/queries/index.js';
 import { jwtSign, customizedError, signinSchema } from '../../utils/index.js';
 
 dotenv.config();
-const signin = async (req, res, next) => {
+const signIn = async (req, res, next) => {
   try {
     const { email, password } = await signinSchema.validate(req.body, {
       abortEarly: false,
@@ -45,4 +45,4 @@ const signin = async (req, res, next) => {
   }
 };
 
-export default signin;
+export default signIn;
