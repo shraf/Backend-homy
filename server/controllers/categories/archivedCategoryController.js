@@ -28,7 +28,7 @@ const archivedCategoryController = async (req, res, next) => {
     const { archive } = req.query;
     const { rows: subCategories } = await getAllSubCategoriesByCategoryIdQuery(id);
     const { rows: products } = await getAllProductsByCategoryIdQuery(id);
-    if (archive) {
+    if (archive === 'true') {
       const result = await global(id, subCategories, products, true);
       return res.json({
         message: 'You have been successfully archived category',

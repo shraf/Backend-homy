@@ -59,7 +59,7 @@ const getProductsFilteredController = async (req, res, next) => {
     if (conditions.length >= 1) {
       const conditionsJoin = conditions.join(' AND ');
       query = `${selections} GROUP BY p.id,c.id HAVING p.price BETWEEN ${minPrice} AND ${maxPrice} AND p.archived = FALSE AND ${conditionsJoin} ${limit(
-        4
+        4,
       )} ${offset(page)}`;
       queryLength = `SELECT p.id FROM products as p
       join categories as c

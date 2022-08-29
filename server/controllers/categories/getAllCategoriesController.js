@@ -5,7 +5,7 @@ import {
 const getAllCategoriesController = async (req, res, next) => {
   try {
     const { archive } = req.query;
-    if (archive) {
+    if (archive === 'true') {
       const { rows } = await getCategoriesQuery(true);
       return res.json({
         message: 'You have been successfully archived categories',

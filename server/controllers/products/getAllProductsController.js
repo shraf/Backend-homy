@@ -3,7 +3,7 @@ import { getProductsQuery } from '../../database/queries/index.js';
 const getAllProductsController = async (req, res, next) => {
   try {
     const { archive } = req.query;
-    if (archive) {
+    if (archive === 'true') {
       const { rows } = await getProductsQuery(true);
       return res.json({
         message: 'You have been successfully archived products',

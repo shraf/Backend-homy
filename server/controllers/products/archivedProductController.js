@@ -6,7 +6,7 @@ const archivedProductController = async (req, res, next) => {
   try {
     const { id } = req.params;
     const { archive } = req.query;
-    if (archive) {
+    if (archive === 'true') {
       const { rows } = await archivedProductQuery(true, id);
       return res.json({
         message: 'You have been successfully archived product',

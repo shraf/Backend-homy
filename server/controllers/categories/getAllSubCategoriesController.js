@@ -3,7 +3,7 @@ import { getAllSubCategoriesQuery } from '../../database/queries/index.js';
 const getAllSubCategoriesController = async (req, res, next) => {
   try {
     const { archive } = req.query;
-    if (archive) {
+    if (archive === 'true') {
       const { rows } = await getAllSubCategoriesQuery(true);
       return res.json({
         message: 'You have been successfully archived sub-categories',
