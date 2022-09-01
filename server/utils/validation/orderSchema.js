@@ -14,6 +14,9 @@ const orderSchema = object({
   products: array().of(array()).required('Your products is required'),
   addresses: array().required('Your addresses is required'),
   amount: number().required('your amount is required'),
+  promoDiscount: number().required('Your promo discount is required'),
+  shippingCost: number().required('Your shipping is required'),
+  subTotal: number().required('Your Sub Total is required'),
 });
 
 export default orderSchema;

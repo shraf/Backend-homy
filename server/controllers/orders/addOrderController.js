@@ -19,10 +19,13 @@ const addOrderController = async (req, res, next) => {
       products,
       addresses,
       orderNumber,
+      promoDiscount,
+      shippingCost,
+      subTotal,
     } = await orderSchema.validate(req.body, { abortEarly: false });
-    const { rows: order} = await checkOrderByOrderNumberQuery(orderNumber.toLocaleLowerCase());
+    const { rows: order } = await checkOrderByOrderNumberQuery(orderNumber.toLocaleLowerCase());
     if (order.length) {
-      throw customizedError(400,'this order number exists');
+      throw customizedError(400, 'this order number exists');
     }
     const { rows: user } = await checkEmailExistsQuery(email);
     const { rows: guest } = await checkGuestEmailExistsQuery(email);
@@ -33,6 +36,9 @@ const addOrderController = async (req, res, next) => {
         addresses,
         orderNumber,
         payment,
+        promoDiscount,
+        shippingCost,
+        subTotal,
         user[0].id,
       );
       res.status(201).json({
@@ -47,6 +53,9 @@ const addOrderController = async (req, res, next) => {
         addresses,
         orderNumber,
         payment,
+        promoDiscount,
+        shippingCost,
+        subTotal,
         guest[0].id,
       );
       res.status(201).json({

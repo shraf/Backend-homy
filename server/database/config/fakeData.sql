@@ -681,37 +681,49 @@ INSERT INTO
         status,
         order_number,
         payment,
+        promo_discount,
+        shipping_cost,
+        sub_total,
         user_id,
         guest_id
     )
 VALUES
     (
-        '{{1,2},{2,10},{3,5}}',
+        '{{1,2,50,40},{2,10,320,10},{3,5,11,15}}',
         300,
         '{Kuwait, First Residence Building, Kuwait Street, 2,10}',
         'pending',
         'scl245as',
         'Kent', 
+        0,
+        0,
+        300,
         1,
         NULL 
     ),
     (
-        '{{4,10},{1,1},{5,3}}',
+        '{{4,10,12,10},{1,1,3,10},{5,3,5,10}}',
         500,
         '{Kuwait, First Residence Building, Kuwait Street, 2,10}',
         'complete',
         'scl245affs',
-        'Kent', 
+        'Kent',
+        0,
+        20,
+        480,
         1,
         NULL 
     ),
     (
-        '{{1,5},{4,2},{3,5}}',
-        200,
+        '{{1,5,12,10},{4,2,20,30},{3,5,10,30}}',
+        475,
         '{Kuwait,First Residence Building, Kuwait Street, 3,11}',
         'reject',
         'asv4524eg', 
         'Kent',
+        5,
+        200,
+        300,
         NULL,
         2
     );
