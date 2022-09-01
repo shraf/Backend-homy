@@ -28,6 +28,7 @@ import {
   updateProductQuery,
   getAllProductsByCategoryIdQuery,
   getAllProductsBySubCategoryQuery,
+  getProductByIdWithCategoryQuery,
 } from './products/index.js';
 
 import {
@@ -204,4 +205,5 @@ export {
   getUserByIdQuery,
   deleteUserQuery,
   checkOrderByOrderNumberQuery,
+  getProductByIdWithCategoryQuery,
 };

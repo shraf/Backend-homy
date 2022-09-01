@@ -25,7 +25,7 @@ const getProductsFilteredController = async (req, res, next) => {
     }
     const selections = `SELECT p.id,p.name,p.image,p.albums, p.price,
     p.description, p.category_id,p.sub_category_id,
-     p.brand,p.quick_overview,p.discount,p.inStock,p.archived
+     p.brand,p.quick_overview,p.discount,p.inStock,p.archived, p.rating,p.users_rated_number
     FROM products as p
     join categories as c
     ON p.category_id = c.id
@@ -59,7 +59,7 @@ const getProductsFilteredController = async (req, res, next) => {
     if (conditions.length >= 1) {
       const conditionsJoin = conditions.join(' AND ');
       query = `${selections} GROUP BY p.id,c.id HAVING p.price BETWEEN ${minPrice} AND ${maxPrice} AND p.archived = FALSE AND ${conditionsJoin} ${limit(
-        4,
+        4
       )} ${offset(page)}`;
       queryLength = `SELECT p.id FROM products as p
       join categories as c

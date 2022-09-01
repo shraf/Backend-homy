@@ -1,3 +1,6 @@
+/* eslint-disable no-underscore-dangle */
+import path from 'path';
+import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import express from 'express';
 import cookieParser from 'cookie-parser';
@@ -51,8 +54,11 @@ app.use('/api/v1', categoryRoute);
 app.use('/api/v1', promoCodeRoute);
 
 if (NODE_ENV === 'production') {
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = path.dirname(__filename);
+  app.use(express.static(__dirname, '..', 'client', 'build'));
   app.get('*', (req, res) => {
-    res.json({ message: 'Welcome to Homy Website' });
+    res.sendFile(__dirname, '..', 'client', 'build', 'index.html');
   });
 }
 
