@@ -37,7 +37,8 @@ app.use(cors());
 
 if (NODE_ENV === 'development') {
   app.get('/', (req, res) => {
-    res.json({ message: 'Welcome to Homy Website' });
+    res.json(process.env)
+    //res.json({ message: 'Welcome to Homy Website' });
   });
 }
 
