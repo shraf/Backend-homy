@@ -196,5 +196,7 @@ CREATE TABLE promo_codes (
   createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
+alter table categories add column name_ar varchar(255) 
+alter table categories add column name_en varchar(255) 
 
 COMMIT;
