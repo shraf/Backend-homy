@@ -135,6 +135,27 @@ CREATE TABLE carts (
   FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
 
+CREATE TABLE cart (
+  id SERIAL PRIMARY KEY,
+  user_id INT,
+  is_sold boolean NOT NULL DEFAULT false , 
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updatedAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE cart_product (
+  id SERIAL PRIMARY KEY,
+  cart_id INT NOT NULL,
+  product_id INT NOT NULL,
+	quantity INT NOT NULL DEFAULT 1,
+  is_sold boolean NOT NULL DEFAULT false , 
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updatedAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (cart_id) REFERENCES cart(id) ON DELETE CASCADE,
+  FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+);
+
 CREATE TABLE wishlists (
   id SERIAL PRIMARY KEY,
   user_id INT,
@@ -172,6 +193,20 @@ CREATE TABLE orders (
   createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
   FOREIGN KEY (guest_id) REFERENCES guests(id) ON DELETE CASCADE
+);
+
+CREATE TABLE _orders (
+  id SERIAL PRIMARY KEY,
+  cart_id int NOT NULL,
+	addresses TEXT[] ,
+  status VARCHAR(100) DEFAULT 'pending',
+  order_number VARCHAR(255) NOT NULL UNIQUE,
+  payment VARCHAR(255) NOT NULL,
+  promo_discount FLOAT NOT NULL,
+  shipping_cost FLOAT NOT NULL,
+  sub_total FLOAT NOT NULL,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (cart_id) REFERENCES cart(id) ON DELETE CASCADE
 );
 
 CREATE TABLE brands (
