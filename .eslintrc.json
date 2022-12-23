@@ -1,4 +1,4 @@
-{
+/* {
     "env": {
         "browser": true,
         "es2021": true,
@@ -18,6 +18,9 @@
             {
                 "ignorePackages": true
             }
-        ]
+        ],
+        "linebreak-style": 0
+
     }
 }
+ */

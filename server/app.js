@@ -22,6 +22,7 @@ import {
 } from './routes/index.js';
 
 const app = express();
+app.use(cors());
 
 dotenv.config();
 const {
@@ -33,12 +34,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(compression());
 app.disable('x-powered-by');
-app.use(cors());
 
 if (NODE_ENV === 'development') {
   app.get('/', (req, res) => {
-    res.json(process.env)
-    //res.json({ message: 'Welcome to Homy Website' });
+    res.json({ message: 'Welcome to Homy Website' });
   });
 }
 

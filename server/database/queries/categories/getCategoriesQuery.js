@@ -1,10 +1,25 @@
 import connection from '../../config/connection.js';
+import queryBuilder from '../../config/queryBuilder.js';
 
-const getCategoriesQuery = (archive) => {
-  const sql = {
-    text: 'SELECT * FROM categories WHERE archived=$1 ORDER BY id DESC',
-    values: [archive],
-  };
-  return connection.query(sql);
+
+const getCategoriesQuery = async(archive, place, pagination = { page: 1 }) => {
+  const offset = (pagination.page - 1) * 10;
+
+  const conditions = place
+    ? {'categories.archived':archive, place}
+    : {'categories.archived':archive};
+
+  const rows =  await queryBuilder.select('categories.*')
+    .from('categories')
+    .leftJoin('products','categories.id', '=', 'products.category_id')
+    .count({'total_products':'products.id'})
+    .where(conditions)
+    .groupBy('categories.id')
+    .paginate({
+      perPage:12,
+      currentPage:pagination.page
+    })
+
+return rows
 };
 export default getCategoriesQuery;
