@@ -13,7 +13,7 @@ import deleteProductController from './deleteProductController.js';
 import getAllProductsController from './getAllProductsController.js';
 import archivedProductController from './archivedProductController.js';
 import updateProductRatingQuery from '../../database/queries/products/updateProductRatingQuery.js';
-
+import getTopSellingProductsQuery from '../../database/queries/products/getTopSellingProductsQuery.js';
 
 export {
   getProductByIdController,
@@ -31,4 +31,5 @@ export {
   getAllProductsController,
   archivedProductController,
   updateProductRatingQuery,
+  getTopSellingProductsQuery
 };

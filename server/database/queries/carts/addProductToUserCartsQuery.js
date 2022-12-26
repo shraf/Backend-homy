@@ -1,10 +1,17 @@
 import connection from '../../config/connection.js';
+import queryBuilder from '../../config/queryBuilder.js';
 
-const addProductToUserCartsQuery = (userId, productId, quantity) => {
-  const sql = {
-    text: 'INSERT INTO carts(user_id ,product_id,quantity) VALUES($1,$2,$3) RETURNING *',
-    values: [userId, productId, quantity],
-  };
-  return connection.query(sql);
+const addProductToUserCartsQuery = (cart_id, product_id, quantity,) => {
+  queryBuilder.insert({
+    cart_id,
+    product_id,
+    quantity,
+  })
+  .into('cart_product');
+
+
+
 };
+
+
 export default addProductToUserCartsQuery;

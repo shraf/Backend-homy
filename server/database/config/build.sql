@@ -137,7 +137,8 @@ CREATE TABLE carts (
 
 CREATE TABLE cart (
   id SERIAL PRIMARY KEY,
-  user_id INT,
+  user_id INT NULL,
+  guest_id int NULL,
   is_sold boolean NOT NULL DEFAULT false , 
   createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updatedAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,

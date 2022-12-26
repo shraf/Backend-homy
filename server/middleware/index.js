@@ -15,6 +15,7 @@ const verifyToken = async (req, res, next) => {
     req.user = decoded;
     next();
   } catch (err) {
+    console.log(err)
     next(customizedError(403, 'Token is Not Valid'));
   }
 };

@@ -3,11 +3,10 @@ import queryBuilder from '../../config/queryBuilder.js';
 
 
 const getCategoriesQuery = async(archive, place, pagination = { page: 1 }) => {
-  const offset = (pagination.page - 1) * 10;
 
   const conditions = place
-    ? {'categories.archived':archive, place}
-    : {'categories.archived':archive};
+    ? {'categories.archived':archive, place,}
+    : {'categories.archived':archive,};
 
   const rows =  await queryBuilder.select('categories.*')
     .from('categories')

@@ -11,8 +11,10 @@ import {
   updateProductController,
   deleteProductController,
   archivedProductController,
+  getTopSellerProductsController,
 } from '../controllers/index.js';
 import { verifyToken, verifyTokenAndAdminAuthorization } from '../middleware/index.js';
+import getMostPopularProductsController from '../controllers/products/getMostPopularProductsController.js';
 
 const router = Router();
 
@@ -22,7 +24,8 @@ router.route('/product/:productId/review').get(getSingleProductReviewController)
 router.get('/product/:productId/rate', getCollectReviewProductController);
 router.post('/products', getProductsFilteredController);
 router.get('/products/:categoriesId/recommended', getRecommendedProductController);
-
+router.get('/products/most_selling', getTopSellerProductsController);
+router.get('/products/most_popular', getMostPopularProductsController);
 router.get('/dashboard/products', verifyTokenAndAdminAuthorization, getAllProductsController);
 router.post('/dashboard/product', verifyTokenAndAdminAuthorization, addProductController);
 router.route('/dashboard/product/:id')
