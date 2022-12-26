@@ -1,7 +1,7 @@
 import queryBuilder from "../../config/queryBuilder.js"
 
-const getTopSellingProductsQuery = async (pagination = { page: 1 }) => {
-    const { page } = pagination
+const getTopSellingProductsQuery = async (pagination = { page: 1, per_page: 12 }) => {
+    const { page, per_page } = pagination
     const rows = await queryBuilder.select('products.*')
         .sum({selling_count:'quantity'})
         .from('products')
@@ -9,7 +9,7 @@ const getTopSellingProductsQuery = async (pagination = { page: 1 }) => {
         .orderBy('selling_count', 'desc', 'last')
         .groupBy('products.id')
         .paginate({
-            perPage: 12,
+            perPage: per_page,
             currentPage: page
         })
     return rows
