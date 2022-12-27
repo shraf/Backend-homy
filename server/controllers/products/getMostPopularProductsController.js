@@ -2,8 +2,8 @@ import getMostPopularProductsQuery from "../../database/queries/products/getMost
 
 const getMostPopularProductsController = async (req, res, next) => {
     try {
-        const page = req.params.page
-        const rows = await getMostPopularProductsQuery({ page })
+        const {page, category_id} = req.query
+        const rows = await getMostPopularProductsQuery({ page }, category_id)
         return res.json({
             message: "success",
             data: rows
