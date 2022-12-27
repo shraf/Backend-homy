@@ -11,7 +11,7 @@ const getProductsController = async (req, res, next) => {
                 min, max
             }
         })
-        return res.json(rows)
+        return res.json({message:"successfull",data:rows})
     }
     catch (err) {
         next(err)

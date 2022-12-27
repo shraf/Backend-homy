@@ -5,7 +5,7 @@ const { Pool } = pkg;
 
 dotenv.config();
 const {
-  NODE_ENV, DEV_DB_URL, DATABASE_URL,
+  NODE_ENV, DEV_DB_URL, DATABASE_URL, TEST_DB_URL
 } = process.env;
 
 let DB_URL = '';
@@ -13,7 +13,7 @@ let sslValue = false;
 
 switch (NODE_ENV) {
   case 'production':
-    DB_URL = DATABASE_URL;
+    DB_URL = TEST_DB_URL;
     sslValue = { rejectUnauthorized: false };
     break;
   case 'development':
