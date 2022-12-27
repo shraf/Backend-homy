@@ -2,8 +2,15 @@ import getAllProductsQuery from "../../database/queries/products/getAllProductsQ
 
 const getProductsController = async (req, res, next) => {
     try {
-        const { page, per_page } = req
-        const rows = await getAllProductsQuery({ page, per_page })
+        const {page, per_page, category_id, brand, name, min, max } = req.query
+        const rows = await getAllProductsQuery({ page, per_page }, {
+            category_id, 
+            brand,
+            name,
+            price: {
+                min, max
+            }
+        })
         return res.json(rows)
     }
     catch (err) {
