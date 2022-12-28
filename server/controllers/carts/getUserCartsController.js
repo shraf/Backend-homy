@@ -1,3 +1,4 @@
+import { getUserCartQuery } from '../../database/queries/carts/getUserCartsQuery.js';
 import {
   getProductByIdQuery,
   getUserCartsQuery,
@@ -27,5 +28,16 @@ const getUserCartsController = async (req, res, next) => {
     next(error);
   }
 };
+
+export const getUserCartControloler = async (req, res, next) => {
+  try {
+    const { id } = req.user
+    const data = await getUserCartQuery(id)
+    return res.json({ message: "succesfully retrieved User cart", data })
+  }
+  catch (err) {
+    next(err)
+  }
+}
 
 export default getUserCartsController;

@@ -1,16 +1,13 @@
 import connection from '../../config/connection.js';
 import queryBuilder from '../../config/queryBuilder.js';
 
-const addProductToUserCartsQuery = (cart_id, product_id, quantity,) => {
-  queryBuilder.insert({
+const addProductToUserCartsQuery = async (cart_id, product_id, quantity,) => {
+  await queryBuilder.insert({
     cart_id,
     product_id,
     quantity,
   })
-  .into('cart_product');
-
-
-
+    .into('cart_product');
 };
 
 

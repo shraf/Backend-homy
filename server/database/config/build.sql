@@ -234,5 +234,8 @@ CREATE TABLE promo_codes (
 
 alter table categories add column name_ar varchar(255) 
 alter table categories add column name_en varchar(255) 
+alter table products ADD COLUMN name_en varchar(255);
+alter table products ADD COLUMN name_ar varchar(255);
+
 
 COMMIT;
