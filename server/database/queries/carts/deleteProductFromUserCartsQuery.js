@@ -1,10 +1,9 @@
-import connection from '../../config/connection.js';
+import queryBuilder from '../../config/queryBuilder.js';
 
-const deleteProductFromUserCartsQuery = (userId, productId) => {
-  const sql = {
-    text: 'DELETE FROM carts WHERE user_id = $1 AND product_id = $2 RETURNING *',
-    values: [userId, productId],
-  };
-  return connection.query(sql);
+const deleteProductFromUserCartQuery = async(cart_id, product_id) => {
+  await queryBuilder
+  .from('cart_product')
+  .where({cart_id, product_id})
+  .delete()
 };
-export default deleteProductFromUserCartsQuery;
+export default deleteProductFromUserCartQuery;
