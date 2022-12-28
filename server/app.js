@@ -53,14 +53,14 @@ app.use('/api/v1', brandRoute);
 app.use('/api/v1', categoryRoute);
 app.use('/api/v1', promoCodeRoute);
 
-if (NODE_ENV === 'production') {
-  // const __filename = fileURLToPath(import.meta.url);
-  const __dirname = path.dirname(__filename);
-  app.use(express.static(__dirname, '..', 'client', 'build'));
-  app.get('*', (req, res) => {
-    res.sendFile(__dirname, '..', 'client', 'build', 'index.html');
-  });
-}
+// if (NODE_ENV === 'production') {
+//    const __filename = fileURLToPath(import.meta.url);
+//   const __dirname = path.dirname(__filename);
+//   app.use(express.static(__dirname, '..', 'client', 'build'));
+//   app.get('*', (req, res) => {
+//     res.sendFile(__dirname, '..', 'client', 'build', 'index.html');
+//   });
+// }
 
 app.use(clientError);
 app.use(serverError);
