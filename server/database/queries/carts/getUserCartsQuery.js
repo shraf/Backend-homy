@@ -10,17 +10,17 @@ const getUserCartsQuery = (userId) => {
 };
 
 export const getUserCartQuery = async userId => {
-  const rows = await queryBuilder.select(['products.*', 'categories.name as category_name'])
-    .sum(queryBuilder.raw('quantity * price'))
+  const rows = await queryBuilder.select(['products.*', 'quantity', 'categories.name as category_name'])
+    .sum({ total_price: queryBuilder.raw('quantity * price') })
     .from('cart_product')
     .innerJoin('products', 'product_id', '=', 'products.id')
     .innerJoin('categories', 'categories.id', '=', 'category_id')
     .innerJoin('cart', 'cart.id', '=', 'cart_product.cart_id')
     .where('cart.user_id', 14)
-    .groupBy('products.id', 'categories.name');
-  
+    .groupBy('products.id', 'categories.name', "cart_product.id");
+
   return rows
-  }
+}
 
 export const getAvailableCartsQuery = async (userId) => {
   const cart = await queryBuilder.select()
