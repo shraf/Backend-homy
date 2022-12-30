@@ -236,7 +236,11 @@ alter table categories add column name_ar varchar(255);
 alter table categories add column name_en varchar(255); 
 alter table products ADD COLUMN name_en varchar(255);
 alter table products ADD COLUMN name_ar varchar(255);
+
 ALTER TABLE cart_product 
 ADD UNIQUE (cart_id, product_id);
+
+ALTER TABLE cart_product
+ADD CONSTRAINT quantity check (quantity > 0);
 
 COMMIT;

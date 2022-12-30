@@ -1,13 +1,13 @@
-import connection from '../../config/connection.js';
+import queryBuilder from '../../config/queryBuilder.js';
 
-const updateProductQuantityQuery = (userId, productId, quantity) => {
-  const sql = {
-    text: `UPDATE carts
-    SET quantity = $3
-    WHERE user_id = $1 AND product_id = $2
-    RETURNING *`,
-    values: [userId, productId, quantity],
-  };
-  return connection.query(sql);
+const updateProductQuantityQuery = async (cart_id, product_id, quantity) => {
+  await queryBuilder.where({
+    cart_id,
+    product_id
+  })
+    .update({
+      quantity
+    })
+    .from('cart_product')
 };
 export default updateProductQuantityQuery;

@@ -8,6 +8,7 @@ import {
 import { verifyTokenAndAuthorization, verifyToken } from '../middleware/index.js';
 import { getUserCartControloler } from '../controllers/carts/getUserCartsController.js';
 import updateProductQuantityController from '../controllers/carts/updateProductQuantityController.js';
+import clearUserCartController from '../controllers/carts/clearCartController.js';
 
 const router = Router();
 router.route('/cart')
@@ -17,7 +18,10 @@ router.route('/cart')
 router.route('/cart/:id')
   .patch(verifyToken, updateProductQuantityController)
   .delete(verifyToken, deleteProductFromUserCartsController)
-/* router.route('/user/:id/cart').get(verifyTokenAndAuthorization, getUserCartsController)
+
+router.route('/cart/clear').post(verifyToken, clearUserCartController)
+
+  /* router.route('/user/:id/cart').get(verifyTokenAndAuthorization, getUserCartsController)
 .post(verifyTokenAndAuthorization, addProductsToUserCartsController); */
 router.delete('/user/:id/cart/:productId', verifyTokenAndAuthorization, deleteProductFromUserCartsController);
 
